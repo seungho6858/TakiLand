@@ -7,7 +7,7 @@ using UnityEngine.Serialization;
 public partial class BattleUnit : MonoBehaviour
 {
     public Team team;
-    [FormerlySerializedAs("specialAction")] public Action action;
+    public SpecialAction specialAction;
     
     [SerializeField] private SpriteRenderer spr;
     [SerializeField] private Rigidbody2D rg;
@@ -23,12 +23,12 @@ public partial class BattleUnit : MonoBehaviour
     private List<BattleUnit> listRangeUnits;
     private BattleUnit rangeUnit;
     
-    public void SetTeam(Team team, Action action)
+    public void SetTeam(Team team, SpecialAction specialAction)
     {
         Init();
         
         this.team = team;
-        this.action = action;
+        this.specialAction = specialAction;
         
         spr.color = team == Team.Red ? Color.red : Color.blue;
     }

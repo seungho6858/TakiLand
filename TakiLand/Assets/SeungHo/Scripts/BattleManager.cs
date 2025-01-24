@@ -12,12 +12,12 @@ public partial class BattleManager : MonoBehaviour
     public List<BattleUnit> listUnits;
     public static System.Action<int, int> OnTeamCountChanged;
     
-    public static void SummonUnit(Team team, Action action, Vector2 vPos)
+    public static void SummonUnit(Team team, SpecialAction specialAction, Vector2 vPos)
     {
         var unit = (Instantiate(Resources.Load("BattleUnit"), vPos, Quaternion.identity) as GameObject).GetComponent<BattleUnit>();
         
         unit.transform.SetParent(instance.transform);
-        unit.SetTeam(team, action);
+        unit.SetTeam(team, specialAction);
         unit.SetStat(10f, 1f, 1f, 1f);
         
         instance.listUnits.Add(unit);
@@ -62,7 +62,7 @@ public partial class BattleManager : MonoBehaviour
             var team = UnityEngine.Random.Range(0, 2) == 0 ? Team.Red : Team.Blue;
             int rand = UnityEngine.Random.Range(1, 11);
             
-            SummonUnit(team, Action.None, GetPosition(team, rand));
+            SummonUnit(team, SpecialAction.None, GetPosition(team, rand));
         }
             
     }

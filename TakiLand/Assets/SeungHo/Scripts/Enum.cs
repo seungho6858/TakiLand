@@ -5,7 +5,7 @@ public enum Team
     End
 }
 
-public enum Action
+public enum SpecialAction
 {
     None,
     Explosion,
