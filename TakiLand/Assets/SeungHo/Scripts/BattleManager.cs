@@ -22,6 +22,36 @@ public partial class BattleManager : MonoBehaviour
     private float timer;
     private int c;
     
+    private void InstanceOnOnBattleStart(Formation.Data data1, Formation.Data data2)
+    {
+        GameState = GameState.Battle;
+        OnBattleStateChanged?.Invoke(GameState);
+
+        timer = c = TIMER;
+
+        Debug.Log("TeamA");
+        Setting(Team.Red, data1);
+        
+        Debug.Log("TeamB");
+        Setting(Team.Blue, data1);
+
+        void Setting(Team team, Formation.Data data)
+        {
+            Debug.Log($"{data.Stage}");
+                
+            int position = 0;
+            foreach (var action in data.Positions)
+            {
+                position++;
+                if(action == SpecialAction.None)
+                    continue;
+             
+                SummonUnit(team, action, GetPosition(team, position));
+                Debug.Log(action);
+            }
+        }
+    }
+    
     private static void SummonUnit(Team team, SpecialAction specialAction, Vector2 vPos)
     {
         var unit = (Instantiate(Resources.Load("BattleUnit"), vPos, Quaternion.identity) as GameObject).GetComponent<BattleUnit>();
@@ -38,14 +68,6 @@ public partial class BattleManager : MonoBehaviour
     {
         instance.listUnits.Remove(unit);
         instance.TeamCountChanged();
-    }
-    
-    private void InstanceOnOnBattleStart(Formation arg1, Formation arg2)
-    {
-        GameState = GameState.Battle;
-        OnBattleStateChanged?.Invoke(GameState);
-
-        timer = c = TIMER;
     }
     
     private void Update()

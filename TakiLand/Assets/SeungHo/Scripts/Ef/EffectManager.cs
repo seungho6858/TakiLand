@@ -20,8 +20,6 @@ public class EffectManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-
-        DontDestroyOnLoad(gameObject);
     }
 
     /// <summary>
