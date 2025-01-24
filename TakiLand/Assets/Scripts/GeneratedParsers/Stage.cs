@@ -33,6 +33,15 @@ namespace Mib.Data
                     case "Stage":
 						data.Stage = Parser.ParseInt(value);
 						break;
+                    case "BattleTime":
+						data.BattleTime = Parser.ParseFloat(value);
+						break;
+                    case "MinimumCost":
+						data.MinimumCost = Parser.ParseInt(value);
+						break;
+                    case "RewardRate":
+						data.RewardRate = Parser.ParseInt(value);
+						break;
 				}
 			}
 
@@ -44,6 +53,9 @@ namespace Mib.Data
 		public partial class Data
 		{
 			public int Stage;
+			public float BattleTime;
+			public int MinimumCost;
+			public int RewardRate;
 
 		}
 

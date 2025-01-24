@@ -15,8 +15,13 @@ public class StageManager : MonoSingleton<StageManager>
 
 
     private bool _battleEndFlag;
-    private int _currentStage;
-    
+
+    public int CurrentStage
+    {
+        get;
+        private set;
+    }
+
     protected override void OnAwake()
     {
         //TODO : 요거 콜백받으면 배틀프로세스 종료시키기.
@@ -25,14 +30,14 @@ public class StageManager : MonoSingleton<StageManager>
 
     private async UniTaskVoid Start()
     {
-        _currentStage = 1;
+        CurrentStage = 1;
         
     }
     
     public async UniTask BettingProcess()
     {
         Formation.Data[] positions = Formation.Instance.Table
-            .Where(data => data.Stage == _currentStage)
+            .Where(data => data.Stage == CurrentStage)
             .OrderBy(_ => Guid.NewGuid())
             .ToArray();
         
@@ -56,6 +61,6 @@ public class StageManager : MonoSingleton<StageManager>
 
     public void ChangeStage(int targetStage)
     {
-        _currentStage = targetStage;
+        CurrentStage = targetStage;
     }
 }

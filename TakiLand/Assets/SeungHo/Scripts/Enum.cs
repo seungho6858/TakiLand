@@ -1,8 +1,10 @@
-public enum BetType
+public enum BetPreset
 {
-    Red,
-    Blue,
-    NoOne,
+    Reset = 0,
+    Bet1 = 1,
+    Bet10 = 10,
+    Bet100 = 100,
+    Bet1000 = 1000,
 }
 
 public enum Team
