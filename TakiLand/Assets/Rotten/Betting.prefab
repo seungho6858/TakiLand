@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1658442655208945584}
   - component: {fileID: 167891714010494511}
   m_Layer: 5
-  m_Name: Bet4
+  m_Name: Bet1000
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -778,7 +778,7 @@ GameObject:
   - component: {fileID: 6655884208345092474}
   - component: {fileID: 4630292315521182426}
   m_Layer: 5
-  m_Name: Bet3
+  m_Name: Bet100
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1065,6 +1065,11 @@ MonoBehaviour:
     - {fileID: 3201172176803750663}
     - {fileID: 3586167678576827349}
     - {fileID: 1522255513857570880}
+    - {fileID: 1300299877060016195}
+    - {fileID: 3117187284779263398}
+    - {fileID: 7460087935343623055}
+    - {fileID: 4630292315521182426}
+    - {fileID: 167891714010494511}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -1132,6 +1137,94 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: _betAmountButtons
+      Entry: 7
+      Data: 2|System.Collections.Generic.Dictionary`2[[BetPreset, Assembly-CSharp],[UnityEngine.UI.Button,
+        UnityEngine.UI]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 3|System.Collections.Generic.EnumEqualityComparer`1[[BetPreset, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 5
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 0
+    - Name: $v
+      Entry: 10
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1
+    - Name: $v
+      Entry: 10
+      Data: 4
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 10
+    - Name: $v
+      Entry: 10
+      Data: 5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 100
+    - Name: $v
+      Entry: 10
+      Data: 6
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1000
+    - Name: $v
+      Entry: 10
+      Data: 7
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  _currentBet: {fileID: 3417583886624320599}
+  _currentRewardRate: {fileID: 3000255823493125505}
 --- !u!1 &3234709945535121719
 GameObject:
   m_ObjectHideFlags: 0
@@ -1316,7 +1409,7 @@ GameObject:
   - component: {fileID: 7266957819457982170}
   - component: {fileID: 3000255823493125505}
   m_Layer: 5
-  m_Name: Earn
+  m_Name: Reward
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1369,7 +1462,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: X2
+  m_text: x 2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1451,7 +1544,7 @@ GameObject:
   - component: {fileID: 253551802243994053}
   - component: {fileID: 7460087935343623055}
   m_Layer: 5
-  m_Name: Bet2
+  m_Name: Bet10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1804,7 +1897,7 @@ GameObject:
   - component: {fileID: 4748633765017043246}
   - component: {fileID: 3417583886624320599}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: CurrentBet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
