@@ -46,3 +46,5 @@ sysinfo.txt
 *.unitypackage
 !R_Frame/ReleasePackage.unitypackage
 DrawWar_clone_0
+
+*.DS_Store
