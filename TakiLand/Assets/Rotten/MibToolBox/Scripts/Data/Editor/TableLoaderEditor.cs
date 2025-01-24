@@ -509,7 +509,7 @@ namespace Mib.Data
 
 			Directory.CreateDirectory(ASSET_PATH);
 
-			string[] files = Directory.GetFiles(TABLE_ROOT, "*.xlsx");
+			string[] files = Directory.GetFiles(TABLE_ROOT, "*.csv");
 			foreach (string filePath in files)
 			{
 				if (filePath.Contains('~'))
