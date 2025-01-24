@@ -110,7 +110,7 @@ public partial class BattleManager : MonoBehaviour
         GameState = GameState.Ready;
         OnBattleStateChanged?.Invoke(GameState);
         
-        StageManager.Instance.OnBattleStart += InstanceOnOnBattleStart;
+        StageManager.Instance.OnStageChanged += InstanceOnOnBattleStart;
     }
 
 
@@ -118,7 +118,7 @@ public partial class BattleManager : MonoBehaviour
     {
         instance = null;
         
-        StageManager.Instance.OnBattleStart -= InstanceOnOnBattleStart;
+        StageManager.Instance.OnStageChanged -= InstanceOnOnBattleStart;
     }
     
     #if UNITY_EDITOR

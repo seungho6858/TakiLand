@@ -10,7 +10,8 @@ using UnityEngine;
 
 public class StageManager : MonoSingleton<StageManager>
 {
-    public event Action<Formation.Data, Formation.Data> OnBattleStart;
+    public event Action<Formation.Data, Formation.Data> OnStageChanged;
+    public event Action OnBattleStart;
     
     protected override void OnAwake()
     {
@@ -32,13 +33,13 @@ public class StageManager : MonoSingleton<StageManager>
             .OrderBy(_ => Guid.NewGuid())
             .ToArray();
         
-        OnBattleStart?.Invoke(positions[0], positions[1]);
+        OnStageChanged?.Invoke(positions[0], positions[1]);
         
     }
 
-    private async UniTask BattleProcess()
+    public async UniTask BattleProcess()
     {
-        
+        OnBattleStart?.Invoke();
     }
     
 

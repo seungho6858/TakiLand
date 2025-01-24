@@ -8,14 +8,21 @@ using UnityEngine.UI;
 public class NonDiegeticUI : MonoBehaviour
 {
 	[SerializeField]
+	private Button _testFormationButton;
+	
+	[SerializeField]
 	private Button _battleStartButton;
 
 	private void Awake()
 	{
+		_testFormationButton.onClick.AddListener(() =>
+		{
+			StageManager.Instance.BattingProcess().Forget();
+		});
+		
 		_battleStartButton.onClick.AddListener(() =>
 		{
-			Debug.Log("Battle Start");
-			StageManager.Instance.BattingProcess().Forget();
+			StageManager.Instance.BattleProcess().Forget();
 		});
 	}
 }
