@@ -5,15 +5,9 @@ public enum Team
     End
 }
 
-public enum WeaponType
+public enum SpecialAction
 {
-    Sword,
-    Cane,
-    Axe,
-}
-
-public enum Action
-{
+    None,
     Explosion,
     Taunt,
     Invisibility,

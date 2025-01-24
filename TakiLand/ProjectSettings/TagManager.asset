@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - BattleUnit
   layers:
   - Default
   - TransparentFX
@@ -33,11 +34,23 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - BattleUnit
+  - FindUnit
   - 
   - 
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BG
+    uniqueID: 974461615
+    locked: 0
+  - name: Unit
+    uniqueID: 220270893
+    locked: 0
+  - name: Effect
+    uniqueID: 4236644423
+    locked: 0
+  - name: UI
+    uniqueID: 1268220503
     locked: 0
