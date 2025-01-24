@@ -49,6 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c660beeac76923f45bd523937bf97f50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _battleStartButton: {fileID: 7736939406937823562}
 --- !u!1 &2637593667306903754
 GameObject:
   m_ObjectHideFlags: 0
