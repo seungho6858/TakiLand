@@ -1,12 +1,12 @@
-~비고,Tid,Damage,MaxHp,MoveSpeed,AttackSpeed,Action
-,$int,int,int,float,float,Action
-검_빨강,1,1,5,1,1,Explosion
-검_주황,2,1,5,1,1,Taunt
-검_노랑,3,2,5,1,1,Invisibility
-검_초록,4,2,5,1,1.5,Rage
-검_파랑,5,22,55,1,1,Greed
-검_보라,6,2,5,1,1,Split
-검_검정,7,2,5,1,1,Fear
-지팡이_빨강,8,2,5,1,1,CounterAttack
-지팡이_주황,9,2,5,1,1,Immobility
-지팡이_노랑,10,22,5,1,1,SpeedBoost
+~비고,Tid,Damage,MaxHp,MoveSpeed,AttackSpeed
+,$SpecialAction,int,int,float,float
+폭발,Explosion,1,5,1,1
+도발,Taunt,1,5,1,1
+투명화,Invisibility,2,5,1,1
+분노,Rage,2,5,1,1.5
+탐욕,Greed,22,55,1,1
+분열,Split,2,5,1,1
+공포,Fear,2,5,1,1
+반격,CounterAttack,2,5,1,1
+이동불가,Immobility,2,5,1,1
+빠른 이동 속도,SpeedBoost,22,5,1,1

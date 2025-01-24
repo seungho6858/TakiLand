@@ -6,8 +6,8 @@ using Sirenix.Serialization;
 
 namespace Mib.Data
 {
-	[ScriptableObjectPath("GeneratedTables/Ability")]
-	public partial class Ability : ScriptableObjectSingleton<Ability>, IDataTable
+	[ScriptableObjectPath("GeneratedTables/Stage")]
+	public partial class Stage : ScriptableObjectSingleton<Stage>, IDataTable
 	{
 		[OdinSerialize]
 		private Dictionary<Key, Data> _table = new Dictionary<Key, Data>();
@@ -30,36 +30,20 @@ namespace Mib.Data
                 switch (columnName)
                 {
 
-                    case "Tid":
-						data.Tid = Parser.ParseEnum<SpecialAction>(value);
-						break;
-                    case "Damage":
-						data.Damage = Parser.ParseInt(value);
-						break;
-                    case "MaxHp":
-						data.MaxHp = Parser.ParseInt(value);
-						break;
-                    case "MoveSpeed":
-						data.MoveSpeed = Parser.ParseFloat(value);
-						break;
-                    case "AttackSpeed":
-						data.AttackSpeed = Parser.ParseFloat(value);
+                    case "Stage":
+						data.Stage = Parser.ParseInt(value);
 						break;
 				}
 			}
 
-			_table.Add(new Key(data.Tid), data);
+			_table.Add(new Key(data.Stage), data);
 		}
 
 
 		[System.Serializable]
 		public partial class Data
 		{
-			public SpecialAction Tid;
-			public int Damage;
-			public int MaxHp;
-			public float MoveSpeed;
-			public float AttackSpeed;
+			public int Stage;
 
 		}
 
@@ -69,14 +53,14 @@ namespace Mib.Data
 			[Sirenix.OdinInspector.HideLabel]
 			[JetBrains.Annotations.NotNull]
 			[UnityEngine.SerializeField]
-			private readonly SpecialAction _item;
+			private readonly int _item;
 
-			public SpecialAction Item => _item;
+			public int Item => _item;
 			public Data Data => Instance.Table[this];
 
-			public Key(SpecialAction tid)
+			public Key(int stage)
 			{
-				_item = tid;
+				_item = stage;
 			}
 			
 			public bool Equals(Key other) => _item == other._item;
