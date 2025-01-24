@@ -10,9 +10,10 @@ using UnityEngine;
 
 public class StageManager : MonoSingleton<StageManager>
 {
-    public event Action<Formation.Data, Formation.Data> OnStageChanged;
+    public event Action<Formation.Data, Formation.Data, int> OnStageChanged;
     public event Action OnBattleStart;
 
+    private Team[] _results;
 
     private bool _battleEndFlag;
 
@@ -24,8 +25,9 @@ public class StageManager : MonoSingleton<StageManager>
 
     protected override void OnAwake()
     {
-        //TODO : 요거 콜백받으면 배틀프로세스 종료시키기.
-        //BattleManager.OnGameEnd
+        _results = new Team[Define.Instance.GetValue("TotalStage")];
+        
+        BattleManager.onTeamWin += EndBattle;
     }
 
     private async UniTaskVoid Start()
@@ -41,7 +43,7 @@ public class StageManager : MonoSingleton<StageManager>
             .OrderBy(_ => Guid.NewGuid())
             .ToArray();
         
-        OnStageChanged?.Invoke(positions[0], positions[1]);
+        OnStageChanged?.Invoke(positions[0], positions[1], CurrentStage);
         
     }
 
@@ -49,14 +51,14 @@ public class StageManager : MonoSingleton<StageManager>
     {
         OnBattleStart?.Invoke();
         
-        await UniTask.WaitUntil(() => Instance._battleEndFlag);
+        await UniTask.WaitUntil(() => Instance._battleEndFlag, cancellationToken:this.GetCancellationTokenOnDestroy());
         _battleEndFlag = false;
     }
-    
 
-    public void EndBattle()
+    public void EndBattle(Team team)
     {
         _battleEndFlag = true;
+        _results[CurrentStage] = team;
     }
 
     public void ChangeStage(int targetStage)

@@ -37,7 +37,7 @@ public partial class BattleManager : MonoBehaviour
         GameState = GameState.Battle;
     }
     
-    private void OnStageChanged(Formation.Data data1, Formation.Data data2)
+    private void OnStageChanged(Formation.Data data1, Formation.Data data2, int stage)
     {
         GameState = GameState.Ready;
 

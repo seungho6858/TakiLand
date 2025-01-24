@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Mib;
+using Mib.Data;
 using UnityEngine;
 
 public class BettingManager : MonoSingleton<BettingManager>
@@ -13,8 +14,7 @@ public class BettingManager : MonoSingleton<BettingManager>
 		public int BetAmount;
 	}
 
-	private readonly List<Bet> _betHistory = new();
-	private readonly List<Team> _results = new();
+	private Bet[] _betHistory;
 	private int _currentGold;
 	private int _currentBet;
 	
@@ -26,10 +26,11 @@ public class BettingManager : MonoSingleton<BettingManager>
 
 	protected override void OnAwake()
 	{
-		StageManager.Instance.OnStageChanged += (_, _) =>
+		_betHistory = new Bet[Define.Instance.GetValue("TotalStage")];
+		for (int i = 0; i < _betHistory.Length; i++)
 		{
-			_betHistory.Add(new Bet());
-		};
+			_betHistory[i] = new Bet();
+		}
 	}
 
 	public void BetTeam(Team team)

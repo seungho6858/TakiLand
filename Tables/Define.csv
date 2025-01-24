@@ -1,3 +1,4 @@
 ~,Key,Value
-,string,int
+,$string,int
 ,DefaultGold,10
+,TotalStage,10

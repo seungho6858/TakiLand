@@ -10,11 +10,11 @@ namespace Mib.Data
 	public partial class Define : ScriptableObjectSingleton<Define>, IDataTable
 	{
 		[OdinSerialize]
-		private List<Data> _table = new List<Data>();
+		private Dictionary<Key, Data> _table = new Dictionary<Key, Data>();
 		
-        public IReadOnlyList<Data> Table => _table;
+        public IReadOnlyDictionary<Key, Data> Table => _table;
 		
-		public IEnumerable GetEnumerable() => Table;
+		public IEnumerable GetEnumerable() => Table.Values;
 
 		public void ParseData(object item, string tableName)
         {
@@ -39,7 +39,7 @@ namespace Mib.Data
 				}
 			}
 
-			_table.Add(data);
+			_table.Add(new Key(data.Key), data);
 		}
 
 
@@ -49,6 +49,30 @@ namespace Mib.Data
 			public string Key;
 			public int Value;
 
+		}
+
+		[System.Serializable]
+		public readonly struct Key : System.IEquatable<Key>
+		{
+			[Sirenix.OdinInspector.HideLabel]
+			[JetBrains.Annotations.NotNull]
+			[UnityEngine.SerializeField]
+			private readonly string _item;
+
+			public string Item => _item;
+			public Data Data => Instance.Table[this];
+
+			public Key(string key)
+			{
+				_item = key;
+			}
+			
+			public bool Equals(Key other) => _item == other._item;
+			public static bool operator ==(Key a, Key b) => a.Equals(b);
+			public static bool operator !=(Key a, Key b) => !a.Equals(b);
+			public override bool Equals(object obj) => obj is Key other && Equals(other);
+			public override int GetHashCode() => _item.GetHashCode();
+			public override string ToString() => _item.ToString();
 		}
 
 	}
