@@ -16,13 +16,12 @@ public class BettingManager : MonoSingleton<BettingManager>
 
 	private Bet[] _betHistory;
 	private int _currentGold;
-	private int _currentBet;
 	
 	public event Action<int, int> OnBetChanged;
 	
 	protected override bool IsPersistent => false;
 
-	public Bet CurrentBet => _betHistory.LastOrDefault();
+	public Bet CurrentBet => _betHistory[StageManager.Instance.CurrentStage];
 
 	protected override void OnAwake()
 	{
@@ -31,6 +30,17 @@ public class BettingManager : MonoSingleton<BettingManager>
 		{
 			_betHistory[i] = new Bet();
 		}
+
+		StageManager.Instance.OnBattleStart += () =>
+		{
+			// TODO: 뭔가 애니메이션 여기서.
+			_currentGold -= CurrentBet.BetAmount;
+		};
+	}
+
+	public void Initialize()
+	{
+		_currentGold = Define.Instance.GetValue("DefaultGold");
 	}
 
 	public void BetTeam(Team team)
@@ -45,5 +55,17 @@ public class BettingManager : MonoSingleton<BettingManager>
 			BetPreset.Reset => 0,
 			_ => CurrentBet.BetAmount + (int)money
 		};
+	}
+
+	public void SettleBets(Team team, int currentStage)
+	{
+		bool isWin = CurrentBet.BetTeam == team;
+		int rewardRate = new Stage.Key(currentStage).Data.RewardRate;
+
+		if (isWin)
+		{
+			// TODO : 뭔가 애니메이션 여기서도.
+			_currentGold += CurrentBet.BetAmount * rewardRate;
+		} 
 	}
 }

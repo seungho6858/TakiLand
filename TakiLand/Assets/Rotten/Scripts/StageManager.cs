@@ -30,10 +30,23 @@ public class StageManager : MonoSingleton<StageManager>
         BattleManager.onTeamWin += EndBattle;
     }
 
-    private async UniTaskVoid Start()
+    private void Start()
     {
-        CurrentStage = 1;
-        
+        // TODO : 일단은 버튼으로 분리. 나중에 합치기
+        // PlayFullSequence().Forget();
+    }
+
+    public async UniTaskVoid PlayFullSequence() 
+    {
+            
+        BettingManager.Instance.Initialize();
+
+        int totalStage = Define.Instance.GetValue("TotalStage");
+        for (CurrentStage = 1; CurrentStage < totalStage; CurrentStage++)
+        {
+            await BettingProcess();
+            await BattleProcess();
+        }
     }
     
     public async UniTask BettingProcess()
@@ -59,6 +72,8 @@ public class StageManager : MonoSingleton<StageManager>
     {
         _battleEndFlag = true;
         _results[CurrentStage] = team;
+        
+        BettingManager.Instance.SettleBets(team, CurrentStage);
     }
 
     public void ChangeStage(int targetStage)

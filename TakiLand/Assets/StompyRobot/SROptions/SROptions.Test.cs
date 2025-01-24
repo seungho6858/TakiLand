@@ -31,6 +31,12 @@ public partial class SROptions
     {
         StageManager.Instance.ChangeStage(_targetStage);
     }
+    
+    [Category("Stage")]
+    public void 풀_기능_테스트()
+    {
+        StageManager.Instance.PlayFullSequence().Forget();
+    }
 
 
 #if ENABLE_TEST_SROPTIONS
