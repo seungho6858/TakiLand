@@ -7,7 +7,7 @@ using UnityEngine.Serialization;
 public partial class BattleUnit : MonoBehaviour
 {
     public Team team;
-    public SpecialAction specialAction;
+    [FormerlySerializedAs("specialAction")] public Action action;
     
     [SerializeField] private SpriteRenderer spr;
     [SerializeField] private Rigidbody2D rg;
@@ -23,12 +23,12 @@ public partial class BattleUnit : MonoBehaviour
     private List<BattleUnit> listRangeUnits;
     private BattleUnit rangeUnit;
     
-    public void SetTeam(Team team, SpecialAction specialAction)
+    public void SetTeam(Team team, Action action)
     {
         Init();
         
         this.team = team;
-        this.specialAction = specialAction;
+        this.action = action;
         
         spr.color = team == Team.Red ? Color.red : Color.blue;
     }
@@ -121,6 +121,8 @@ public partial class BattleUnit
 
     private void Die()
     {
+        BattleManager.DestroyUnit(this);
+        
         gameObject.SetActive(false);
     }
 
@@ -145,6 +147,10 @@ public partial class BattleUnit
         {
             Die();   
         }
+
+        var ef = EffectManager.Instance.SpawnEffect("Ef_DamageFont", GetPos(), Quaternion.identity)
+            .GetComponent<Ef_DamageFont>();
+        ef.SetDamage(dmg);
         
         return this.hp <= 0f;
     }

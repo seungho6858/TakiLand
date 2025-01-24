@@ -351,7 +351,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -1
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.23921569}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.003921569}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -411,11 +411,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   team: 0
-  specialAction: 0
+  action: 0
   spr: {fileID: 4918849630453502626}
   rg: {fileID: 8772071211764512268}
   find: {fileID: 7559843902011120747}
   range: {fileID: 8439114211847771343}
+  hp: 0
+  atk: 0
+  moveSpeed: 0
+  attackSpeed: 0
+  coolTime: 0
 --- !u!50 &8772071211764512268
 Rigidbody2D:
   serializedVersion: 4
