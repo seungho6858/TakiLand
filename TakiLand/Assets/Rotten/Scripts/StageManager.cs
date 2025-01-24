@@ -53,4 +53,9 @@ public class StageManager : MonoSingleton<StageManager>
     {
         _battleEndFlag = true;
     }
+
+    public void ChangeStage(int targetStage)
+    {
+        _currentStage = targetStage;
+    }
 }

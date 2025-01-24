@@ -17,6 +17,22 @@ using Random = UnityEngine.Random;
 
 public partial class SROptions
 {
+    private int _targetStage = 1;
+
+    [Category("Stage")]
+    public int TestShort
+    {
+        get => _targetStage;
+        set => _targetStage = value;
+    }
+
+    [Category("Stage")]
+    public void TestAction()
+    {
+        StageManager.Instance.ChangeStage(_targetStage);
+    }
+
+
 #if ENABLE_TEST_SROPTIONS
 
     public enum TestValues
