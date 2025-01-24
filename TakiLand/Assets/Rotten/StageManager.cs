@@ -32,6 +32,8 @@ public class StageManager : MonoSingleton<StageManager>
 
     private void Start()
     {
+        CurrentStage = 1;
+
         // TODO : 일단은 버튼으로 분리. 나중에 합치기
         // PlayFullSequence().Forget();
     }
