@@ -14,10 +14,29 @@ public class BettingManager : MonoSingleton<BettingManager>
 		public int BetAmount;
 	}
 
+	public class Gold
+	{
+		public int Value
+		{
+			get;
+			private set;
+		}
+
+		public void SetValue(int gold)
+		{
+			int prevGold = Value;
+			Value = gold;
+			Debug.Log($"prev[{prevGold}]\tcurrent[{Value}]");
+			Instance.OnGoldChanged?.Invoke(prevGold, Value);
+		}
+	}
+
 	private Bet[] _betHistory;
-	private int _currentGold;
+	private readonly Gold _gold = new Gold();
+	private int CurrentGold => _gold.Value;
 	
 	public event Action<int, int> OnBetChanged;
+	public event Action<int, int> OnGoldChanged;
 	
 	protected override bool IsPersistent => false;
 
@@ -33,14 +52,19 @@ public class BettingManager : MonoSingleton<BettingManager>
 
 		StageManager.Instance.OnBattleStart += () =>
 		{
-			// TODO: 뭔가 애니메이션 여기서.
-			_currentGold -= CurrentBet.BetAmount;
+			_gold.SetValue(CurrentGold - CurrentBet.BetAmount);
+		};
+
+		StageManager.Instance.OnStageChanged += (_, _, stage) =>
+		{
+			var stageData = new Stage.Key(stage);
+			BetMoney(stageData.Data.MinimumCost);
 		};
 	}
 
 	public void Initialize()
 	{
-		_currentGold = Define.Instance.GetValue("DefaultGold");
+		_gold.SetValue(Define.Instance.GetValue("DefaultGold"));
 	}
 
 	public void BetTeam(Team team)
@@ -50,11 +74,24 @@ public class BettingManager : MonoSingleton<BettingManager>
 
 	public void BetMoney(BetPreset money)
 	{
-		CurrentBet.BetAmount = money switch
+		int amount = money switch
 		{
 			BetPreset.Reset => 0,
 			_ => CurrentBet.BetAmount + (int)money
 		};
+		
+		BetMoney(amount);
+	}
+	
+	public void BetMoney(int amount)
+	{
+		int prevBet = CurrentBet.BetAmount;
+
+		amount = Math.Clamp(amount, 0, CurrentGold);
+		
+		CurrentBet.BetAmount = amount;
+		
+		OnBetChanged?.Invoke(prevBet, CurrentBet.BetAmount);
 	}
 
 	public void SettleBets(Team team, int currentStage)
@@ -64,8 +101,12 @@ public class BettingManager : MonoSingleton<BettingManager>
 
 		if (isWin)
 		{
-			// TODO : 뭔가 애니메이션 여기서도.
-			_currentGold += CurrentBet.BetAmount * rewardRate;
-		} 
+			_gold.SetValue(CurrentGold + CurrentBet.BetAmount * (rewardRate + 1));
+		}
+	}
+
+	public void Cheat_SetGold(int amount)
+	{
+		_gold.SetValue(amount);
 	}
 }

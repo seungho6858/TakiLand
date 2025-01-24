@@ -52,6 +52,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _testFormationButton: {fileID: 3022377311087368927}
   _battleStartButton: {fileID: 7736939406937823562}
+  _currentGoldText: {fileID: 4370523682251828636}
 --- !u!1 &3689549972273594745
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,6 +269,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Betting
       objectReference: {fileID: 0}
+    - target: {fileID: 4776520131444178968, guid: 69358e4019a4b074ab2fc6da10ca77f5, type: 3}
+      propertyPath: m_text
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7360282073748609371, guid: 69358e4019a4b074ab2fc6da10ca77f5, type: 3}
       propertyPath: m_Pivot.x
       value: 1
@@ -371,6 +376,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4370523682251828636 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4776520131444178968, guid: 69358e4019a4b074ab2fc6da10ca77f5, type: 3}
+  m_PrefabInstance: {fileID: 9146428087149718916}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &7736939406937823562 stripped

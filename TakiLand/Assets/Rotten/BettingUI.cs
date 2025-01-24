@@ -50,7 +50,7 @@ public class BettingUI : SerializedMonoBehaviour
 		StageManager.Instance.OnStageChanged += (blue, red, stage) =>
 		{
 			var stageKey = new Stage.Key(stage);
-			_currentRewardRate.text = $"X {stageKey.Data.RewardRate.ToString()}";
+			_currentRewardRate.text = $"x {stageKey.Data.RewardRate.ToString()}";
 		};
 	}
 }

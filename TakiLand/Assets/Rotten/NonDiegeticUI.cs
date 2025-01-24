@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +13,9 @@ public class NonDiegeticUI : MonoBehaviour
 	
 	[SerializeField]
 	private Button _battleStartButton;
+	
+	[SerializeField]
+	private TextMeshProUGUI _currentGoldText;
 
 	private void Awake()
 	{
@@ -24,5 +28,11 @@ public class NonDiegeticUI : MonoBehaviour
 		{
 			StageManager.Instance.BattleProcess().Forget();
 		});
+		
+		BettingManager.Instance.OnGoldChanged += (prev, current) =>
+		{
+			//TODO : 뭔가 애니메이션
+			_currentGoldText.text = current.ToString();
+		};
 	}
 }

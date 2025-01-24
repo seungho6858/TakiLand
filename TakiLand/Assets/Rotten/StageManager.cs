@@ -32,17 +32,20 @@ public class StageManager : MonoSingleton<StageManager>
 
     private void Start()
     {
-        CurrentStage = 1;
+        Initialize();
 
         // TODO : 일단은 버튼으로 분리. 나중에 합치기
         // PlayFullSequence().Forget();
     }
 
+    private void Initialize()
+    {
+        CurrentStage = 1;
+        BettingManager.Instance.Initialize();   
+    }
+
     public async UniTaskVoid PlayFullSequence() 
     {
-            
-        BettingManager.Instance.Initialize();
-
         int totalStage = Define.Instance.GetValue("TotalStage");
         for (CurrentStage = 1; CurrentStage < totalStage; CurrentStage++)
         {
@@ -72,13 +75,15 @@ public class StageManager : MonoSingleton<StageManager>
 
     public void EndBattle(Team team)
     {
+        Debug.Log("전투종료!!");
+        
         _battleEndFlag = true;
         _results[CurrentStage] = team;
         
         BettingManager.Instance.SettleBets(team, CurrentStage);
     }
 
-    public void ChangeStage(int targetStage)
+    public void Cheat_ChangeStage(int targetStage)
     {
         CurrentStage = targetStage;
     }

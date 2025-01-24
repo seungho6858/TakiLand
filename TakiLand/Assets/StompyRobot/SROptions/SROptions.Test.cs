@@ -20,22 +20,37 @@ public partial class SROptions
     private int _targetStage = 1;
 
     [Category("Stage")]
-    public int TestShort
+    public int Stage
     {
         get => _targetStage;
         set => _targetStage = value;
     }
 
     [Category("Stage")]
-    public void TestAction()
+    public void 스테이지_변경()
     {
-        StageManager.Instance.ChangeStage(_targetStage);
+        StageManager.Instance.Cheat_ChangeStage(Stage);
     }
     
     [Category("Stage")]
     public void 풀_기능_테스트()
     {
         StageManager.Instance.PlayFullSequence().Forget();
+    }
+    
+    private int _targetGold = 1;
+
+    [Category("Gold")]
+    public int Gold
+    {
+        get => _targetGold;
+        set => _targetGold = value;
+    }
+    
+    [Category("Gold")]
+    public void 골드_변경()
+    {
+        BettingManager.Instance.Cheat_SetGold(Gold);
     }
 
 
