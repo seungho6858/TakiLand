@@ -188,7 +188,7 @@ namespace Mib.Data
 				AssetDatabase.DeleteAsset(SCRIPT_PATH);
 			}
 
-			string[] files = Directory.GetFiles(TABLE_ROOT, "*.xlsx");
+			string[] files = Directory.GetFiles(TABLE_ROOT, "*.csv");
 			List<(string baseName, string derivedName)> baseDerivedChecker = new();
 
 			foreach (string filePath in files)

@@ -43,7 +43,7 @@ namespace Mib
 			File.Copy(filePath, destFilePath, true);
 			FileStream fileStream = File.Open(destFilePath, FileMode.Open, FileAccess.Read);
 
-			IExcelDataReader reader = ExcelReaderFactory.CreateReader(fileStream, new ExcelReaderConfiguration
+			IExcelDataReader reader = ExcelReaderFactory.CreateCsvReader(fileStream, new ExcelReaderConfiguration
 			{
 				FallbackEncoding = Encoding.UTF8,
 			});
