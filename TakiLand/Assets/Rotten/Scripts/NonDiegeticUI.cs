@@ -14,6 +14,7 @@ public class NonDiegeticUI : MonoBehaviour
 	{
 		_battleStartButton.onClick.AddListener(() =>
 		{
+			Debug.Log("Battle Start");
 			StageManager.Instance.BattingProcess().Forget();
 		});
 	}
