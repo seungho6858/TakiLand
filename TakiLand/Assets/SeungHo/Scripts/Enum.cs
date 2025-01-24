@@ -9,7 +9,7 @@ public enum Team
 {
     Red,
     Blue,
-    End
+    None
 }
 
 public enum SpecialAction

@@ -12,20 +12,34 @@ public partial class BattleManager : MonoBehaviour
     
     public List<BattleUnit> listUnits;
 
-    public static GameState GameState;
+    private static GameState _GameState;
+    public static GameState GameState
+    {
+        get => _GameState;
+        set
+        {
+            _GameState = value;
+            OnBattleStateChanged?.Invoke(_GameState);
+        }
+    }
     
     public static System.Action<int, int> OnTeamCountChanged;
     public static System.Action<GameState> OnBattleStateChanged;
     public static System.Action<int> onBattleTimer;
+    public static System.Action<Team> onTeamWin;
 
     private const int TIMER = 30;
     private float timer;
     private int c;
-    
-    private void InstanceOnOnBattleStart(Formation.Data data1, Formation.Data data2)
+
+    private void OnBattleStart()
     {
         GameState = GameState.Battle;
-        OnBattleStateChanged?.Invoke(GameState);
+    }
+    
+    private void OnStageChanged(Formation.Data data1, Formation.Data data2)
+    {
+        GameState = GameState.Ready;
 
         timer = c = TIMER;
 
@@ -58,7 +72,9 @@ public partial class BattleManager : MonoBehaviour
         
         unit.transform.SetParent(instance.transform);
         unit.SetTeam(team, specialAction);
-        unit.SetStat(10f, 1f, 1f, 1f);
+
+        Ability.Instance.Table.TryGetValue(new Ability.Key(specialAction), out var value);
+        unit.SetStat(value.MaxHp, value.Damage, value.MoveSpeed, value.AttackSpeed);
         
         instance.listUnits.Add(unit);
         instance.TeamCountChanged();
@@ -85,7 +101,7 @@ public partial class BattleManager : MonoBehaviour
             if (timer <= 0f)
             {
                 GameState = GameState.End;
-                OnBattleStateChanged?.Invoke(GameState);
+                onTeamWin?.Invoke(Team.None);
             }
         }
     }
@@ -99,6 +115,12 @@ public partial class BattleManager : MonoBehaviour
         Debug.Log($"Team B : {teamB}");
 
         OnTeamCountChanged?.Invoke(teamA, teamB);
+
+        if (GameState == GameState.Battle && (teamA == 0) || teamB == 0)
+        {
+            GameState = GameState.End;
+            onTeamWin?.Invoke(teamA > 0 ? Team.Red : Team.Blue);
+        }
     }
     
     private void Awake()
@@ -108,9 +130,9 @@ public partial class BattleManager : MonoBehaviour
         listUnits = new List<BattleUnit>();
 
         GameState = GameState.Ready;
-        OnBattleStateChanged?.Invoke(GameState);
         
-        StageManager.Instance.OnStageChanged += InstanceOnOnBattleStart;
+        StageManager.Instance.OnStageChanged += OnStageChanged;
+        StageManager.Instance.OnBattleStart += OnBattleStart;
     }
 
 
@@ -118,7 +140,8 @@ public partial class BattleManager : MonoBehaviour
     {
         instance = null;
         
-        StageManager.Instance.OnStageChanged -= InstanceOnOnBattleStart;
+        StageManager.Instance.OnStageChanged -= OnStageChanged;
+        StageManager.Instance.OnBattleStart -= OnBattleStart;
     }
     
     #if UNITY_EDITOR

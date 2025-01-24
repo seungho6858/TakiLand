@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -10,7 +11,9 @@ public partial class BattleUnit : MonoBehaviour
     public SpecialAction specialAction;
     
     [SerializeField] private SpriteRenderer spr;
+    [SerializeField] private TextMeshPro tmpAction;
     [SerializeField] private Rigidbody2D rg;
+    [SerializeField] private Transform trLook;
     private Transform tr;
     
     // 유닛을 다가가자
@@ -31,8 +34,9 @@ public partial class BattleUnit : MonoBehaviour
         this.specialAction = specialAction;
         
         spr.color = team == Team.Red ? Color.red : Color.blue;
+        tmpAction.text = specialAction.ToString();
     }
-
+    
     public void SetStat(float hp, float atk, float moveSpeed, float attackSpeed)
     {
         this.hp = hp;
@@ -50,15 +54,22 @@ public partial class BattleUnit : MonoBehaviour
     private void CheckAttackEnemy()
     {
         this.rangeUnit = FindNearest(this.listRangeUnits);
-        
+
+        if (rangeUnit != null)
+        {
+            Look(rangeUnit.GetPos().x - GetPos().x);
+        }
     }
     
     private void CheckFindEnemy()
     {
         this.nearUnit = FindNearest(this.listFindUnits);
-        
-        if(nearUnit != null)
+
+        if (nearUnit != null)
+        {
+            Look(nearUnit.GetPos().x - GetPos().x);
             Debug.DrawLine(GetPos(), this.nearUnit.GetPos(), team == Team.Red ? Color.red : Color.blue, 1f);
+        }
     }
     
     private BattleUnit FindNearest(List<BattleUnit> units)
@@ -87,6 +98,18 @@ public partial class BattleUnit : MonoBehaviour
         return nearestUnit; // 가장 가까운 유닛 반환
     }
 
+    private void Look(float diff)
+    {
+        if (Mathf.Abs(diff) > 0.1f)
+        {
+            Vector3 v = trLook.localScale;
+
+            v.x = diff >= 0f ? 1f : -1f;
+
+            trLook.localScale = v;
+        }
+    }
+    
     public Vector2 GetPos() => tr.position;
 }
 
@@ -100,17 +123,20 @@ public partial class BattleUnit
     
     private void FixedUpdate()
     {
-        if (this.rangeUnit != null)
+        if (BattleManager.GameState == GameState.Battle)
         {
-            // 주위에 공격할 유닛이 있다!
-        }
-        else if (this.nearUnit != null)
-        {
-            // 가장 가까운 적에게 다가간다!
-            Vector2 vDir = this.nearUnit.GetPos() - this.GetPos();
-            vDir.Normalize();
+            if (this.rangeUnit != null)
+            {
+                // 주위에 공격할 유닛이 있다!
+            }
+            else if (this.nearUnit != null)
+            {
+                // 가장 가까운 적에게 다가간다!
+                Vector2 vDir = this.nearUnit.GetPos() - this.GetPos();
+                vDir.Normalize();
 
-            rg.position += vDir * (moveSpeed * Time.deltaTime);
+                rg.position += vDir * (moveSpeed * Time.deltaTime);
+            }
         }
     }
 
@@ -128,15 +154,19 @@ public partial class BattleUnit
 
     private void Update()
     {
-        coolTime -= Time.deltaTime;
-        if (coolTime <= 0f)
+        if (BattleManager.GameState == GameState.Battle)
         {
-            if (this.rangeUnit != null)
+            coolTime -= Time.deltaTime;
+            if (coolTime <= 0f)
             {
-                coolTime = attackSpeed;
-                Attack();
+                if (this.rangeUnit != null)
+                {
+                    coolTime = attackSpeed;
+                    Attack();
+                }
             }
         }
+        
     }
     
     public bool GetDamage(float dmg)
@@ -234,4 +264,10 @@ public partial class BattleUnit
         listFindUnits.Clear();
     }
 
+    public enum Dir
+    {
+        Right,
+        Left,
+        
+    }
 }
