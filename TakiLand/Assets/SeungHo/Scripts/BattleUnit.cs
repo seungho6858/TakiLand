@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class BattleUnit : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Team team;
+    [SerializeField] private SpriteRenderer spr;
 
-    // Update is called once per frame
-    void Update()
+    public void SetTeam()
     {
         
     }
+    
 }
