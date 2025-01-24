@@ -11,9 +11,18 @@ public partial class BattleManager : MonoBehaviour
     private static BattleManager instance;
     
     public List<BattleUnit> listUnits;
-    public static System.Action<int, int> OnTeamCountChanged;
+
+    public static GameState GameState;
     
-    public static void SummonUnit(Team team, SpecialAction specialAction, Vector2 vPos)
+    public static System.Action<int, int> OnTeamCountChanged;
+    public static System.Action<GameState> OnBattleStateChanged;
+    public static System.Action<int> onBattleTimer;
+
+    private const int TIMER = 30;
+    private float timer;
+    private int c;
+    
+    private static void SummonUnit(Team team, SpecialAction specialAction, Vector2 vPos)
     {
         var unit = (Instantiate(Resources.Load("BattleUnit"), vPos, Quaternion.identity) as GameObject).GetComponent<BattleUnit>();
         
@@ -29,6 +38,34 @@ public partial class BattleManager : MonoBehaviour
     {
         instance.listUnits.Remove(unit);
         instance.TeamCountChanged();
+    }
+    
+    private void InstanceOnOnBattleStart(Formation arg1, Formation arg2)
+    {
+        GameState = GameState.Battle;
+        OnBattleStateChanged?.Invoke(GameState);
+
+        timer = c = TIMER;
+    }
+    
+    private void Update()
+    {
+        if (GameState == GameState.Battle)
+        {
+            timer -= Time.deltaTime;
+
+            if ((int)timer < c)
+            {
+                c = (int) timer + 1;
+                onBattleTimer?.Invoke(c);
+            }
+
+            if (timer <= 0f)
+            {
+                GameState = GameState.End;
+                OnBattleStateChanged?.Invoke(GameState);
+            }
+        }
     }
 
     private void TeamCountChanged()
@@ -47,11 +84,19 @@ public partial class BattleManager : MonoBehaviour
         instance = this;
 
         listUnits = new List<BattleUnit>();
+
+        GameState = GameState.Ready;
+        OnBattleStateChanged?.Invoke(GameState);
+        
+        StageManager.Instance.OnBattleStart += InstanceOnOnBattleStart;
     }
+
 
     private void OnDestroy()
     {
         instance = null;
+        
+        StageManager.Instance.OnBattleStart -= InstanceOnOnBattleStart;
     }
     
     #if UNITY_EDITOR

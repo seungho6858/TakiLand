@@ -197,6 +197,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   listUnits: []
+  trA: {fileID: 536452328}
+  trB: {fileID: 364028959}
 --- !u!4 &181585034
 Transform:
   m_ObjectHideFlags: 0

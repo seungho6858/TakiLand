@@ -19,3 +19,12 @@ public enum SpecialAction
     Immobility,
     SpeedBoost
 }
+
+public enum GameState
+{
+    Ready,
+    
+    Battle,
+    
+    End
+}
