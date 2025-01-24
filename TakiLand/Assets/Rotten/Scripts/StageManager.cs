@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Cysharp.Threading.Tasks;
 using EnumsNET;
 using Mib;
@@ -9,7 +10,7 @@ using UnityEngine;
 
 public class StageManager : MonoSingleton<StageManager>
 {
-    public event Action<Formation, Formation> OnBattleStart;
+    public event Action<Formation.Data, Formation.Data> OnBattleStart;
     
     protected override void OnAwake()
     {
@@ -19,11 +20,19 @@ public class StageManager : MonoSingleton<StageManager>
 
     private async UniTaskVoid Start()
     {
-        
+        _currentStage = 1;
     }
 
-    private async UniTask BattingProcess()
+    private int _currentStage;
+    
+    public async UniTask BattingProcess()
     {
+        Formation.Data[] positions = Formation.Instance.Table
+            .Where(data => data.Stage == _currentStage)
+            .OrderBy(_ => Guid.NewGuid())
+            .ToArray();
+        
+        OnBattleStart?.Invoke(positions[0], positions[1]);
         
     }
 
