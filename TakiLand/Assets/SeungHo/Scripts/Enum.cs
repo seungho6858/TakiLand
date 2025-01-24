@@ -1,3 +1,10 @@
+public enum BetType
+{
+    Red,
+    Blue,
+    NoOne,
+}
+
 public enum Team
 {
     Red,

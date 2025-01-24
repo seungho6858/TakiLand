@@ -12,6 +12,10 @@ public class StageManager : MonoSingleton<StageManager>
 {
     public event Action<Formation.Data, Formation.Data> OnStageChanged;
     public event Action OnBattleStart;
+
+
+    private bool _battleEndFlag;
+    private int _currentStage;
     
     protected override void OnAwake()
     {
@@ -22,11 +26,10 @@ public class StageManager : MonoSingleton<StageManager>
     private async UniTaskVoid Start()
     {
         _currentStage = 1;
+        
     }
-
-    private int _currentStage;
     
-    public async UniTask BattingProcess()
+    public async UniTask BettingProcess()
     {
         Formation.Data[] positions = Formation.Instance.Table
             .Where(data => data.Stage == _currentStage)
@@ -40,11 +43,14 @@ public class StageManager : MonoSingleton<StageManager>
     public async UniTask BattleProcess()
     {
         OnBattleStart?.Invoke();
+        
+        await UniTask.WaitUntil(() => Instance._battleEndFlag);
+        _battleEndFlag = false;
     }
     
 
     public void EndBattle()
     {
-        
+        _battleEndFlag = true;
     }
 }

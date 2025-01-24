@@ -17,7 +17,7 @@ public class NonDiegeticUI : MonoBehaviour
 	{
 		_testFormationButton.onClick.AddListener(() =>
 		{
-			StageManager.Instance.BattingProcess().Forget();
+			StageManager.Instance.BettingProcess().Forget();
 		});
 		
 		_battleStartButton.onClick.AddListener(() =>
