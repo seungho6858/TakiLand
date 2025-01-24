@@ -372,46 +372,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Betting
       objectReference: {fileID: 0}
-    - target: {fileID: 3000255823493125505, guid: 69358e4019a4b074ab2fc6da10ca77f5, type: 3}
-      propertyPath: m_fontSize
-      value: 68.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3000255823493125505, guid: 69358e4019a4b074ab2fc6da10ca77f5, type: 3}
-      propertyPath: m_fontStyle
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3000255823493125505, guid: 69358e4019a4b074ab2fc6da10ca77f5, type: 3}
-      propertyPath: m_enableAutoSizing
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3417583886624320599, guid: 69358e4019a4b074ab2fc6da10ca77f5, type: 3}
-      propertyPath: m_fontSize
-      value: 72
-      objectReference: {fileID: 0}
-    - target: {fileID: 3417583886624320599, guid: 69358e4019a4b074ab2fc6da10ca77f5, type: 3}
-      propertyPath: m_fontStyle
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3417583886624320599, guid: 69358e4019a4b074ab2fc6da10ca77f5, type: 3}
-      propertyPath: m_enableAutoSizing
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776520131444178968, guid: 69358e4019a4b074ab2fc6da10ca77f5, type: 3}
-      propertyPath: m_text
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776520131444178968, guid: 69358e4019a4b074ab2fc6da10ca77f5, type: 3}
-      propertyPath: m_fontSize
-      value: 72
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776520131444178968, guid: 69358e4019a4b074ab2fc6da10ca77f5, type: 3}
-      propertyPath: m_fontStyle
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4776520131444178968, guid: 69358e4019a4b074ab2fc6da10ca77f5, type: 3}
-      propertyPath: m_enableAutoSizing
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7360282073748609371, guid: 69358e4019a4b074ab2fc6da10ca77f5, type: 3}
       propertyPath: m_Pivot.x
       value: 1
@@ -498,7 +458,7 @@ PrefabInstance:
       objectReference: {fileID: 8729112554243722923, guid: 69358e4019a4b074ab2fc6da10ca77f5, type: 3}
     - target: {fileID: 8729112554243722923, guid: 69358e4019a4b074ab2fc6da10ca77f5, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.size
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8729112554243722923, guid: 69358e4019a4b074ab2fc6da10ca77f5, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[0]
@@ -534,7 +494,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8729112554243722923, guid: 69358e4019a4b074ab2fc6da10ca77f5, type: 3}
       propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.size
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8729112554243722923, guid: 69358e4019a4b074ab2fc6da10ca77f5, type: 3}
       propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[0]

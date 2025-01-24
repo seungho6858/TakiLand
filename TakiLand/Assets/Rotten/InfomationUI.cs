@@ -1,18 +1,30 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class InfomationUI : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	[SerializeField]
+	private TextMeshProUGUI _currentStageText;
+	
+	[SerializeField]
+	private TextMeshProUGUI _remainTimeText;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	private void Awake()
+	{
+		_currentStageText.text = "";
+		_remainTimeText.text = "";
+		
+		BattleManager.onBattleTimer += remainTime =>
+		{
+			_remainTimeText.text = remainTime.ToString("N0");
+		};
+
+		StageManager.Instance.OnBattleStart += () =>
+		{
+			_currentStageText.text = $"Round {StageManager.Instance.CurrentStage.ToString()}";
+		};
+	}
 }
