@@ -44,6 +44,8 @@ public class Bullet : Effect
 
 	private void Hide()
 	{
+		
+		
 		// 총알을 풀로 반환
 		EffectManager.Instance.ReturnEffect("Bullet", gameObject);
 	}

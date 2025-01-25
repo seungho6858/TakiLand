@@ -40,6 +40,11 @@ public partial class BattleManager : MonoBehaviour
     {
         GameState = GameState.Battle;
     }
+
+    public static int GetGreedCount(Team team)
+    {
+        return instance.listUnits.Count(x => x.team == team && x.specialAction == SpecialAction.Greed);
+    }
     
     private void OnBattleStateChangedFunc(GameState obj)
     {
@@ -156,6 +161,8 @@ public partial class BattleManager : MonoBehaviour
         {
             GameState = GameState.End;
             onTeamWin?.Invoke(teamA > 0 ? Team.Red : Team.Blue);
+            
+            Debug.Log("게임 종료!");
         }
     }
     
