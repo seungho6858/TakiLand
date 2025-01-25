@@ -232,7 +232,7 @@ MonoBehaviour:
       Data: 1
     - Name: AttackSpeed
       Entry: 4
-      Data: 1
+      Data: 1.5
     - Name: Range
       Entry: 4
       Data: 5

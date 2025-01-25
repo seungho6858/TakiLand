@@ -64,7 +64,7 @@ MonoBehaviour:
       Data: 5
     - Name: RewardRate
       Entry: 3
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -100,7 +100,7 @@ MonoBehaviour:
       Data: 5
     - Name: RewardRate
       Entry: 3
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -136,7 +136,7 @@ MonoBehaviour:
       Data: 10
     - Name: RewardRate
       Entry: 3
-      Data: 1
+      Data: 3
     - Name: 
       Entry: 8
       Data: 
@@ -172,7 +172,7 @@ MonoBehaviour:
       Data: 30
     - Name: RewardRate
       Entry: 3
-      Data: 2
+      Data: 3
     - Name: 
       Entry: 8
       Data: 
@@ -244,7 +244,7 @@ MonoBehaviour:
       Data: 250
     - Name: RewardRate
       Entry: 3
-      Data: 2
+      Data: 4
     - Name: 
       Entry: 8
       Data: 
@@ -280,7 +280,7 @@ MonoBehaviour:
       Data: 500
     - Name: RewardRate
       Entry: 3
-      Data: 3
+      Data: 4
     - Name: 
       Entry: 8
       Data: 
@@ -316,7 +316,7 @@ MonoBehaviour:
       Data: 1250
     - Name: RewardRate
       Entry: 3
-      Data: 3
+      Data: 5
     - Name: 
       Entry: 8
       Data: 
@@ -352,7 +352,7 @@ MonoBehaviour:
       Data: 3000
     - Name: RewardRate
       Entry: 3
-      Data: 3
+      Data: 5
     - Name: 
       Entry: 8
       Data: 
@@ -385,7 +385,7 @@ MonoBehaviour:
       Data: 20
     - Name: MaximumCost
       Entry: 3
-      Data: 13536
+      Data: 17514
     - Name: RewardRate
       Entry: 3
       Data: 10
