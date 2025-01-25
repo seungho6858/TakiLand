@@ -38,6 +38,22 @@ public class BettingHistoryUI : MonoBehaviour
 			
 			_scores[scoreIndex].UpdateScore(won, goldDelta);
 
+			if (stage > 1)
+			{
+				Show();
+			}
 		};
+		
+		Hide();
+	}
+
+	public void Show()
+	{
+		gameObject.SetActive(true);
+	}
+
+	public void Hide()
+	{
+		gameObject.SetActive(false);
 	}
 }
