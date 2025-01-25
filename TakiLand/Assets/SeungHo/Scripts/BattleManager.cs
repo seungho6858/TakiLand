@@ -199,7 +199,11 @@ public partial class BattleManager : MonoBehaviour
         return instance.listUnits.FindAll(x => x.team == team && Vector2.Distance(x.GetPos(), vPos) <= range);
     }
 
-    public static string nick;
+    public static string nick
+    {
+        get;
+        set;
+    }
     
     public static void LeaderboardPlayerRecord(long gold, int stage, string nickName)
     {
@@ -231,7 +235,6 @@ public partial class BattleManager : MonoBehaviour
         //SoundManager.PlayLoopSound("track_shortadventure_loop");    
         
         DOTween.SetTweensCapacity(2000, 100); // Tweens: 2000, Sequences: 100
-
     }
 
     private void Awake()
@@ -258,8 +261,49 @@ public partial class BattleManager : MonoBehaviour
     
     #if UNITY_EDITOR
 
+    private int cnt = 0;
     private void LateUpdate()
     {
+        
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            cnt++;
+            Team team = cnt %2 == 0 ? Team.Red : Team.Blue;
+            Vector2 vPos= Vector2.zero;
+            
+            if(team == Team.Red)
+                vPos = new Vector2(
+                    UnityEngine.Random.Range(-10f, -4f  ), 
+                    UnityEngine.Random.Range(-8f, 8f));
+            else
+                vPos = new Vector2(
+                    UnityEngine.Random.Range(4f, 10f  ), 
+                    UnityEngine.Random.Range(-8f, 8f));
+
+            SpecialAction action = team == Team.Red ? SpecialAction.SpeedBoost : SpecialAction.Taunt;
+            
+            var unit = (Instantiate(Resources.Load("BattleUnit"), vPos, Quaternion.identity) as GameObject).GetComponent<BattleUnit>();
+        
+            unit.transform.SetParent(instance.transform);
+            unit.SetTeam(team, action);
+
+            Ability.Instance.Table.TryGetValue(new Ability.Key(action), out var value);
+            unit.SetStat(value.MaxHp, value.Damage, value.MoveSpeed, value.AttackSpeed, value.Range, (RangeType) value.IsRangedUnit);
+        
+            instance.listUnits.Add(unit);
+            instance.TeamCountChanged(false);
+            
+            
+            
+            
+            
+            
+            
+            
+        }
+
+        return;
+        
         if (Input.GetKeyDown(KeyCode.C))
         {
             var team = UnityEngine.Random.Range(0, 2) == 0 ? Team.Red : Team.Blue;

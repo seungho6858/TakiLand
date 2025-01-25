@@ -37,7 +37,10 @@ public class GameResultPopup : PopupBase
             BattleManager.nick = nick;
             
             ServerManager.instance.LeaderboardPlayerRecord(BettingManager.Instance.CurrentGold, 
-                JsonUtility.ToJson(new BattleManager.Rank()), nick, 
+                JsonUtility.ToJson(new BattleManager.Rank()
+                {
+                    nick = nick, stage = StageManager.Instance.CurrentStage
+                }), nick, 
                 b =>
                 {
                     Mib.UI.PopupManager.Instance.Open<Popup_Ranking>();
@@ -53,8 +56,6 @@ public class GameResultPopup : PopupBase
                 BettingManager.Instance.CurrentGold,
                 StageManager.Instance.CurrentStage, 
                 GetPlayerNickName());
-            
-            SceneLoader.ChangeScene(Constant.TitleScene).Forget();
         });
     }
 

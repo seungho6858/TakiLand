@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using Mib;
+using Mib.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -36,7 +37,7 @@ public partial class Title : MonoBehaviour
 		
 		_exitButton.onClick.AddListener(() =>
 		{
-			SceneLoader.ChangeScene(Constant.BattleScene).Forget();
+			Mib.UI.PopupManager.Instance.Open<Popup_Ranking>();
 			// TODO: 페이크 버튼 만들기
 		});
 		

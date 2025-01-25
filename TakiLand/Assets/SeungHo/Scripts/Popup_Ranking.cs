@@ -13,8 +13,6 @@ using UnityEngine.UI;
 [PopupPath("Popup_Ranking")]
 public class Popup_Ranking : PopupBase
 {
-    
-    
     [SerializeField] private UiRankElement uiElement;
     [SerializeField] private UiRankElement mine;
 
@@ -68,6 +66,7 @@ public class Popup_Ranking : PopupBase
 
     protected override void OnClose()
     {
-        SceneManager.LoadScene("01.Title");
+            
+        SceneLoader.ChangeScene(Constant.TitleScene).Forget();
     }
 }
