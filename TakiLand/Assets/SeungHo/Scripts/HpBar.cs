@@ -23,7 +23,7 @@ public class HpBar : MonoBehaviour
     {
         oBar.SetActive(b);
 
-        if (b) duration = 1f;
+        if (b) this.duration = duration;
     }
 
     private void Update()

@@ -102,7 +102,8 @@ public partial class BattleUnit : MonoBehaviour
             unitState = UnitState.Move;
             
             Look(nearUnit.GetPos().x - GetPos().x);
-            Debug.DrawLine(GetPos(), this.nearUnit.GetPos(), team == Team.Red ? Color.red : Color.blue, 1f);
+            Debug.DrawLine(GetPos(), this.nearUnit.GetPos(),
+                team == Team.Red ? Color.red : Color.blue, 1f);
         }
     }
     
@@ -232,6 +233,8 @@ public partial class BattleUnit
             }
             
             Die();
+            
+            SoundManager.PlaySound("52_Dive_02");
         }
         else
         {
@@ -247,7 +250,8 @@ public partial class BattleUnit
                 int life = rangeUnit.life;
                 ef.SetTarget(rangeUnit, () =>
                 {
-                    if(life == rangeUnit.life)
+                    if(rangeUnit != null &&
+                        life == rangeUnit.life)
                         rangeUnit.GetDamage(this, GetAtk());
                 });
             }
@@ -312,7 +316,7 @@ public partial class BattleUnit
         if (null != attacker)
         {
             vKnockBack = (GetPos() - attacker.GetPos()).normalized;
-            knockBack = 0.12f;
+            knockBack = 0.08f;
         }
         
         var ef = EffectManager.Instance.SpawnEffect("Ef_DamageFont", GetPos(), Quaternion.identity)

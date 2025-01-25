@@ -20,7 +20,6 @@ public class Bullet : Effect
 					life != trTarget.life ||
 				   !trTarget.gameObject.activeSelf)
 					Hide();
-				
 			})
 			.OnComplete(() =>
 			{

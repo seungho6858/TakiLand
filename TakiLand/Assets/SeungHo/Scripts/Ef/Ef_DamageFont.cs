@@ -9,8 +9,7 @@ public class Ef_DamageFont : Effect
     [SerializeField] private TextMeshPro damageText;
     [SerializeField] private float moveDistance = 1f; // 위로 올라가는 거리
     [SerializeField] private float fadeDuration = 1f; // 페이드 아웃 시간
-
-
+    
     public void SetDamage(float dmg)
     {
         damageText.text = $"{(int)dmg}";

@@ -9,6 +9,11 @@ public class MainCamera : MonoBehaviour
     [SerializeField]
     private Camera cam;
 
+    private void OnBattleStart()
+    {
+        transform.DOMove(new Vector3(0f, 0f, -10f), 0.5f);
+        cam.DOOrthoSize(10f, 0.5f);
+    }
     
     private void OnBattleStateChanged(GameState obj)
     {
@@ -21,8 +26,6 @@ public class MainCamera : MonoBehaviour
                 break;
             
             case GameState.Battle:
-                transform.DOMove(new Vector3(0f, 0f, -10f), 0.5f);
-                cam.DOOrthoSize(10f, 0.5f);
                 break;
         }
     }
@@ -30,10 +33,13 @@ public class MainCamera : MonoBehaviour
     private void Awake()
     {
         BattleManager.OnBattleStateChanged += OnBattleStateChanged;
+        StageManager.Instance.OnBattleStart += OnBattleStart;
+        
     }
 
     private void OnDestroy()
     {
         BattleManager.OnBattleStateChanged -= OnBattleStateChanged;
+        StageManager.Instance.OnBattleStart -= OnBattleStart;
     }
 }
