@@ -25,6 +25,16 @@ public class BettingHistoryUI : MonoBehaviour
 		
 		StageManager.Instance.OnStageChanged +=(red, blue, stage) =>
 		{
+			if (stage <= 1)
+			{
+				return;
+			}
+
+			if (!gameObject.activeSelf)
+			{
+				Show();
+			}
+			
 			int prevStage = stage - 1;
 			int scoreIndex = prevStage - 1;
 			
@@ -37,11 +47,6 @@ public class BettingHistoryUI : MonoBehaviour
 				: -prevBet.BetAmount;
 			
 			_scores[scoreIndex].UpdateScore(won, goldDelta);
-
-			if (stage > 1)
-			{
-				Show();
-			}
 		};
 		
 		Hide();
