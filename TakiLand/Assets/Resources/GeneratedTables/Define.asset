@@ -82,7 +82,7 @@ MonoBehaviour:
       Data: TotalStage
     - Name: Value
       Entry: 3
-      Data: 10
+      Data: 40
     - Name: 
       Entry: 8
       Data: 
