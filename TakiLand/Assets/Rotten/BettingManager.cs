@@ -120,17 +120,18 @@ public class BettingManager : MonoSingleton<BettingManager>
 	public void SettleBets(Team team, int currentStage)
 	{
 		bool isWin = CurrentBet.BetTeam == team;
-
-		if (isWin)
+		if (!isWin)
 		{
-			// 남은 탐욕슬라임 개수만큼 추가 리워드 적용
-			int extraRewardRate = BattleManager.GetGreedCount(Team.Blue);
-			CurrentBet.ExtraRewardRate = extraRewardRate;
-			
-			// 리워드 적용 
-			var reward = Stage.Instance.GetReward(currentStage, CurrentBet);
-			_gold.SetValue(CurrentGold + reward);
+			return;
 		}
+
+		// 남은 탐욕슬라임 개수만큼 추가 리워드 적용
+		int extraRewardRate = BattleManager.GetGreedCount(team);
+		CurrentBet.ExtraRewardRate = extraRewardRate;
+			
+		// 리워드 적용 
+		int reward = Stage.Instance.GetReward(currentStage, CurrentBet);
+		_gold.SetValue(CurrentGold + reward);
 	}
 
 	public (bool won, int goldDelta) CalculateResult(int stage)
