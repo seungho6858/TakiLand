@@ -60,7 +60,7 @@ public partial class BattleManager : MonoBehaviour
         }
     }
 
-    private void OnStageChanged(Formation.Data data1, Formation.Data data2, int stage)
+    private void OnStageChanged(Formation.Data redTeamData, Formation.Data blueTeamData, int stage)
     {
         GameState = GameState.Ready;
 
@@ -73,10 +73,10 @@ public partial class BattleManager : MonoBehaviour
         listUnits.Clear();
         
         Debug.Log("TeamA");
-        Setting(Team.Red, data1);
+        Setting(Team.Red, redTeamData);
         
         Debug.Log("TeamB");
-        Setting(Team.Blue, data1);
+        Setting(Team.Blue, blueTeamData);
 
         void Setting(Team team, Formation.Data data)
         {
