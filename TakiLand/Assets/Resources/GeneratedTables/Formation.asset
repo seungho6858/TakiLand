@@ -27,7 +27,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 50
+      Data: 159
     - Name: 
       Entry: 7
       Data: 1|Mib.Data.Formation+Data, Assembly-CSharp
@@ -42,13 +42,37 @@ MonoBehaviour:
       Data: 2|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
       Data: 2
     - Name: 
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 4
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -72,16 +96,37 @@ MonoBehaviour:
       Data: 4|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 3
+      Data: 10
     - Name: 
       Entry: 3
-      Data: 8
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 2
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 8
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 4
     - Name: 
       Entry: 13
       Data: 
@@ -105,16 +150,37 @@ MonoBehaviour:
       Data: 6|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 3
-    - Name: 
-      Entry: 3
       Data: 10
     - Name: 
       Entry: 3
-      Data: 3
+      Data: 2
     - Name: 
       Entry: 3
-      Data: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -138,13 +204,37 @@ MonoBehaviour:
       Data: 8|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 10
     - Name: 
       Entry: 3
-      Data: 5
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 9
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 4
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 4
     - Name: 
       Entry: 13
       Data: 
@@ -159,22 +249,46 @@ MonoBehaviour:
       Data: 9|Mib.Data.Formation+Data, Assembly-CSharp
     - Name: Stage
       Entry: 3
-      Data: 2
+      Data: 3
     - Name: Variation
       Entry: 3
-      Data: 2
+      Data: 0
     - Name: Positions
       Entry: 7
       Data: 10|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
       Data: 2
     - Name: 
       Entry: 3
-      Data: 7
+      Data: 2
     - Name: 
       Entry: 3
-      Data: 5
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -192,22 +306,43 @@ MonoBehaviour:
       Data: 3
     - Name: Variation
       Entry: 3
-      Data: 0
+      Data: 1
     - Name: Positions
       Entry: 7
       Data: 12|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 3
+      Data: 10
     - Name: 
       Entry: 3
-      Data: 3
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 3
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 4
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 4
     - Name: 
       Entry: 13
       Data: 
@@ -222,22 +357,46 @@ MonoBehaviour:
       Data: 13|Mib.Data.Formation+Data, Assembly-CSharp
     - Name: Stage
       Entry: 3
-      Data: 3
+      Data: 4
     - Name: Variation
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Positions
       Entry: 7
       Data: 14|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
       Data: 2
     - Name: 
       Entry: 3
-      Data: 9
+      Data: 2
     - Name: 
       Entry: 3
-      Data: 1
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 4
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -252,22 +411,46 @@ MonoBehaviour:
       Data: 15|Mib.Data.Formation+Data, Assembly-CSharp
     - Name: Stage
       Entry: 3
-      Data: 3
+      Data: 4
     - Name: Variation
       Entry: 3
-      Data: 2
+      Data: 1
     - Name: Positions
       Entry: 7
       Data: 16|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
       Data: 2
     - Name: 
       Entry: 3
-      Data: 8
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 10
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 4
+    - Name: 
+      Entry: 3
+      Data: 4
     - Name: 
       Entry: 13
       Data: 
@@ -282,22 +465,46 @@ MonoBehaviour:
       Data: 17|Mib.Data.Formation+Data, Assembly-CSharp
     - Name: Stage
       Entry: 3
-      Data: 3
+      Data: 4
     - Name: Variation
       Entry: 3
-      Data: 3
+      Data: 2
     - Name: Positions
       Entry: 7
       Data: 18|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 10
     - Name: 
       Entry: 3
-      Data: 7
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 9
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 4
+    - Name: 
+      Entry: 3
+      Data: 4
+    - Name: 
+      Entry: 3
+      Data: 5
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -312,7 +519,7 @@ MonoBehaviour:
       Data: 19|Mib.Data.Formation+Data, Assembly-CSharp
     - Name: Stage
       Entry: 3
-      Data: 4
+      Data: 5
     - Name: Variation
       Entry: 3
       Data: 0
@@ -321,16 +528,37 @@ MonoBehaviour:
       Data: 20|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 3
+      Data: 10
     - Name: 
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 1
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 4
+    - Name: 
+      Entry: 3
+      Data: 4
+    - Name: 
+      Entry: 3
+      Data: 5
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -345,7 +573,7 @@ MonoBehaviour:
       Data: 21|Mib.Data.Formation+Data, Assembly-CSharp
     - Name: Stage
       Entry: 3
-      Data: 4
+      Data: 5
     - Name: Variation
       Entry: 3
       Data: 1
@@ -354,7 +582,19 @@ MonoBehaviour:
       Data: 22|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 3
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 3
       Data: 5
@@ -363,7 +603,16 @@ MonoBehaviour:
       Data: 5
     - Name: 
       Entry: 3
-      Data: 5
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 1
     - Name: 
       Entry: 13
       Data: 
@@ -378,7 +627,7 @@ MonoBehaviour:
       Data: 23|Mib.Data.Formation+Data, Assembly-CSharp
     - Name: Stage
       Entry: 3
-      Data: 4
+      Data: 5
     - Name: Variation
       Entry: 3
       Data: 2
@@ -387,13 +636,34 @@ MonoBehaviour:
       Data: 24|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
       Data: 3
     - Name: 
       Entry: 3
-      Data: 10
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 10
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 3
       Data: 10
@@ -411,25 +681,46 @@ MonoBehaviour:
       Data: 25|Mib.Data.Formation+Data, Assembly-CSharp
     - Name: Stage
       Entry: 3
-      Data: 4
+      Data: 6
     - Name: Variation
       Entry: 3
-      Data: 3
+      Data: 0
     - Name: Positions
       Entry: 7
       Data: 26|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
       Data: 3
     - Name: 
       Entry: 3
-      Data: 2
+      Data: 3
     - Name: 
       Entry: 3
-      Data: 2
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 2
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 10
     - Name: 
       Entry: 13
       Data: 
@@ -444,25 +735,46 @@ MonoBehaviour:
       Data: 27|Mib.Data.Formation+Data, Assembly-CSharp
     - Name: Stage
       Entry: 3
-      Data: 4
+      Data: 6
     - Name: Variation
       Entry: 3
-      Data: 4
+      Data: 1
     - Name: Positions
       Entry: 7
       Data: 28|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 3
+      Data: 10
     - Name: 
       Entry: 3
-      Data: 7
+      Data: 8
     - Name: 
       Entry: 3
-      Data: 7
+      Data: 8
     - Name: 
       Entry: 3
-      Data: 7
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -477,28 +789,46 @@ MonoBehaviour:
       Data: 29|Mib.Data.Formation+Data, Assembly-CSharp
     - Name: Stage
       Entry: 3
-      Data: 5
+      Data: 6
     - Name: Variation
       Entry: 3
-      Data: 0
+      Data: 2
     - Name: Positions
       Entry: 7
       Data: 30|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 4
+      Data: 10
     - Name: 
       Entry: 3
-      Data: 8
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 7
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 7
+      Data: 10
     - Name: 
       Entry: 3
-      Data: 7
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -513,22 +843,46 @@ MonoBehaviour:
       Data: 31|Mib.Data.Formation+Data, Assembly-CSharp
     - Name: Stage
       Entry: 3
-      Data: 5
+      Data: 7
     - Name: Variation
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Positions
       Entry: 7
       Data: 32|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 10
     - Name: 
       Entry: 3
-      Data: 8
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 8
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -543,22 +897,46 @@ MonoBehaviour:
       Data: 33|Mib.Data.Formation+Data, Assembly-CSharp
     - Name: Stage
       Entry: 3
-      Data: 5
+      Data: 7
     - Name: Variation
       Entry: 3
-      Data: 2
+      Data: 1
     - Name: Positions
       Entry: 7
       Data: 34|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 10
     - Name: 
       Entry: 3
-      Data: 8
+      Data: 9
     - Name: 
       Entry: 3
-      Data: 8
+      Data: 9
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -573,25 +951,46 @@ MonoBehaviour:
       Data: 35|Mib.Data.Formation+Data, Assembly-CSharp
     - Name: Stage
       Entry: 3
-      Data: 5
+      Data: 7
     - Name: Variation
       Entry: 3
-      Data: 3
+      Data: 2
     - Name: Positions
       Entry: 7
       Data: 36|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 3
+      Data: 10
     - Name: 
       Entry: 3
-      Data: 2
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 2
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 2
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 3
+      Data: 1
     - Name: 
       Entry: 13
       Data: 
@@ -606,25 +1005,46 @@ MonoBehaviour:
       Data: 37|Mib.Data.Formation+Data, Assembly-CSharp
     - Name: Stage
       Entry: 3
-      Data: 5
+      Data: 8
     - Name: Variation
       Entry: 3
-      Data: 4
+      Data: 0
     - Name: Positions
       Entry: 7
       Data: 38|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 3
+      Data: 10
     - Name: 
       Entry: 3
-      Data: 4
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 4
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 4
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 9
+    - Name: 
+      Entry: 3
+      Data: 9
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 9
+    - Name: 
+      Entry: 3
+      Data: 9
     - Name: 
       Entry: 13
       Data: 
@@ -639,25 +1059,46 @@ MonoBehaviour:
       Data: 39|Mib.Data.Formation+Data, Assembly-CSharp
     - Name: Stage
       Entry: 3
-      Data: 5
+      Data: 8
     - Name: Variation
       Entry: 3
-      Data: 5
+      Data: 1
     - Name: Positions
       Entry: 7
       Data: 40|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 3
-    - Name: 
-      Entry: 3
       Data: 10
     - Name: 
       Entry: 3
-      Data: 10
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 10
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 5
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 5
+    - Name: 
+      Entry: 3
+      Data: 5
+    - Name: 
+      Entry: 3
+      Data: 5
     - Name: 
       Entry: 13
       Data: 
@@ -672,31 +1113,46 @@ MonoBehaviour:
       Data: 41|Mib.Data.Formation+Data, Assembly-CSharp
     - Name: Stage
       Entry: 3
-      Data: 6
+      Data: 8
     - Name: Variation
       Entry: 3
-      Data: 0
+      Data: 2
     - Name: Positions
       Entry: 7
       Data: 42|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 5
+      Data: 10
     - Name: 
       Entry: 3
-      Data: 7
+      Data: 8
     - Name: 
       Entry: 3
-      Data: 7
+      Data: 8
     - Name: 
       Entry: 3
-      Data: 7
+      Data: 8
     - Name: 
       Entry: 3
-      Data: 7
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 7
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 8
+    - Name: 
+      Entry: 3
+      Data: 8
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -711,31 +1167,46 @@ MonoBehaviour:
       Data: 43|Mib.Data.Formation+Data, Assembly-CSharp
     - Name: Stage
       Entry: 3
-      Data: 6
+      Data: 9
     - Name: Variation
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Positions
       Entry: 7
       Data: 44|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 5
+      Data: 10
     - Name: 
       Entry: 3
-      Data: 7
+      Data: 3
     - Name: 
       Entry: 3
-      Data: 7
+      Data: 3
     - Name: 
       Entry: 3
-      Data: 7
+      Data: 3
     - Name: 
       Entry: 3
-      Data: 7
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 7
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -750,16 +1221,16 @@ MonoBehaviour:
       Data: 45|Mib.Data.Formation+Data, Assembly-CSharp
     - Name: Stage
       Entry: 3
-      Data: 6
+      Data: 9
     - Name: Variation
       Entry: 3
-      Data: 2
+      Data: 1
     - Name: Positions
       Entry: 7
       Data: 46|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 5
+      Data: 10
     - Name: 
       Entry: 3
       Data: 2
@@ -768,13 +1239,28 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 3
-      Data: 2
+      Data: 1
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 1
     - Name: 
       Entry: 3
       Data: 2
     - Name: 
       Entry: 3
       Data: 2
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -789,31 +1275,46 @@ MonoBehaviour:
       Data: 47|Mib.Data.Formation+Data, Assembly-CSharp
     - Name: Stage
       Entry: 3
-      Data: 6
+      Data: 9
     - Name: Variation
       Entry: 3
-      Data: 3
+      Data: 2
     - Name: Positions
       Entry: 7
       Data: 48|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 5
+      Data: 10
     - Name: 
       Entry: 3
-      Data: 8
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 8
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 8
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 8
+      Data: 7
     - Name: 
       Entry: 3
-      Data: 8
+      Data: 7
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 9
+    - Name: 
+      Entry: 3
+      Data: 9
     - Name: 
       Entry: 13
       Data: 
@@ -828,31 +1329,46 @@ MonoBehaviour:
       Data: 49|Mib.Data.Formation+Data, Assembly-CSharp
     - Name: Stage
       Entry: 3
-      Data: 6
+      Data: 10
     - Name: Variation
       Entry: 3
-      Data: 4
+      Data: 0
     - Name: Positions
       Entry: 7
       Data: 50|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 5
+      Data: 10
     - Name: 
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 1
+      Data: 9
     - Name: 
       Entry: 3
-      Data: 1
+      Data: 7
     - Name: 
       Entry: 3
-      Data: 1
+      Data: 7
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 7
+    - Name: 
+      Entry: 3
+      Data: 7
     - Name: 
       Entry: 13
       Data: 
@@ -867,31 +1383,46 @@ MonoBehaviour:
       Data: 51|Mib.Data.Formation+Data, Assembly-CSharp
     - Name: Stage
       Entry: 3
-      Data: 6
+      Data: 10
     - Name: Variation
       Entry: 3
-      Data: 5
+      Data: 1
     - Name: Positions
       Entry: 7
       Data: 52|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 5
-    - Name: 
-      Entry: 3
       Data: 10
     - Name: 
       Entry: 3
-      Data: 10
+      Data: 7
     - Name: 
       Entry: 3
-      Data: 10
+      Data: 7
     - Name: 
       Entry: 3
-      Data: 10
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 10
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 7
+    - Name: 
+      Entry: 3
+      Data: 7
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -906,25 +1437,40 @@ MonoBehaviour:
       Data: 53|Mib.Data.Formation+Data, Assembly-CSharp
     - Name: Stage
       Entry: 3
-      Data: 7
+      Data: 10
     - Name: Variation
       Entry: 3
-      Data: 0
+      Data: 2
     - Name: Positions
       Entry: 7
       Data: 54|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 5
+      Data: 10
     - Name: 
       Entry: 3
-      Data: 2
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 2
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 3
       Data: 9
+    - Name: 
+      Entry: 3
+      Data: 9
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 3
       Data: 9
@@ -945,16 +1491,16 @@ MonoBehaviour:
       Data: 55|Mib.Data.Formation+Data, Assembly-CSharp
     - Name: Stage
       Entry: 3
-      Data: 7
+      Data: 10
     - Name: Variation
       Entry: 3
-      Data: 1
+      Data: 3
     - Name: Positions
       Entry: 7
       Data: 56|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 5
+      Data: 10
     - Name: 
       Entry: 3
       Data: 9
@@ -963,13 +1509,28 @@ MonoBehaviour:
       Data: 9
     - Name: 
       Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
       Data: 9
     - Name: 
       Entry: 3
-      Data: 3
+      Data: 9
     - Name: 
       Entry: 3
-      Data: 3
+      Data: 7
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -984,16 +1545,31 @@ MonoBehaviour:
       Data: 57|Mib.Data.Formation+Data, Assembly-CSharp
     - Name: Stage
       Entry: 3
-      Data: 7
+      Data: 11
     - Name: Variation
       Entry: 3
-      Data: 2
+      Data: 0
     - Name: Positions
       Entry: 7
       Data: 58|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 5
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 8
+    - Name: 
+      Entry: 3
+      Data: 8
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 3
       Data: 5
@@ -1002,13 +1578,13 @@ MonoBehaviour:
       Data: 5
     - Name: 
       Entry: 3
-      Data: 9
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 9
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 9
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -1023,31 +1599,46 @@ MonoBehaviour:
       Data: 59|Mib.Data.Formation+Data, Assembly-CSharp
     - Name: Stage
       Entry: 3
-      Data: 7
+      Data: 11
     - Name: Variation
       Entry: 3
-      Data: 3
+      Data: 1
     - Name: Positions
       Entry: 7
       Data: 60|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 5
+      Data: 10
     - Name: 
       Entry: 3
-      Data: 9
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 9
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 9
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 8
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 8
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -1062,31 +1653,46 @@ MonoBehaviour:
       Data: 61|Mib.Data.Formation+Data, Assembly-CSharp
     - Name: Stage
       Entry: 3
-      Data: 7
+      Data: 11
     - Name: Variation
       Entry: 3
-      Data: 4
+      Data: 2
     - Name: Positions
       Entry: 7
       Data: 62|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 5
-    - Name: 
-      Entry: 3
       Data: 10
     - Name: 
       Entry: 3
-      Data: 10
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 9
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 9
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 9
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -1101,34 +1707,46 @@ MonoBehaviour:
       Data: 63|Mib.Data.Formation+Data, Assembly-CSharp
     - Name: Stage
       Entry: 3
-      Data: 7
+      Data: 11
     - Name: Variation
       Entry: 3
-      Data: 5
+      Data: 3
     - Name: Positions
       Entry: 7
       Data: 64|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 6
-    - Name: 
-      Entry: 3
-      Data: 8
-    - Name: 
-      Entry: 3
       Data: 10
     - Name: 
       Entry: 3
-      Data: 10
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 10
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 10
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 10
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -1143,7 +1761,7 @@ MonoBehaviour:
       Data: 65|Mib.Data.Formation+Data, Assembly-CSharp
     - Name: Stage
       Entry: 3
-      Data: 8
+      Data: 12
     - Name: Variation
       Entry: 3
       Data: 0
@@ -1152,31 +1770,37 @@ MonoBehaviour:
       Data: 66|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 8
+      Data: 10
     - Name: 
       Entry: 3
-      Data: 4
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 4
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 4
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 2
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 2
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 1
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -1191,7 +1815,7 @@ MonoBehaviour:
       Data: 67|Mib.Data.Formation+Data, Assembly-CSharp
     - Name: Stage
       Entry: 3
-      Data: 8
+      Data: 12
     - Name: Variation
       Entry: 3
       Data: 1
@@ -1200,22 +1824,37 @@ MonoBehaviour:
       Data: 68|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 5
+      Data: 10
     - Name: 
       Entry: 3
-      Data: 5
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 5
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 5
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 5
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 5
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -1230,7 +1869,7 @@ MonoBehaviour:
       Data: 69|Mib.Data.Formation+Data, Assembly-CSharp
     - Name: Stage
       Entry: 3
-      Data: 8
+      Data: 12
     - Name: Variation
       Entry: 3
       Data: 2
@@ -1239,31 +1878,37 @@ MonoBehaviour:
       Data: 70|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 8
-    - Name: 
-      Entry: 3
-      Data: 8
-    - Name: 
-      Entry: 3
       Data: 10
     - Name: 
       Entry: 3
-      Data: 8
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 9
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 10
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 9
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 10
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 9
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -1278,7 +1923,7 @@ MonoBehaviour:
       Data: 71|Mib.Data.Formation+Data, Assembly-CSharp
     - Name: Stage
       Entry: 3
-      Data: 8
+      Data: 12
     - Name: Variation
       Entry: 3
       Data: 3
@@ -1287,22 +1932,37 @@ MonoBehaviour:
       Data: 72|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 5
+      Data: 10
     - Name: 
       Entry: 3
-      Data: 8
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 8
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 8
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 1
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -1317,34 +1977,46 @@ MonoBehaviour:
       Data: 73|Mib.Data.Formation+Data, Assembly-CSharp
     - Name: Stage
       Entry: 3
-      Data: 8
+      Data: 13
     - Name: Variation
       Entry: 3
-      Data: 4
+      Data: 0
     - Name: Positions
       Entry: 7
       Data: 74|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 6
-    - Name: 
-      Entry: 3
-      Data: 8
-    - Name: 
-      Entry: 3
       Data: 10
     - Name: 
       Entry: 3
-      Data: 8
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 4
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 4
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 4
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -1359,34 +2031,46 @@ MonoBehaviour:
       Data: 75|Mib.Data.Formation+Data, Assembly-CSharp
     - Name: Stage
       Entry: 3
-      Data: 8
+      Data: 13
     - Name: Variation
       Entry: 3
-      Data: 5
+      Data: 1
     - Name: Positions
       Entry: 7
       Data: 76|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 6
+      Data: 10
     - Name: 
       Entry: 3
-      Data: 9
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 4
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 9
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 4
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 4
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 4
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -1401,31 +2085,46 @@ MonoBehaviour:
       Data: 77|Mib.Data.Formation+Data, Assembly-CSharp
     - Name: Stage
       Entry: 3
-      Data: 9
+      Data: 13
     - Name: Variation
       Entry: 3
-      Data: 0
+      Data: 2
     - Name: Positions
       Entry: 7
       Data: 78|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 5
-    - Name: 
-      Entry: 3
       Data: 10
     - Name: 
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 10
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 3
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -1440,31 +2139,46 @@ MonoBehaviour:
       Data: 79|Mib.Data.Formation+Data, Assembly-CSharp
     - Name: Stage
       Entry: 3
-      Data: 9
+      Data: 13
     - Name: Variation
       Entry: 3
-      Data: 1
+      Data: 3
     - Name: Positions
       Entry: 7
       Data: 80|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 5
+      Data: 10
     - Name: 
       Entry: 3
-      Data: 5
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 5
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 5
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 3
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -1479,34 +2193,46 @@ MonoBehaviour:
       Data: 81|Mib.Data.Formation+Data, Assembly-CSharp
     - Name: Stage
       Entry: 3
-      Data: 9
+      Data: 14
     - Name: Variation
       Entry: 3
-      Data: 2
+      Data: 0
     - Name: Positions
       Entry: 7
       Data: 82|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 6
+      Data: 10
     - Name: 
       Entry: 3
-      Data: 7
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 9
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 7
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 8
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 7
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 8
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -1521,34 +2247,46 @@ MonoBehaviour:
       Data: 83|Mib.Data.Formation+Data, Assembly-CSharp
     - Name: Stage
       Entry: 3
-      Data: 9
+      Data: 14
     - Name: Variation
       Entry: 3
-      Data: 3
+      Data: 1
     - Name: Positions
       Entry: 7
       Data: 84|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 6
+      Data: 10
     - Name: 
       Entry: 3
-      Data: 9
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 4
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 9
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 4
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 4
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 4
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -1563,10 +2301,10 @@ MonoBehaviour:
       Data: 85|Mib.Data.Formation+Data, Assembly-CSharp
     - Name: Stage
       Entry: 3
-      Data: 9
+      Data: 14
     - Name: Variation
       Entry: 3
-      Data: 4
+      Data: 2
     - Name: Positions
       Entry: 7
       Data: 86|SpecialAction[], Assembly-CSharp
@@ -1575,34 +2313,34 @@ MonoBehaviour:
       Data: 10
     - Name: 
       Entry: 3
-      Data: 2
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 2
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 2
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 2
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 2
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 2
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 2
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 2
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 2
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 2
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -1617,40 +2355,46 @@ MonoBehaviour:
       Data: 87|Mib.Data.Formation+Data, Assembly-CSharp
     - Name: Stage
       Entry: 3
-      Data: 9
+      Data: 14
     - Name: Variation
       Entry: 3
-      Data: 5
+      Data: 3
     - Name: Positions
       Entry: 7
       Data: 88|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 8
+      Data: 10
     - Name: 
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 9
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 3
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 9
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -1665,7 +2409,7 @@ MonoBehaviour:
       Data: 89|Mib.Data.Formation+Data, Assembly-CSharp
     - Name: Stage
       Entry: 3
-      Data: 10
+      Data: 15
     - Name: Variation
       Entry: 3
       Data: 0
@@ -1677,34 +2421,34 @@ MonoBehaviour:
       Data: 10
     - Name: 
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 2
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 2
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -1719,7 +2463,7 @@ MonoBehaviour:
       Data: 91|Mib.Data.Formation+Data, Assembly-CSharp
     - Name: Stage
       Entry: 3
-      Data: 10
+      Data: 15
     - Name: Variation
       Entry: 3
       Data: 1
@@ -1731,34 +2475,34 @@ MonoBehaviour:
       Data: 10
     - Name: 
       Entry: 3
-      Data: 5
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 5
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 5
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 5
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 5
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 5
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 5
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 5
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 5
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 5
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -1773,7 +2517,7 @@ MonoBehaviour:
       Data: 93|Mib.Data.Formation+Data, Assembly-CSharp
     - Name: Stage
       Entry: 3
-      Data: 10
+      Data: 15
     - Name: Variation
       Entry: 3
       Data: 2
@@ -1785,34 +2529,34 @@ MonoBehaviour:
       Data: 10
     - Name: 
       Entry: 3
-      Data: 10
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 10
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 10
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 10
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 10
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 9
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 10
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 9
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 10
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 9
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -1827,7 +2571,7 @@ MonoBehaviour:
       Data: 95|Mib.Data.Formation+Data, Assembly-CSharp
     - Name: Stage
       Entry: 3
-      Data: 10
+      Data: 15
     - Name: Variation
       Entry: 3
       Data: 3
@@ -1839,34 +2583,34 @@ MonoBehaviour:
       Data: 10
     - Name: 
       Entry: 3
-      Data: 4
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 4
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 4
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 4
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 4
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 4
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 9
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 4
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -1881,10 +2625,10 @@ MonoBehaviour:
       Data: 97|Mib.Data.Formation+Data, Assembly-CSharp
     - Name: Stage
       Entry: 3
-      Data: 10
+      Data: 16
     - Name: Variation
       Entry: 3
-      Data: 4
+      Data: 0
     - Name: Positions
       Entry: 7
       Data: 98|SpecialAction[], Assembly-CSharp
@@ -1893,34 +2637,34 @@ MonoBehaviour:
       Data: 10
     - Name: 
       Entry: 3
-      Data: 9
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 9
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 9
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 9
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 9
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 4
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 10
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 4
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 10
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 4
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -1935,10 +2679,10 @@ MonoBehaviour:
       Data: 99|Mib.Data.Formation+Data, Assembly-CSharp
     - Name: Stage
       Entry: 3
-      Data: 10
+      Data: 16
     - Name: Variation
       Entry: 3
-      Data: 5
+      Data: 1
     - Name: Positions
       Entry: 7
       Data: 100|SpecialAction[], Assembly-CSharp
@@ -1947,34 +2691,5920 @@ MonoBehaviour:
       Data: 10
     - Name: 
       Entry: 3
-      Data: 7
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 7
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 7
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 7
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 7
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 5
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 5
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 5
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 5
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 5
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 101|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 16
+    - Name: Variation
+      Entry: 3
+      Data: 2
+    - Name: Positions
+      Entry: 7
+      Data: 102|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 103|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 16
+    - Name: Variation
+      Entry: 3
+      Data: 3
+    - Name: Positions
+      Entry: 7
+      Data: 104|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 105|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 17
+    - Name: Variation
+      Entry: 3
+      Data: 0
+    - Name: Positions
+      Entry: 7
+      Data: 106|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 107|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 17
+    - Name: Variation
+      Entry: 3
+      Data: 1
+    - Name: Positions
+      Entry: 7
+      Data: 108|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 109|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 17
+    - Name: Variation
+      Entry: 3
+      Data: 2
+    - Name: Positions
+      Entry: 7
+      Data: 110|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 111|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 17
+    - Name: Variation
+      Entry: 3
+      Data: 3
+    - Name: Positions
+      Entry: 7
+      Data: 112|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 113|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 18
+    - Name: Variation
+      Entry: 3
+      Data: 0
+    - Name: Positions
+      Entry: 7
+      Data: 114|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 115|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 18
+    - Name: Variation
+      Entry: 3
+      Data: 1
+    - Name: Positions
+      Entry: 7
+      Data: 116|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 117|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 18
+    - Name: Variation
+      Entry: 3
+      Data: 2
+    - Name: Positions
+      Entry: 7
+      Data: 118|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 119|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 18
+    - Name: Variation
+      Entry: 3
+      Data: 3
+    - Name: Positions
+      Entry: 7
+      Data: 120|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 121|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 19
+    - Name: Variation
+      Entry: 3
+      Data: 0
+    - Name: Positions
+      Entry: 7
+      Data: 122|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 123|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 19
+    - Name: Variation
+      Entry: 3
+      Data: 1
+    - Name: Positions
+      Entry: 7
+      Data: 124|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 125|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 19
+    - Name: Variation
+      Entry: 3
+      Data: 2
+    - Name: Positions
+      Entry: 7
+      Data: 126|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 127|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 19
+    - Name: Variation
+      Entry: 3
+      Data: 3
+    - Name: Positions
+      Entry: 7
+      Data: 128|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 129|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 20
+    - Name: Variation
+      Entry: 3
+      Data: 0
+    - Name: Positions
+      Entry: 7
+      Data: 130|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 131|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 20
+    - Name: Variation
+      Entry: 3
+      Data: 1
+    - Name: Positions
+      Entry: 7
+      Data: 132|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 133|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 20
+    - Name: Variation
+      Entry: 3
+      Data: 2
+    - Name: Positions
+      Entry: 7
+      Data: 134|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 135|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 20
+    - Name: Variation
+      Entry: 3
+      Data: 3
+    - Name: Positions
+      Entry: 7
+      Data: 136|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 137|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 21
+    - Name: Variation
+      Entry: 3
+      Data: 0
+    - Name: Positions
+      Entry: 7
+      Data: 138|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 139|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 21
+    - Name: Variation
+      Entry: 3
+      Data: 1
+    - Name: Positions
+      Entry: 7
+      Data: 140|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 141|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 21
+    - Name: Variation
+      Entry: 3
+      Data: 2
+    - Name: Positions
+      Entry: 7
+      Data: 142|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 143|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 21
+    - Name: Variation
+      Entry: 3
+      Data: 3
+    - Name: Positions
+      Entry: 7
+      Data: 144|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 145|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 22
+    - Name: Variation
+      Entry: 3
+      Data: 0
+    - Name: Positions
+      Entry: 7
+      Data: 146|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 147|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 22
+    - Name: Variation
+      Entry: 3
+      Data: 1
+    - Name: Positions
+      Entry: 7
+      Data: 148|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 149|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 22
+    - Name: Variation
+      Entry: 3
+      Data: 2
+    - Name: Positions
+      Entry: 7
+      Data: 150|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 151|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 22
+    - Name: Variation
+      Entry: 3
+      Data: 3
+    - Name: Positions
+      Entry: 7
+      Data: 152|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 153|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 23
+    - Name: Variation
+      Entry: 3
+      Data: 0
+    - Name: Positions
+      Entry: 7
+      Data: 154|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 155|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 23
+    - Name: Variation
+      Entry: 3
+      Data: 1
+    - Name: Positions
+      Entry: 7
+      Data: 156|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 157|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 23
+    - Name: Variation
+      Entry: 3
+      Data: 2
+    - Name: Positions
+      Entry: 7
+      Data: 158|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 159|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 23
+    - Name: Variation
+      Entry: 3
+      Data: 3
+    - Name: Positions
+      Entry: 7
+      Data: 160|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 161|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 24
+    - Name: Variation
+      Entry: 3
+      Data: 0
+    - Name: Positions
+      Entry: 7
+      Data: 162|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 163|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 24
+    - Name: Variation
+      Entry: 3
+      Data: 1
+    - Name: Positions
+      Entry: 7
+      Data: 164|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 165|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 24
+    - Name: Variation
+      Entry: 3
+      Data: 2
+    - Name: Positions
+      Entry: 7
+      Data: 166|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 167|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 24
+    - Name: Variation
+      Entry: 3
+      Data: 3
+    - Name: Positions
+      Entry: 7
+      Data: 168|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 169|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 25
+    - Name: Variation
+      Entry: 3
+      Data: 0
+    - Name: Positions
+      Entry: 7
+      Data: 170|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 171|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 25
+    - Name: Variation
+      Entry: 3
+      Data: 1
+    - Name: Positions
+      Entry: 7
+      Data: 172|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 173|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 25
+    - Name: Variation
+      Entry: 3
+      Data: 2
+    - Name: Positions
+      Entry: 7
+      Data: 174|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 175|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 25
+    - Name: Variation
+      Entry: 3
+      Data: 3
+    - Name: Positions
+      Entry: 7
+      Data: 176|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 177|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 26
+    - Name: Variation
+      Entry: 3
+      Data: 0
+    - Name: Positions
+      Entry: 7
+      Data: 178|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 179|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 26
+    - Name: Variation
+      Entry: 3
+      Data: 1
+    - Name: Positions
+      Entry: 7
+      Data: 180|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 181|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 26
+    - Name: Variation
+      Entry: 3
+      Data: 2
+    - Name: Positions
+      Entry: 7
+      Data: 182|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 183|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 26
+    - Name: Variation
+      Entry: 3
+      Data: 3
+    - Name: Positions
+      Entry: 7
+      Data: 184|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 185|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 27
+    - Name: Variation
+      Entry: 3
+      Data: 0
+    - Name: Positions
+      Entry: 7
+      Data: 186|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 187|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 27
+    - Name: Variation
+      Entry: 3
+      Data: 1
+    - Name: Positions
+      Entry: 7
+      Data: 188|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 189|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 27
+    - Name: Variation
+      Entry: 3
+      Data: 2
+    - Name: Positions
+      Entry: 7
+      Data: 190|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 191|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 27
+    - Name: Variation
+      Entry: 3
+      Data: 3
+    - Name: Positions
+      Entry: 7
+      Data: 192|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 193|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 28
+    - Name: Variation
+      Entry: 3
+      Data: 0
+    - Name: Positions
+      Entry: 7
+      Data: 194|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 195|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 28
+    - Name: Variation
+      Entry: 3
+      Data: 1
+    - Name: Positions
+      Entry: 7
+      Data: 196|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 197|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 28
+    - Name: Variation
+      Entry: 3
+      Data: 2
+    - Name: Positions
+      Entry: 7
+      Data: 198|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 199|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 28
+    - Name: Variation
+      Entry: 3
+      Data: 3
+    - Name: Positions
+      Entry: 7
+      Data: 200|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 201|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 29
+    - Name: Variation
+      Entry: 3
+      Data: 0
+    - Name: Positions
+      Entry: 7
+      Data: 202|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 203|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 29
+    - Name: Variation
+      Entry: 3
+      Data: 1
+    - Name: Positions
+      Entry: 7
+      Data: 204|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 205|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 29
+    - Name: Variation
+      Entry: 3
+      Data: 2
+    - Name: Positions
+      Entry: 7
+      Data: 206|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 207|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 29
+    - Name: Variation
+      Entry: 3
+      Data: 3
+    - Name: Positions
+      Entry: 7
+      Data: 208|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 209|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 30
+    - Name: Variation
+      Entry: 3
+      Data: 0
+    - Name: Positions
+      Entry: 7
+      Data: 210|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 211|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 30
+    - Name: Variation
+      Entry: 3
+      Data: 1
+    - Name: Positions
+      Entry: 7
+      Data: 212|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 213|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 30
+    - Name: Variation
+      Entry: 3
+      Data: 2
+    - Name: Positions
+      Entry: 7
+      Data: 214|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 215|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 30
+    - Name: Variation
+      Entry: 3
+      Data: 3
+    - Name: Positions
+      Entry: 7
+      Data: 216|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 217|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 30
+    - Name: Variation
+      Entry: 3
+      Data: 4
+    - Name: Positions
+      Entry: 7
+      Data: 218|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 219|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 31
+    - Name: Variation
+      Entry: 3
+      Data: 0
+    - Name: Positions
+      Entry: 7
+      Data: 220|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 221|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 31
+    - Name: Variation
+      Entry: 3
+      Data: 1
+    - Name: Positions
+      Entry: 7
+      Data: 222|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 223|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 31
+    - Name: Variation
+      Entry: 3
+      Data: 2
+    - Name: Positions
+      Entry: 7
+      Data: 224|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 225|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 31
+    - Name: Variation
+      Entry: 3
+      Data: 3
+    - Name: Positions
+      Entry: 7
+      Data: 226|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 227|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 31
+    - Name: Variation
+      Entry: 3
+      Data: 4
+    - Name: Positions
+      Entry: 7
+      Data: 228|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 229|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 32
+    - Name: Variation
+      Entry: 3
+      Data: 0
+    - Name: Positions
+      Entry: 7
+      Data: 230|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 231|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 32
+    - Name: Variation
+      Entry: 3
+      Data: 1
+    - Name: Positions
+      Entry: 7
+      Data: 232|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 233|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 32
+    - Name: Variation
+      Entry: 3
+      Data: 2
+    - Name: Positions
+      Entry: 7
+      Data: 234|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 235|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 32
+    - Name: Variation
+      Entry: 3
+      Data: 3
+    - Name: Positions
+      Entry: 7
+      Data: 236|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 237|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 32
+    - Name: Variation
+      Entry: 3
+      Data: 4
+    - Name: Positions
+      Entry: 7
+      Data: 238|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 239|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 33
+    - Name: Variation
+      Entry: 3
+      Data: 0
+    - Name: Positions
+      Entry: 7
+      Data: 240|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 241|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 33
+    - Name: Variation
+      Entry: 3
+      Data: 1
+    - Name: Positions
+      Entry: 7
+      Data: 242|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 243|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 33
+    - Name: Variation
+      Entry: 3
+      Data: 2
+    - Name: Positions
+      Entry: 7
+      Data: 244|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 245|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 33
+    - Name: Variation
+      Entry: 3
+      Data: 3
+    - Name: Positions
+      Entry: 7
+      Data: 246|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 247|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 33
+    - Name: Variation
+      Entry: 3
+      Data: 4
+    - Name: Positions
+      Entry: 7
+      Data: 248|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 249|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 34
+    - Name: Variation
+      Entry: 3
+      Data: 0
+    - Name: Positions
+      Entry: 7
+      Data: 250|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 251|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 34
+    - Name: Variation
+      Entry: 3
+      Data: 1
+    - Name: Positions
+      Entry: 7
+      Data: 252|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 253|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 34
+    - Name: Variation
+      Entry: 3
+      Data: 2
+    - Name: Positions
+      Entry: 7
+      Data: 254|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 255|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 34
+    - Name: Variation
+      Entry: 3
+      Data: 3
+    - Name: Positions
+      Entry: 7
+      Data: 256|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 257|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 34
+    - Name: Variation
+      Entry: 3
+      Data: 4
+    - Name: Positions
+      Entry: 7
+      Data: 258|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 259|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 35
+    - Name: Variation
+      Entry: 3
+      Data: 0
+    - Name: Positions
+      Entry: 7
+      Data: 260|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 261|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 35
+    - Name: Variation
+      Entry: 3
+      Data: 1
+    - Name: Positions
+      Entry: 7
+      Data: 262|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 263|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 35
+    - Name: Variation
+      Entry: 3
+      Data: 2
+    - Name: Positions
+      Entry: 7
+      Data: 264|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 265|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 35
+    - Name: Variation
+      Entry: 3
+      Data: 3
+    - Name: Positions
+      Entry: 7
+      Data: 266|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 267|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 35
+    - Name: Variation
+      Entry: 3
+      Data: 4
+    - Name: Positions
+      Entry: 7
+      Data: 268|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 269|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 36
+    - Name: Variation
+      Entry: 3
+      Data: 0
+    - Name: Positions
+      Entry: 7
+      Data: 270|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 271|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 36
+    - Name: Variation
+      Entry: 3
+      Data: 1
+    - Name: Positions
+      Entry: 7
+      Data: 272|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 273|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 36
+    - Name: Variation
+      Entry: 3
+      Data: 2
+    - Name: Positions
+      Entry: 7
+      Data: 274|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 275|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 36
+    - Name: Variation
+      Entry: 3
+      Data: 3
+    - Name: Positions
+      Entry: 7
+      Data: 276|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 277|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 36
+    - Name: Variation
+      Entry: 3
+      Data: 4
+    - Name: Positions
+      Entry: 7
+      Data: 278|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 279|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 37
+    - Name: Variation
+      Entry: 3
+      Data: 0
+    - Name: Positions
+      Entry: 7
+      Data: 280|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 281|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 37
+    - Name: Variation
+      Entry: 3
+      Data: 1
+    - Name: Positions
+      Entry: 7
+      Data: 282|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 283|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 37
+    - Name: Variation
+      Entry: 3
+      Data: 2
+    - Name: Positions
+      Entry: 7
+      Data: 284|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 285|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 37
+    - Name: Variation
+      Entry: 3
+      Data: 3
+    - Name: Positions
+      Entry: 7
+      Data: 286|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 287|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 37
+    - Name: Variation
+      Entry: 3
+      Data: 4
+    - Name: Positions
+      Entry: 7
+      Data: 288|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 289|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 38
+    - Name: Variation
+      Entry: 3
+      Data: 0
+    - Name: Positions
+      Entry: 7
+      Data: 290|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 291|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 38
+    - Name: Variation
+      Entry: 3
+      Data: 1
+    - Name: Positions
+      Entry: 7
+      Data: 292|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 293|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 38
+    - Name: Variation
+      Entry: 3
+      Data: 2
+    - Name: Positions
+      Entry: 7
+      Data: 294|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 295|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 38
+    - Name: Variation
+      Entry: 3
+      Data: 3
+    - Name: Positions
+      Entry: 7
+      Data: 296|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 297|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 38
+    - Name: Variation
+      Entry: 3
+      Data: 4
+    - Name: Positions
+      Entry: 7
+      Data: 298|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 299|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 39
+    - Name: Variation
+      Entry: 3
+      Data: 0
+    - Name: Positions
+      Entry: 7
+      Data: 300|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 301|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 39
+    - Name: Variation
+      Entry: 3
+      Data: 1
+    - Name: Positions
+      Entry: 7
+      Data: 302|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 303|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 39
+    - Name: Variation
+      Entry: 3
+      Data: 2
+    - Name: Positions
+      Entry: 7
+      Data: 304|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 305|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 39
+    - Name: Variation
+      Entry: 3
+      Data: 3
+    - Name: Positions
+      Entry: 7
+      Data: 306|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 307|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 39
+    - Name: Variation
+      Entry: 3
+      Data: 4
+    - Name: Positions
+      Entry: 7
+      Data: 308|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 309|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 40
+    - Name: Variation
+      Entry: 3
+      Data: 0
+    - Name: Positions
+      Entry: 7
+      Data: 310|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 311|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 40
+    - Name: Variation
+      Entry: 3
+      Data: 1
+    - Name: Positions
+      Entry: 7
+      Data: 312|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 313|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 40
+    - Name: Variation
+      Entry: 3
+      Data: 2
+    - Name: Positions
+      Entry: 7
+      Data: 314|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 315|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 40
+    - Name: Variation
+      Entry: 3
+      Data: 3
+    - Name: Positions
+      Entry: 7
+      Data: 316|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 317|Mib.Data.Formation+Data, Assembly-CSharp
+    - Name: Stage
+      Entry: 3
+      Data: 40
+    - Name: Variation
+      Entry: 3
+      Data: 4
+    - Name: Positions
+      Entry: 7
+      Data: 318|SpecialAction[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
