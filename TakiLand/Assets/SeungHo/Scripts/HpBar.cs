@@ -8,13 +8,15 @@ public class HpBar : MonoBehaviour
     [SerializeField] private GameObject oBar;
     [SerializeField] private Transform trBar;
 
+    public float init = 2.7f;
     private float duration;
     
     public void SetHp(float hp, float ratio)
     {
         Vector2 vScale = trBar.localScale;
 
-        vScale.x = ratio;
+        ratio = Mathf.Max(ratio, 0f);
+        vScale.x = ratio * init;
 
         trBar.localScale = vScale;
     }

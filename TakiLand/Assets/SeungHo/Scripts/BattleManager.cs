@@ -66,7 +66,7 @@ public partial class BattleManager : MonoBehaviour
 
         timer = c = TIMER;
 
-        foreach (var unit in GetComponentsInChildren<BattleUnit>())
+        foreach (var unit in GetComponentsInChildren<BattleUnit>(true))
         {
             Destroy(unit.gameObject);
         }

@@ -11,8 +11,9 @@ public class MainCamera : MonoBehaviour
 
     private void OnBattleStart()
     {
-        transform.DOMove(new Vector3(0f, 0f, -10f), 0.5f);
-        cam.DOOrthoSize(10f, 0.5f);
+        transform.DOMove(new Vector3(0f, 2f, -10f), 0.5f);
+        cam.DOOrthoSize(5, 0.5f);
+        
     }
     
     private void OnBattleStateChanged(GameState obj)

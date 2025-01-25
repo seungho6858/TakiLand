@@ -16,9 +16,7 @@ public partial class BattleUnit : MonoBehaviour
     [SerializeField] private TextMeshPro tmpAction;
     [SerializeField] private Rigidbody2D rg;
     [SerializeField] private CircleCollider2D circleCollider;
-    [SerializeField] private Transform trLook;
     [SerializeField] private Transform trRange;
-    [SerializeField] private HpBar hpBar;
     [SerializeField] private AudioSource audioSource;
     private Transform tr;
     
@@ -44,10 +42,15 @@ public partial class BattleUnit : MonoBehaviour
         
         var obj = Resources.Load(this.specialAction.ToString());
         if (null == obj)
-            obj = Resources.Load("Fast");
+            obj = Resources.Load("Invisibility");
         
         slime = (Instantiate(obj, transform) as GameObject).GetComponent<Slime>();
         slime.SetTeam(team);
+        slime.Look(team == Team.Red ? 5f : -5f); // 각 진형을 바라봐
+        slime.AddCallBack(s =>
+        {
+            EndDeathAnimation();
+        });
         
         tmpAction.text = specialAction.ToString();
 
@@ -128,6 +131,12 @@ public partial class BattleUnit : MonoBehaviour
 
     private void SetUnitState(UnitState unitState)
     {
+        if (this.unitState == UnitState.Die)
+            return;
+        
+        if(this.unitState != unitState)
+            slime?.PlayAnimation(unitState);
+        
         this.unitState = unitState;
         
         switch (unitState)
@@ -139,14 +148,14 @@ public partial class BattleUnit : MonoBehaviour
             MoveSound();
         else
             StopMoveSound();
+
+        rg.mass = unitState == UnitState.Attack ? 1000f : 1f;
     }
     
     private void Init()
     {
         SetUnitState(UnitState.Idle);
         nearUnit = null;
-        
-        hpBar.ShowHpBar(false);
     }
 
     private void CheckAttackEnemy()
@@ -219,14 +228,7 @@ public partial class BattleUnit : MonoBehaviour
 
     private void Look(float diff)
     {
-        if (Mathf.Abs(diff) > 0.1f)
-        {
-            Vector3 v = trLook.localScale;
-
-            v.x = diff >= 0f ? 1f : -1f;
-
-            trLook.localScale = v;
-        }
+        slime.Look(diff);
     }
     
     public Vector2 GetPos() => tr.position;
@@ -394,8 +396,13 @@ public partial class BattleUnit
         find.gameObject.SetActive(false);
         range.gameObject.SetActive(false);
 
-        SetUnitState(UnitState.Die);
         circleCollider.enabled = false;
+        
+        SetUnitState(UnitState.Die);
+    }
+
+    private void EndDeathAnimation()
+    {
         gameObject.SetActive(false);
     }
 
@@ -430,7 +437,7 @@ public partial class BattleUnit
         bool isRage = IsRage();
         
         this.hp -= dmg;
-        hpBar.SetHp(this.hp, this.hp / this.FullHp);
+        slime.SetHp(this.hp, this.hp / this.FullHp);
 
         bool isDead = this.hp <= 0f;
         
@@ -439,7 +446,7 @@ public partial class BattleUnit
             Die();
         }
         
-        hpBar.ShowHpBar(true, isDead ? 10f : 1f);
+        slime.ShowHpBar(true, isDead ? 10f : 1f);
         
         if (null != attacker)
         {

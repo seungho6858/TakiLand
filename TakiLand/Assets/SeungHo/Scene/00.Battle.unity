@@ -804,9 +804,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2201347144862206683, guid: c9cb934a7daae49479a51cc7f7bda2cc, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2201347144862206683, guid: c9cb934a7daae49479a51cc7f7bda2cc, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3689549972273594745, guid: c9cb934a7daae49479a51cc7f7bda2cc, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5173959609536407525, guid: c9cb934a7daae49479a51cc7f7bda2cc, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5173959609536407525, guid: c9cb934a7daae49479a51cc7f7bda2cc, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297873517357096636, guid: c9cb934a7daae49479a51cc7f7bda2cc, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297873517357096636, guid: c9cb934a7daae49479a51cc7f7bda2cc, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8627316564005636693, guid: c9cb934a7daae49479a51cc7f7bda2cc, type: 3}
       propertyPath: m_Pivot.x
@@ -886,6 +910,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8627316564005636693, guid: c9cb934a7daae49479a51cc7f7bda2cc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989036662664369010, guid: c9cb934a7daae49479a51cc7f7bda2cc, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989036662664369010, guid: c9cb934a7daae49479a51cc7f7bda2cc, type: 3}
+      propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
