@@ -35,5 +35,7 @@ public partial class Title : MonoBehaviour
 			SceneLoader.ChangeScene(Constant.BattleScene).Forget();
 			// TODO: 페이크 버튼 만들기
 		});
+		
+		SoundManager.PlayLoopSound("track_shortadventure_loop");
 	}
 }
