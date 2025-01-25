@@ -8,7 +8,7 @@ public partial class Slime : MonoBehaviour
     [SerializeField] private Animator animator;
     private System.Action<string> onAnimCallBack;
 
-    private Team team;
+    protected Team team;
     
     private HpBar _hpBar;
     private HpBar hpBar
@@ -106,5 +106,5 @@ public partial class Slime
     {
         listSprs.ForEach(x => BattleHelper.SetAlpha(x, b ? 0.29f : 1f));
     }
-    
+
 }

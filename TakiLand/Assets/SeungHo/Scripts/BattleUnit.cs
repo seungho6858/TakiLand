@@ -60,6 +60,9 @@ public partial class BattleUnit : MonoBehaviour
         });
         
         tmpAction.text = specialAction.ToString();
+        
+        if(specialAction == SpecialAction.Rage)
+            (slime as Slime_Rage).SetRage(false);
 
         if (specialAction == SpecialAction.Invisibility)
         {
@@ -492,9 +495,12 @@ public partial class BattleUnit
                 SoundManager.PlaySound("SWORD_27");
             }
         }
-        
-        if(!isRage && IsRage())
+
+        if (!isRage && IsRage())
+        {
+            (slime as Slime_Rage).SetRage(true);
             SoundManager.PlaySound("Goblin_03");
+        }
         
         return this.hp <= 0f;
     }

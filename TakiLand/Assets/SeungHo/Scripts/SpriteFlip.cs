@@ -6,7 +6,6 @@ using UnityEngine;
 public class SpriteFlip : MonoBehaviour
 {
     private SpriteRenderer _spr;
-
     private SpriteRenderer spr
     {
         get

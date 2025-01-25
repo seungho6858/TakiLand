@@ -180,8 +180,45 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 9c04935f638bb7844872b57b1a1a9482, type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1488364407650039487, guid: bb1b4805da6a64a13a20cd0ba6c3a9d2, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2608552064685199872, guid: bb1b4805da6a64a13a20cd0ba6c3a9d2, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 7109982807684509646}
   m_SourcePrefab: {fileID: 100100000, guid: bb1b4805da6a64a13a20cd0ba6c3a9d2, type: 3}
+--- !u!95 &1786169905090120851 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5841167662459685753, guid: bb1b4805da6a64a13a20cd0ba6c3a9d2, type: 3}
+  m_PrefabInstance: {fileID: 5316005791714199530}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &4889199037825006943 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 729534231947442869, guid: bb1b4805da6a64a13a20cd0ba6c3a9d2, type: 3}
+  m_PrefabInstance: {fileID: 5316005791714199530}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7923326333548434922 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2608552064685199872, guid: bb1b4805da6a64a13a20cd0ba6c3a9d2, type: 3}
+  m_PrefabInstance: {fileID: 5316005791714199530}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7109982807684509646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7923326333548434922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7f49bc9ff9a64b96861a55d7a099024, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1786169905090120851}
+  spriteRenderer: {fileID: 4889199037825006943}
+  rage_red: {fileID: 21300000, guid: 4aa44ed630572b849a0aca63ac96ba4a, type: 3}
+  rage_blue: {fileID: 21300000, guid: 43d056a06aec6a046a24ac0fcc24156f, type: 3}
+  none_red: {fileID: 21300000, guid: 9c04935f638bb7844872b57b1a1a9482, type: 3}
+  none_blue: {fileID: 21300000, guid: 43f5d533e19ea26488352651887183d0, type: 3}
