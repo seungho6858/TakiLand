@@ -30,10 +30,10 @@ public class BettingHistoryUI : MonoBehaviour
 				return;
 			}
 
-			if (!gameObject.activeSelf)
-			{
-				Show();
-			}
+			// if (!gameObject.activeSelf)
+			// {
+			// 	Show();
+			// }
 			
 			int prevStage = stage - 1;
 			int scoreIndex = prevStage - 1;

@@ -102,13 +102,13 @@ public class StageManager : MonoSingleton<StageManager>
         }
         
         Debug.Log("전투종료!!");
+        
+        _battleEndFlag = true;
 
         int resultIndex = CurrentStage - 1;
         _results[resultIndex] = team;
         
         BettingManager.Instance.SettleBets(team, CurrentStage);
-        
-        _battleEndFlag = true;
     }
 
     public void Cheat_ChangeStage(int targetStage)
