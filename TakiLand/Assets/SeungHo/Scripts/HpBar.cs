@@ -24,9 +24,9 @@ public class HpBar : MonoBehaviour
 
     public void SetStat(Team team, float atk, float fullHp)
     {
-        icon.color = team == Team.Red ? red : blue;
+        //icon.color = team == Team.Red ? red : blue;
         
-        ShowHpBar(true, 0f);
+        //ShowHpBar(true, 0f);
         oPower.SetActive(true);
 
         this.atk.text = $"{(int)atk}";

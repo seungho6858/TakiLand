@@ -1,13 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using R3;
 using UnityEngine;
 
 public partial class Slime : MonoBehaviour
 {
     [SerializeField] protected Animator animator;
     private System.Action<string> onAnimCallBack;
-
+    
     protected Team team;
     
     private HpBar _hpBar;

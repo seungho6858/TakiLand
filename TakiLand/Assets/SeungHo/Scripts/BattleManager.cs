@@ -42,6 +42,9 @@ public partial class BattleManager : MonoBehaviour
     {
         GameState = GameState.Battle;
         
+        SoundManager.StopAllLoopSounds();
+        SoundManager.PlayLoopSound("Battle");
+        
         listUnits.ForEach(x => x.GameStateChange(GameState.Battle));
     }
 
@@ -63,7 +66,8 @@ public partial class BattleManager : MonoBehaviour
 
             case GameState.Ready:
                 {
-                    
+                    SoundManager.StopAllLoopSounds();
+                    SoundManager.PlayLoopSound("Gambling");
                 }
                 break;
         }
@@ -197,7 +201,7 @@ public partial class BattleManager : MonoBehaviour
 
     private void Start()
     {
-        SoundManager.PlayLoopSound("track_shortadventure_loop");    
+        //SoundManager.PlayLoopSound("track_shortadventure_loop");    
         
         DOTween.SetTweensCapacity(2000, 100); // Tweens: 2000, Sequences: 100
 

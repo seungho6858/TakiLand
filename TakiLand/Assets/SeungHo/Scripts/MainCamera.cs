@@ -21,7 +21,7 @@ public class MainCamera : MonoBehaviour
         {
             case GameState.End:
             case GameState.Ready:
-                transform.DOMove(new Vector3(1.7f, 1.9f, -10f), 0.5f);
+                transform.DOMove(new Vector3(1.7f, 1f, -10f), 0.5f);
                 cam.DOOrthoSize(6.47f, 0.5f);
                 break;
             

@@ -122,6 +122,8 @@ public class BettingManager : MonoSingleton<BettingManager>
 	public void SettleBets(Team team, int currentStage)
 	{
 		bool isWin = CurrentBet.BetTeam == team;
+		SoundManager.StopAllLoopSounds();
+		SoundManager.PlayLoopSound(isWin ? "Ending_Win" : "Ending_Lose");
 		if (!isWin)
 		{
 			return;
