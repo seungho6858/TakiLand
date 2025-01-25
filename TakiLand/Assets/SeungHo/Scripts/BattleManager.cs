@@ -199,10 +199,11 @@ public partial class BattleManager : MonoBehaviour
         return instance.listUnits.FindAll(x => x.team == team && Vector2.Distance(x.GetPos(), vPos) <= range);
     }
 
-    public static void LeaderboardPlayerRecord(long gold, int stage)
+    public static void LeaderboardPlayerRecord(long gold, int stage, string nickName)
     {
-        ServerManager.instance.LeaderboardPlayerRecord(gold, JsonUtility.ToJson(
-            new Rank() { stage = stage}), b =>
+        ServerManager.instance.LeaderboardPlayerRecord(
+            gold, JsonUtility.ToJson(
+            new Rank() { stage = stage}), nickName, b =>
         {
         });
     }
@@ -274,7 +275,7 @@ public partial class BattleManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.L))
         {
-            LeaderboardPlayerRecord(100, 4);
+            LeaderboardPlayerRecord(100, 4, "");
         }
 
         if (Input.GetKeyDown(KeyCode.A))

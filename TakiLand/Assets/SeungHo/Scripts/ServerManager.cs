@@ -32,11 +32,13 @@ public class ServerManager : MonoBehaviour
         });
     }
 
-    public void LeaderboardPlayerRecord(long score, string extraData, 
+    public void LeaderboardPlayerRecord(long score, string extraData, string nickName,
         System.Action<bool> callBack)
     {
-        string recordId = ServerManager.UserUniqueID; // 고유한 값으로 지정
+        //string recordId = ServerManager.UserUniqueID; // 고유한 값으로 지정
 
+        string recordId = nickName;
+        
         plugin.LeaderboardManagerV20240301.Record("takiland-leaderboard-2B3CF595-9E3E7FD1", recordId,
             score, extraData, (status, errorCode, jsonString, values) =>
             {
