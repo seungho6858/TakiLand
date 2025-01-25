@@ -6,6 +6,7 @@ using Cysharp.Threading.Tasks;
 using EnumsNET;
 using Mib;
 using Mib.Data;
+using Mib.UI;
 using UnityEngine;
 
 public class StageManager : MonoSingleton<StageManager>
@@ -63,6 +64,10 @@ public class StageManager : MonoSingleton<StageManager>
             .Where(data => data.Stage == CurrentStage)
             .OrderBy(_ => Guid.NewGuid())
             .ToArray();
+
+        (StageResultPopup popup, UniTask task) =  PopupManager.Instance.OpenWithTask<StageResultPopup>();
+        popup.Set(CurrentStage);
+        await task;
         
         OnStageChanged?.Invoke(positions[0], positions[1], CurrentStage);
         

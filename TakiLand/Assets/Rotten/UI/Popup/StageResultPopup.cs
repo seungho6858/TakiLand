@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+[PopupPath("StageResultPopup")]
 public class StageResultPopup : PopupBase
 {
     [SerializeField]
@@ -32,6 +33,8 @@ public class StageResultPopup : PopupBase
     public void Set(int stage)
     {
         (bool won, int goldDelta) = BettingManager.Instance.CalculateResult(stage);
-        
+        string resultText = won ? "맞췄다!" : "틀렸다!";
+        _resultText.text =  $"{resultText} gold: {goldDelta} ";
+
     }
 }
