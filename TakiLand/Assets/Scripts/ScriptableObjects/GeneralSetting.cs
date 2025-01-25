@@ -30,5 +30,6 @@ public class GeneralSetting : ScriptableObjectSingleton<GeneralSetting>
 	public SerializableDictionary<Team, TeamImages> TeamSprites;
 	
 	public SerializableDictionary<Team, StageResultImage> ResultSprites;
+	public SerializableDictionary<Team, Sprite> ButtonImage;
 
 }
