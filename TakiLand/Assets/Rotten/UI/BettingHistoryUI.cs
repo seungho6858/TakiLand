@@ -30,7 +30,7 @@ public class BettingHistoryUI : MonoBehaviour
 			
 			(bool won, int goldDelta) = BettingManager.Instance.CalculateResult(prevStage);
 
-			_scores[scoreIndex].UpdateScore(won, goldDelta);
+//			_scores[scoreIndex].UpdateScore(won, goldDelta);
 		};
 
 		StageManager.Instance.OnBattleStart += () =>
