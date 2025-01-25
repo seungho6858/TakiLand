@@ -311,7 +311,7 @@ GameObject:
   - component: {fileID: 4056024103538223617}
   - component: {fileID: 742063984592015565}
   m_Layer: 5
-  m_Name: Infomation
+  m_Name: Information
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -354,6 +354,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _currentStageText: {fileID: 3202727425165919122}
   _remainTimeText: {fileID: 7206288741160795053}
+  _remainUnitCount:
+    m_keys: 
+    m_values: []
 --- !u!1 &2337580120737465717
 GameObject:
   m_ObjectHideFlags: 0

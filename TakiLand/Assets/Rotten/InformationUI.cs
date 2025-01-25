@@ -4,13 +4,16 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class InfomationUI : MonoBehaviour
+public class InformationUI : MonoBehaviour
 {
 	[SerializeField]
 	private TextMeshProUGUI _currentStageText;
 	
 	[SerializeField]
 	private TextMeshProUGUI _remainTimeText;
+	
+	[SerializeField]
+	private SerializableDictionary<Team, TextMeshProUGUI> _remainUnitCount;
 
 	private void Awake()
 	{
@@ -25,6 +28,11 @@ public class InfomationUI : MonoBehaviour
 		StageManager.Instance.OnBattleStart += () =>
 		{
 			_currentStageText.text = $"Round {StageManager.Instance.CurrentStage.ToString()}";
+		};
+
+		StageManager.Instance.OnStageChanged += (teamRed, teamBlue, stage) =>
+		{
+
 		};
 	}
 }
