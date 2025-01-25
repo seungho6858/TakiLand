@@ -102,6 +102,11 @@ namespace Mib
 		// 씬 전환되고 커튼 걷혀야하는 시점에 수동 호출해줘야함.
 		public static async UniTaskVoid CompleteLoading()
 		{
+			if (!_isLoading)
+			{
+				return;
+			}
+			
 			// 로딩 닫기
 			await LoadingCurtain.Instance.Hide();
 			await SceneManager.UnloadSceneAsync(LOADING);

@@ -39,7 +39,7 @@ public class BettingManager : MonoSingleton<BettingManager>
 
 	private Bet[] _betHistory;
 	private Gold _gold;
-	private int CurrentGold => _gold.Value;
+	public int CurrentGold => _gold.Value;
 	
 	public event Action<int, int> OnBetChanged;//prev, current
 	public event Action<Team> OnBetTeamChanged; //current

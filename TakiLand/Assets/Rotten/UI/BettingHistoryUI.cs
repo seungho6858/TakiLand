@@ -16,13 +16,6 @@ public class BettingHistoryUI : MonoBehaviour
 	
 	private void Awake()
 	{
-		_scores = new ScoreUI[Define.Instance.GetValue("TotalStage")];
-		for (int i = 0; i < _scores.Length; i++)
-		{
-			_scores[i] = Instantiate(_scorePrefab, _scoreRoot);
-			_scores[i].Initialize(i + 1);
-		}
-		
 		StageManager.Instance.OnStageChanged +=(red, blue, stage) =>
 		{
 			if (stage <= 1)
@@ -30,17 +23,19 @@ public class BettingHistoryUI : MonoBehaviour
 				return;
 			}
 
-			// if (!gameObject.activeSelf)
-			// {
-			// 	Show();
-			// }
-			
+			Show();
+
 			int prevStage = stage - 1;
 			int scoreIndex = prevStage - 1;
 			
 			(bool won, int goldDelta) = BettingManager.Instance.CalculateResult(prevStage);
 
-			_scores[scoreIndex].UpdateScore(won, goldDelta);
+//			_scores[scoreIndex].UpdateScore(won, goldDelta);
+		};
+
+		StageManager.Instance.OnBattleStart += () =>
+		{
+			Hide();
 		};
 	}
 
