@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ScoreUI : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class ScoreUI : MonoBehaviour
     private TextMeshProUGUI _stageText;
     
     [SerializeField]
-    private TextMeshProUGUI _resultText;
+    private Image _resultImage;
     
     [SerializeField]
     private TextMeshProUGUI _goldText;
@@ -17,17 +18,15 @@ public class ScoreUI : MonoBehaviour
     public void Initialize(int stage)
     {
         _stageText.text = stage.ToString();
-        _resultText.text = string.Empty;
+        _resultImage.gameObject.SetActive(false);
         _goldText.text = string.Empty;
     }
 
-    public void UpdateScore(bool isWin, int goldDelta)
+    public void UpdateScore(int stage, bool isWin, int goldDelta)
     {
-        _resultText.text = isWin ? "O" : "X";
-        _resultText.color = isWin 
-            ? GeneralSetting.Instance.WinColor
-            : GeneralSetting.Instance.LoseColor;
-        
+        _resultImage.gameObject.SetActive(true);
+        _stageText.text = stage.ToString();
+        _resultImage.sprite = GeneralSetting.Instance.ScoreSprite[isWin];
         _goldText.text = $"{goldDelta:+#;-#;0}";
     }
 }

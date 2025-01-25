@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stageText: {fileID: 5085248351591629028}
-  _resultText: {fileID: 0}
+  _resultImage: {fileID: 1707260368175623964}
   _goldText: {fileID: 5360302035139654086}
 --- !u!1 &1960983401209649264
 GameObject:

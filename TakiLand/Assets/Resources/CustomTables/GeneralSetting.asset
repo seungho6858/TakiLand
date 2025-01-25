@@ -39,8 +39,6 @@ MonoBehaviour:
     - {r: 1, g: 0.5882353, b: 0.76862746, a: 1}
     - {r: 0.32941177, g: 0.6431373, b: 1, a: 1}
     - {r: 0.7529412, g: 0.87058824, b: 1, a: 1}
-  WinColor: {r: 0.17735851, g: 0.12682807, b: 0.12682807, a: 1}
-  LoseColor: {r: 1, g: 0, b: 0, a: 1}
   TeamSprites:
     m_keys: 000000000100000002000000
     m_values:
@@ -65,3 +63,8 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 38ce8873b1f1df540ba28063cd2b53bf, type: 3}
     - {fileID: 21300000, guid: 01c5e54e8d41da94ea31d8e1349abcd3, type: 3}
     - {fileID: 21300000, guid: 74eb16387c169a54d808007110d887e8, type: 3}
+  ScoreSprite:
+    m_keys: 0001
+    m_values:
+    - {fileID: 21300000, guid: 2d9111293872dec4f8b95303b21ea94c, type: 3}
+    - {fileID: 21300000, guid: a89d6f3f34cb78742bda38f4c15fbe1c, type: 3}
