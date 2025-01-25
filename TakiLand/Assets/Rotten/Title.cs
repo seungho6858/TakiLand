@@ -38,4 +38,9 @@ public partial class Title : MonoBehaviour
 		
 		SoundManager.PlayLoopSound("track_shortadventure_loop");
 	}
+
+	private void Start()
+	{
+		SceneLoader.CompleteLoading().Forget();
+	}
 }

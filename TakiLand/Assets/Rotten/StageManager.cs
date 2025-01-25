@@ -29,8 +29,6 @@ public class StageManager : MonoSingleton<StageManager>
     protected override void OnAwake()
     {
         _results = new Team[Define.Instance.GetValue("TotalStage")];
-        _battleEndFlag = AutoResetUniTaskCompletionSource.Create();
-        _bettingEndFlag = AutoResetUniTaskCompletionSource.Create();
         
         BattleManager.onTeamWin += EndBattle;
         
@@ -61,17 +59,25 @@ public class StageManager : MonoSingleton<StageManager>
     
     public Team GetResult(int stage) => _results[stage - 1];
 
-    public async UniTaskVoid PlayFullSequence() 
+    private async UniTaskVoid PlayFullSequence() 
     {
         int totalStage = Define.Instance.GetValue("TotalStage");
         for (CurrentStage = 1; CurrentStage <= totalStage; CurrentStage++)
         {
-            await BettingProcess();
-            await BattleProcess();
-            
             _bettingEndFlag = AutoResetUniTaskCompletionSource.Create();
             _battleEndFlag = AutoResetUniTaskCompletionSource.Create();
+            
+            await BettingProcess();
+            await BattleProcess();
+
+            bool isDead = BettingManager.Instance.CurrentGold <= 0;
+            if (isDead)
+            {
+                break;
+            }
         }
+
+        PopupManager.Instance.Open<GameResultPopup>();
     }
     
     public async UniTask BettingProcess()
