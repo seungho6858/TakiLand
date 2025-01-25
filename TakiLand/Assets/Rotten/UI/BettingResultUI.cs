@@ -32,10 +32,12 @@ public class BettingResultUI : MonoBehaviour
 		{
 			Show();
 			BettingManager.Bet currentBet = BettingManager.Instance.CurrentBet;
+			Color textColor = GeneralSetting.Instance.TeamColors[currentBet.BetTeam];
 			
 			// 베팅
 			_betAmount.text = currentBet.BetAmount.ToString();
 			_betTeam.text = currentBet.BetTeam.GetTeamName();
+			_betTeam.color = textColor; 
 
 			// sprite
 			Sprite teamSprite = GeneralSetting.Instance.TeamSprites[currentBet.BetTeam].Selected;
@@ -44,6 +46,7 @@ public class BettingResultUI : MonoBehaviour
 			// 보상 설명
 			Stage.Data stageData = new Stage.Key(StageManager.Instance.CurrentStage).Data;
 			_betDescription.text = $"성공시 x {stageData.RewardRate.ToString()}배 획득";
+			_betDescription.color = textColor;
 		};
 	}
 	

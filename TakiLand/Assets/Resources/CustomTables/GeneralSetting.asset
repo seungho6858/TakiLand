@@ -21,6 +21,12 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
+  TeamColors:
+    m_keys: 000000000100000002000000
+    m_values:
+    - {r: 0.654902, g: 0.20784315, b: 0.29411766, a: 1}
+    - {r: 0.2509804, g: 0.35686275, b: 0.64705884, a: 1}
+    - {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
   RedTeamColor: {r: 0.654902, g: 0.20784315, b: 0.29411766, a: 1}
   BlueTeamColor: {r: 0.2509804, g: 0.35686275, b: 0.64705884, a: 1}
   WinColor: {r: 0.17735851, g: 0.12682807, b: 0.12682807, a: 1}

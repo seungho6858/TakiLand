@@ -11,6 +11,9 @@ public class GeneralSetting : ScriptableObjectSingleton<GeneralSetting>
 		public Sprite Idle;
 		public Sprite Selected;
 	}
+
+	[SerializeField]
+	public SerializableDictionary<Team, Color> TeamColors;
 	
 	public Color RedTeamColor;
 	public Color BlueTeamColor;
