@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using EnumsNET;
 using Mib;
 using Mib.Data;
 using UnityEngine;
@@ -13,6 +14,11 @@ public class BettingManager : MonoSingleton<BettingManager>
 		public Team BetTeam;
 		public int BetAmount;
 		public int ExtraRewardRate;
+
+		public override string ToString()
+		{
+			return $"BetTeam:[{BetTeam.AsString()}]\tBetAmount:[{BetAmount.ToString()}]\tExtraRewardRate:[{ExtraRewardRate.ToString()}]";
+		}
 	}
 
 	public class Gold

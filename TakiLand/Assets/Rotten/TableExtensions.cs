@@ -44,4 +44,15 @@ namespace Mib.Data
 			}
 		}
 	}
+
+	public partial class Formation
+	{
+		public partial class Data
+		{
+			public override string ToString()
+			{
+				return $"[{Stage}_{Variation}";
+			}
+		}
+	}
 }
