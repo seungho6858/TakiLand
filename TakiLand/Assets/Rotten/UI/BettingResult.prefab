@@ -828,6 +828,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _betTeam: {fileID: 4999435526776882059}
   _betAmount: {fileID: 941866870596877236}
+  _betDescription: {fileID: 6220122836099076072}
+  _betTeamImage: {fileID: 7964389582084935812}
 --- !u!1 &8069259775579897636
 GameObject:
   m_ObjectHideFlags: 0
