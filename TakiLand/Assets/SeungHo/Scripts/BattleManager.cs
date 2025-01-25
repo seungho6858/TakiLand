@@ -103,7 +103,7 @@ public partial class BattleManager : MonoBehaviour
         unit.SetTeam(team, specialAction);
 
         Ability.Instance.Table.TryGetValue(new Ability.Key(specialAction), out var value);
-        unit.SetStat(value.MaxHp, value.Damage, value.MoveSpeed, value.AttackSpeed, value.Range);
+        unit.SetStat(value.MaxHp, value.Damage, value.MoveSpeed, value.AttackSpeed, value.Range, (RangeType) value.IsRangedUnit);
         
         instance.listUnits.Add(unit);
         instance.TeamCountChanged();

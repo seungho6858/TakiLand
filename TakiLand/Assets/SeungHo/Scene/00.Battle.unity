@@ -196,6 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2578926345c94342b4a18e4bd106210, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unitData: {fileID: 11400000, guid: cc2c3c2ab166e4acea0dd3fcf1fbfa35, type: 2}
   listUnits: []
   trA: {fileID: 536452328}
   trB: {fileID: 364028959}

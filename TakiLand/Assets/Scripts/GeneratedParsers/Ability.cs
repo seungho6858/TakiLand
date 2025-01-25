@@ -48,6 +48,9 @@ namespace Mib.Data
                     case "Range":
 						data.Range = Parser.ParseFloat(value);
 						break;
+                    case "IsRangedUnit":
+						data.IsRangedUnit = Parser.ParseInt(value);
+						break;
 				}
 			}
 
@@ -64,6 +67,7 @@ namespace Mib.Data
 			public float MoveSpeed;
 			public float AttackSpeed;
 			public float Range;
+			public int IsRangedUnit;
 
 		}
 

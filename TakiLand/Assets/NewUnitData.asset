@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3efa41b967e4b4d09973c057798d54ff, type: 3}
   m_Name: NewUnitData
   m_EditorClassIdentifier: 
-  hpRatio: 0
-  multiply_att: 0
-  multiply_speed: 0
-  minus_speed: 0
+  Rage_hpRatio: 30
+  Rage_multiply_att: 3
+  Rage_multiply_speed: 3
+  Rage_minus_speed: 0.5
+  Rage_minumum_speed: 0.5
+  ghost_second: 3

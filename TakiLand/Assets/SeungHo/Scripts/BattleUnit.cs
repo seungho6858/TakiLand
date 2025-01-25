@@ -55,7 +55,8 @@ public partial class BattleUnit : MonoBehaviour
             circleCollider.enabled = true;
     }
     
-    public void SetStat(float hp, float atk, float moveSpeed, float attackSpeed, float range)
+    public void SetStat(
+        float hp, float atk, float moveSpeed, float attackSpeed, float range, RangeType rangeType)
     {
         this.hp = this.FullHp = hp;
         this.atk = atk;
@@ -76,6 +77,8 @@ public partial class BattleUnit : MonoBehaviour
 
     private void CheckAttackEnemy()
     {
+        BattleUnit before = this.rangeUnit;
+        
         this.rangeUnit = FindNearest(this.listRangeUnits);
 
         if (rangeUnit != null)
@@ -84,6 +87,9 @@ public partial class BattleUnit : MonoBehaviour
             
             Look(rangeUnit.GetPos().x - GetPos().x);
         }
+
+        if (before != this.rangeUnit)
+            atkSameCnt = 0;
     }
     
     private void CheckFindEnemy()
@@ -164,11 +170,27 @@ public partial class BattleUnit
     public float knockBack;
     public Vector2 vKnockBack;
     public int atkCnt; // 공격 카운트
+    public int atkSameCnt; // 같은적 공격 카운트
+
+    public float fear;
+    public Vector2 vFear;
     
     private void FixedUpdate()
     {
         if (BattleManager.GameState == GameState.Battle)
         {
+            if (fear >= 0f) // 공포
+            {
+                fear -= Time.deltaTime;
+                
+                rg.position += vFear * Time.deltaTime;
+
+                if (fear <= 0f)
+                {
+                    CheckFindEnemy();
+                    CheckAttackEnemy();
+                }
+            }
             if (knockBack >= 0f) // 넉백 적용
             {
                 knockBack -= Time.deltaTime;
@@ -211,11 +233,17 @@ public partial class BattleUnit
         {
             rangeUnit.GetDamage(this, GetAtk());
         }
-
+        
         atkCnt++;
+        atkSameCnt++;
 
         if (specialAction == SpecialAction.Invisibility)
             circleCollider.enabled = true;
+
+        if (specialAction == SpecialAction.Fear)
+        {
+            rangeUnit.SetFear(this);
+        }
     }   
     
     private void Die()
@@ -268,6 +296,14 @@ public partial class BattleUnit
         ef.SetDamage(dmg);
 
         unitState = UnitState.Hit;
+
+        if (this.specialAction == SpecialAction.CounterAttack)
+        {
+            if (null != attacker && attacker.rangeType == RangeType.Near)
+            {
+                attacker.GetDamage(null, dmg);
+            }
+        }
         
         return this.hp <= 0f;
     }
@@ -279,24 +315,51 @@ public partial class BattleUnit
     
     public float GetAtk()
     {
-        if (specialAction == SpecialAction.Rage)
+        if (IsRage())
         {
-            if (GetRatio() <= BattleManager.GetData().Rage_hpRatio)
-            {
-                return atk;
-            }
-            else
-                return atk;
+            return atk * BattleManager.GetData().Rage_multiply_att;
         }
         else
             return atk;
     }
+    
+    public float GetAttackSpeed()
+    {
+        if (IsRage())
+        {
+            return Mathf.Max(BattleManager.GetData().Rage_minumum_speed, 
+                attackSpeed - atkSameCnt * BattleManager.GetData().Rage_minus_speed);
+        }
+        else
+            return attackSpeed;
+    }
 
-    public float GetAttackSpeed() => attackSpeed;
-    public float GetMoveSpeed() => moveSpeed;
+    public float GetMoveSpeed()
+    {
+        if (this.specialAction == SpecialAction.SpeedBoost && atkCnt == 0)
+        {
+            return moveSpeed * BattleManager.GetData().horse_second;
+        }
+        if (IsRage())
+        {
+            return moveSpeed * BattleManager.GetData().Rage_multiply_speed;
+        }
+        else
+            return moveSpeed;
+    }
+
     public float GetHp() => hp;
     public float GetRatio() => hp / FullHp;
 
+    public bool IsRage() => specialAction == SpecialAction.Rage && GetRatio() <= BattleManager.GetData().Rage_hpRatio;
+
+    public void SetFear(BattleUnit attacker)
+    {
+        this.fear = BattleManager.GetData().ghost_second;
+        this.vFear = (attacker.GetPos() - GetPos()).normalized;
+        this.circleCollider.enabled = false;
+    }
+    
     public enum UnitState
     {
         Idle,
