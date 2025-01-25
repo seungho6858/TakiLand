@@ -67,7 +67,7 @@ int,int,SpecialAction,SpecialAction,SpecialAction,SpecialAction,SpecialAction,Sp
 20,0,None,None,Rage,Rage,Greed,None,None,None,None,None,"None,None,Rage,Rage,Greed,None,None,None,None,None",
 20,1,None,None,None,Greed,Greed,None,None,None,Explosion,None,"None,None,None,Greed,Greed,None,None,None,Explosion,None",
 20,2,None,None,Invisibility,Greed,None,None,None,None,SpeedBoost,None,"None,None,Invisibility,Greed,None,None,None,None,SpeedBoost,None",
-20,3,None,None,None,None,None,None,None,None,None,None,"None,None,None,None,None,None,None,None,None,None",
+20,3,None,None,None,Taunt,Taunt,Taunt,Taunt,None,None,None,"None,None,None,Taunt,Taunt,Taunt,Taunt,None,None,None",
 21,0,Greed,Greed,Greed,Greed,Greed,None,None,None,None,None,"Greed,Greed,Greed,Greed,Greed,None,None,None,None,None",
 21,1,None,None,None,None,None,None,SpeedBoost,SpeedBoost,SpeedBoost,None,"None,None,None,None,None,None,SpeedBoost,SpeedBoost,SpeedBoost,None",
 21,2,None,Rage,Rage,Rage,None,None,None,None,None,None,"None,Rage,Rage,Rage,None,None,None,None,None,None",
