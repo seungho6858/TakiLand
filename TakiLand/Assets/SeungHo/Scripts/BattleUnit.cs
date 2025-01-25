@@ -282,7 +282,7 @@ public partial class BattleUnit
                     CheckAttackEnemy();
                 }
             }
-            if (knockBack >= 0f) // 넉백 적용
+            else if (knockBack >= 0f) // 넉백 적용
             {
                 knockBack -= Time.deltaTime;
                 
@@ -323,6 +323,8 @@ public partial class BattleUnit
                 }
                 
                 SoundManager.PlaySound("52_Dive_02");
+                
+                Die();
             };
             
             //Die();
@@ -569,7 +571,7 @@ public partial class BattleUnit
     public void SetFear(BattleUnit attacker)
     {
         this.fear = BattleManager.GetData().ghost_second;
-        this.vFear = (attacker.GetPos() - GetPos()).normalized;
+        this.vFear = (GetPos() - attacker.GetPos()).normalized;
         this.circleCollider.enabled = false;
     }
     
