@@ -534,7 +534,7 @@ public partial class BattleUnit
         
         var ef = EffectManager.Instance.SpawnEffect("Ef_DamageFont", GetPos() + Vector2.up , Quaternion.identity)
             .GetComponent<Ef_DamageFont>();
-        ef.SetDamage(dmg);
+        ef.SetDamage(this.team, dmg);
 
         if(!slime.IsPlaying("Attack"))
             SetUnitState(UnitState.Hit);
