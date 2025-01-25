@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Slime : MonoBehaviour
+public partial class Slime : MonoBehaviour
 {
     [SerializeField] private Animator animator;
     private System.Action<string> onAnimCallBack;
@@ -25,6 +25,17 @@ public class Slime : MonoBehaviour
 
     private Transform trLook;
 
+    private List<SpriteRenderer> _listSprs;
+    private List<SpriteRenderer> listSprs
+    {
+        get
+        {
+            if (null == _listSprs)
+                _listSprs = new List<SpriteRenderer>(
+                    GetComponentsInChildren<SpriteRenderer>(true));
+            return _listSprs;
+        }
+    }
     private List<SpriteFlip> listFlips;
 
     public void AddCallBack(System.Action<string> onAnimCallBack)
@@ -52,7 +63,7 @@ public class Slime : MonoBehaviour
         }
     }
 
-    public void ShowHpBar(bool b, float timer = 1f)
+    public void ShowHpBar(bool b, float timer = 2f)
     {
         hpBar.ShowHpBar(b, timer);
     }
@@ -65,6 +76,11 @@ public class Slime : MonoBehaviour
     public void EndDieAnimation()
     {
         onAnimCallBack.Invoke("Die");
+    }
+
+    public void OnAttackAnimation()
+    {
+        onAnimCallBack.Invoke("Attack");
     }
 
     public void SetTeam(Team team)
@@ -81,4 +97,14 @@ public class Slime : MonoBehaviour
         trLook = transform.Find("Group");
         listFlips = new List<SpriteFlip>(GetComponentsInChildren<SpriteFlip>(true));
     }
+}
+
+public partial class Slime
+{
+
+    public void SetInvisible(bool b)
+    {
+        listSprs.ForEach(x => BattleHelper.SetAlpha(x, b ? 0.29f : 1f));
+    }
+    
 }

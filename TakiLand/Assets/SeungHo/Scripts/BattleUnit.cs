@@ -19,6 +19,8 @@ public partial class BattleUnit : MonoBehaviour
     [SerializeField] private Transform trRange;
     [SerializeField] private AudioSource audioSource;
     private Transform tr;
+
+    private System.Action onAttack;
     
     // 유닛을 다가가자
     [SerializeField] private Trigger2D find;
@@ -49,7 +51,12 @@ public partial class BattleUnit : MonoBehaviour
         slime.Look(team == Team.Red ? 5f : -5f); // 각 진형을 바라봐
         slime.AddCallBack(s =>
         {
-            EndDeathAnimation();
+            if(s == "Die")
+                EndDeathAnimation();
+            else if (s == "Attack")
+            {
+                onAttack?.Invoke();
+            }
         });
         
         tmpAction.text = specialAction.ToString();
@@ -58,6 +65,8 @@ public partial class BattleUnit : MonoBehaviour
         {
             SoundManager.PlaySound("invisable");
             circleCollider.enabled = false;
+            
+            slime.SetInvisible(true);
         }
         else
             circleCollider.enabled = true;
@@ -149,7 +158,7 @@ public partial class BattleUnit : MonoBehaviour
         else
             StopMoveSound();
 
-        rg.mass = unitState == UnitState.Attack ? 1000f : 1f;
+        rg.mass = rangeUnit == null ? 1f : 1000f;
     }
     
     private void Init()
@@ -166,7 +175,6 @@ public partial class BattleUnit : MonoBehaviour
 
         if (rangeUnit != null)
         {
-            SetUnitState(UnitState.Attack);
             
             Look(rangeUnit.GetPos().x - GetPos().x);
         }
@@ -300,22 +308,34 @@ public partial class BattleUnit
     
     private void Attack()
     {
+        SetUnitState(UnitState.Attack);
+        
         if (specialAction == SpecialAction.Explosion)
         {
-            foreach (BattleUnit battleUnit in BattleManager.GetRangeUnits(GetPos(), 1.5f, BattleHelper.GetOther(this.team)))
+            onAttack = () =>
             {
-                battleUnit.GetDamage(this, GetAtk());
-            }
+                foreach (BattleUnit battleUnit in BattleManager.GetRangeUnits(GetPos(), 3f, BattleHelper.GetOther(this.team)))
+                {
+                    battleUnit.GetDamage(this, GetAtk());
+                }
+                
+                SoundManager.PlaySound("52_Dive_02");
+            };
             
-            Die();
-            
-            SoundManager.PlaySound("52_Dive_02");
+            //Die();
         }
         else
         {
             if (rangeType == RangeType.Near)
             {
-                rangeUnit.GetDamage(this, GetAtk());
+                int life = rangeUnit.life;
+
+                onAttack = () =>
+                {
+                    if(null != rangeUnit && life == rangeUnit.life)
+                        rangeUnit.GetDamage(this, GetAtk());
+                };
+
             }
             else if (rangeType == RangeType.Dist)
             {
@@ -372,7 +392,10 @@ public partial class BattleUnit
         atkSameCnt++;
 
         if (specialAction == SpecialAction.Invisibility)
+        {
+            slime.SetInvisible(false);
             circleCollider.enabled = true;
+        }
 
         if (specialAction == SpecialAction.Fear)
         {
@@ -454,7 +477,7 @@ public partial class BattleUnit
             knockBack = 0.08f;
         }
         
-        var ef = EffectManager.Instance.SpawnEffect("Ef_DamageFont", GetPos(), Quaternion.identity)
+        var ef = EffectManager.Instance.SpawnEffect("Ef_DamageFont", GetPos() + Vector2.up , Quaternion.identity)
             .GetComponent<Ef_DamageFont>();
         ef.SetDamage(dmg);
 
