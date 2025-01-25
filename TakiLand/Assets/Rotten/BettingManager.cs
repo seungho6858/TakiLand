@@ -12,6 +12,7 @@ public class BettingManager : MonoSingleton<BettingManager>
 	{
 		public Team BetTeam;
 		public int BetAmount;
+		public int ExtraRewardRate;
 	}
 
 	public class Gold
@@ -116,7 +117,12 @@ public class BettingManager : MonoSingleton<BettingManager>
 
 		if (isWin)
 		{
-			var reward = Stage.Instance.GetReward(currentStage, CurrentBet.BetAmount);
+			// 남은 탐욕슬라임 개수만큼 추가 리워드 적용
+			int extraRewardRate = BattleManager.GetGreedCount(Team.Blue);
+			CurrentBet.ExtraRewardRate = extraRewardRate;
+			
+			// 리워드 적용 
+			var reward = Stage.Instance.GetReward(currentStage, CurrentBet);
 			_gold.SetValue(CurrentGold + reward);
 		}
 	}
@@ -128,8 +134,9 @@ public class BettingManager : MonoSingleton<BettingManager>
 		bool won = prevBet.BetTeam == result;
 
 		int goldDelta = won
-			? Stage.Instance.GetReward(stage, prevBet.BetAmount) - prevBet.BetAmount
+			? Stage.Instance.GetReward(stage, prevBet) - prevBet.BetAmount
 			: -prevBet.BetAmount;
+		
 		return (won, goldDelta);
 	}
 

@@ -29,10 +29,11 @@ namespace Mib.Data
 
 	public partial class Stage
 	{
-		public int GetReward(int stage, int betAmount)
+		public int GetReward(int stage, BettingManager.Bet bet)
 		{
 			int rewardRate = new Key(stage).Data.RewardRate;
-			return betAmount * (rewardRate + 1);
+			int totalRewardRate = 1 + rewardRate + bet.ExtraRewardRate;
+			return bet.BetAmount * totalRewardRate;
 		}
 
 		public partial class Data : IValidatable
