@@ -285,6 +285,8 @@ public partial class BattleUnit
             {
                 return atk;
             }
+            else
+                return atk;
         }
         else
             return atk;
