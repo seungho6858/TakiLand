@@ -7,13 +7,13 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BettingUI : SerializedMonoBehaviour
+public class BettingUI : MonoBehaviour
 {
 	[SerializeField] 
-	private Dictionary<Team, Button> _bettingButtons;
+	private SerializableDictionary<Team, Button> _bettingButtons;
 	
 	[SerializeField] 
-	private Dictionary<BetPreset, Button> _betAmountButtons;
+	private SerializableDictionary<BetPreset, Button> _betAmountButtons;
 
 	[SerializeField]
 	private TextMeshProUGUI _currentBet;
