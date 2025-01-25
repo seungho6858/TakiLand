@@ -2,8 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using EnumsNET;
+using Mib.Data;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BettingResultUI : MonoBehaviour
 {
@@ -12,6 +14,12 @@ public class BettingResultUI : MonoBehaviour
 	
 	[SerializeField]
 	private TextMeshProUGUI _betAmount;
+	
+	[SerializeField]
+	private TextMeshProUGUI _betDescription;
+	
+	[SerializeField]
+	private Image _betTeamImage;
 
 	private void Awake()
 	{
@@ -24,8 +32,18 @@ public class BettingResultUI : MonoBehaviour
 		{
 			Show();
 			BettingManager.Bet currentBet = BettingManager.Instance.CurrentBet;
+			
+			// 베팅
 			_betAmount.text = currentBet.BetAmount.ToString();
-			_betTeam.text = currentBet.BetTeam.AsString();
+			_betTeam.text = currentBet.BetTeam.GetTeamName();
+
+			// sprite
+			Sprite teamSprite = GeneralSetting.Instance.TeamSprites[currentBet.BetTeam].Selected;
+			_betTeamImage.sprite = teamSprite;
+
+			// 보상 설명
+			Stage.Data stageData = new Stage.Key(StageManager.Instance.CurrentStage).Data;
+			_betDescription.text = $"성공시 x {stageData.RewardRate.ToString()}배 획득";
 		};
 	}
 	

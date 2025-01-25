@@ -1,6 +1,20 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+public static class Extensions
+{
+	public static string GetTeamName(this Team team)
+	{
+		return team switch
+		{
+			Team.Red => "레드팀",
+			Team.Blue => "블루팀",
+			Team.Draw => "무승부",
+		};
+	}
+}
 
 namespace Mib.Data
 {
