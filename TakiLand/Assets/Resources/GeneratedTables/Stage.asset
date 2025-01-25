@@ -55,7 +55,7 @@ MonoBehaviour:
       Data: 1
     - Name: BattleTime
       Entry: 4
-      Data: 40
+      Data: 30
     - Name: MinimumCost
       Entry: 3
       Data: 1
@@ -91,7 +91,7 @@ MonoBehaviour:
       Data: 2
     - Name: BattleTime
       Entry: 4
-      Data: 40
+      Data: 30
     - Name: MinimumCost
       Entry: 3
       Data: 2
@@ -127,7 +127,7 @@ MonoBehaviour:
       Data: 3
     - Name: BattleTime
       Entry: 4
-      Data: 50
+      Data: 30
     - Name: MinimumCost
       Entry: 3
       Data: 4
@@ -163,7 +163,7 @@ MonoBehaviour:
       Data: 4
     - Name: BattleTime
       Entry: 4
-      Data: 50
+      Data: 40
     - Name: MinimumCost
       Entry: 3
       Data: 8
@@ -199,7 +199,7 @@ MonoBehaviour:
       Data: 5
     - Name: BattleTime
       Entry: 4
-      Data: 50
+      Data: 40
     - Name: MinimumCost
       Entry: 3
       Data: 10
@@ -235,7 +235,7 @@ MonoBehaviour:
       Data: 6
     - Name: BattleTime
       Entry: 4
-      Data: 60
+      Data: 40
     - Name: MinimumCost
       Entry: 3
       Data: 20
@@ -271,7 +271,7 @@ MonoBehaviour:
       Data: 7
     - Name: BattleTime
       Entry: 4
-      Data: 60
+      Data: 50
     - Name: MinimumCost
       Entry: 3
       Data: 20
@@ -307,7 +307,7 @@ MonoBehaviour:
       Data: 8
     - Name: BattleTime
       Entry: 4
-      Data: 70
+      Data: 50
     - Name: MinimumCost
       Entry: 3
       Data: 20
@@ -343,7 +343,7 @@ MonoBehaviour:
       Data: 9
     - Name: BattleTime
       Entry: 4
-      Data: 80
+      Data: 50
     - Name: MinimumCost
       Entry: 3
       Data: 20
@@ -379,7 +379,7 @@ MonoBehaviour:
       Data: 10
     - Name: BattleTime
       Entry: 4
-      Data: 90
+      Data: 60
     - Name: MinimumCost
       Entry: 3
       Data: 20
