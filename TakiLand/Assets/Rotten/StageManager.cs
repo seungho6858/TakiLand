@@ -10,6 +10,7 @@ using UnityEngine;
 
 public class StageManager : MonoSingleton<StageManager>
 {
+    // Red, Blue, CurrentStage
     public event Action<Formation.Data, Formation.Data, int> OnStageChanged;
     public event Action OnBattleStart;
 

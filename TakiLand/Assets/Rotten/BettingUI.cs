@@ -51,6 +51,24 @@ public class BettingUI : MonoBehaviour
 		{
 			var stageKey = new Stage.Key(stage);
 			_currentRewardRate.text = $"x {stageKey.Data.RewardRate.ToString()}";
+			Show();
 		};
+
+		StageManager.Instance.OnBattleStart += () =>
+		{
+			Hide();
+		};
+	}
+
+	public void Show()
+	{
+		// TODO : 여기는 나중에 애니메이션 들어가면 수정
+		gameObject.SetActive(true);
+	}
+
+	public void Hide()
+	{
+		// TODO : 여기는 나중에 애니메이션 들어가면 수정
+		gameObject.SetActive(false);
 	}
 }
