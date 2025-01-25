@@ -12,4 +12,13 @@ namespace Mib.Data
 			return defineKey.Data.Value;
 		}
 	}
+
+	public partial class Stage
+	{
+		public int GetReward(int stage, int betAmount)
+		{
+			int rewardRate = new Key(stage).Data.RewardRate;
+			return betAmount * (rewardRate + 1);
+		}
+	}
 }

@@ -22,5 +22,22 @@ public class BettingHistoryUI : MonoBehaviour
 			_scores[i] = Instantiate(_scorePrefab, _scoreRoot);
 			_scores[i].Initialize(i + 1);
 		}
+		
+		StageManager.Instance.OnStageChanged +=(red, blue, stage) =>
+		{
+			int prevStage = stage - 1;
+			int scoreIndex = prevStage - 1;
+			
+			BettingManager.Bet prevBet = BettingManager.Instance.GetBet(prevStage);
+			Team result = StageManager.Instance.GetResult(prevStage);
+			bool won = prevBet.BetTeam == result;
+
+			int goldDelta = won
+				? Stage.Instance.GetReward(prevStage, prevBet.BetAmount) - prevBet.BetAmount
+				: -prevBet.BetAmount;
+			
+			_scores[scoreIndex].UpdateScore(won, goldDelta);
+
+		};
 	}
 }

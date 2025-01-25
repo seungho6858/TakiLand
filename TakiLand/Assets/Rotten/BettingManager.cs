@@ -26,7 +26,6 @@ public class BettingManager : MonoSingleton<BettingManager>
 		{
 			int prevGold = Value;
 			Value = gold;
-			Debug.Log($"prev[{prevGold}]\tcurrent[{Value}]");
 			Instance.OnGoldChanged?.Invoke(prevGold, Value);
 		}
 	}
@@ -40,8 +39,10 @@ public class BettingManager : MonoSingleton<BettingManager>
 	
 	protected override bool IsPersistent => false;
 
-	public Bet CurrentBet => _betHistory[StageManager.Instance.CurrentStage];
+	public Bet CurrentBet => GetBet(StageManager.Instance.CurrentStage);
 
+	public Bet GetBet(int stage) => _betHistory[stage - 1];
+	
 	protected override void OnAwake()
 	{
 		_betHistory = new Bet[Define.Instance.GetValue("TotalStage")];
@@ -97,11 +98,11 @@ public class BettingManager : MonoSingleton<BettingManager>
 	public void SettleBets(Team team, int currentStage)
 	{
 		bool isWin = CurrentBet.BetTeam == team;
-		int rewardRate = new Stage.Key(currentStage).Data.RewardRate;
 
 		if (isWin)
 		{
-			_gold.SetValue(CurrentGold + CurrentBet.BetAmount * (rewardRate + 1));
+			var reward = Stage.Instance.GetReward(currentStage, CurrentBet.BetAmount);
+			_gold.SetValue(CurrentGold + reward);
 		}
 	}
 

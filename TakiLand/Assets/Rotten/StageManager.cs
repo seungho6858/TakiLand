@@ -44,6 +44,8 @@ public class StageManager : MonoSingleton<StageManager>
         CurrentStage = 1;
         BettingManager.Instance.Initialize();   
     }
+    
+    public Team GetResult(int stage) => _results[stage - 1];
 
     public async UniTaskVoid PlayFullSequence() 
     {
@@ -79,7 +81,9 @@ public class StageManager : MonoSingleton<StageManager>
         Debug.Log("전투종료!!");
         
         _battleEndFlag = true;
-        _results[CurrentStage] = team;
+
+        int resultIndex = CurrentStage - 1;
+        _results[resultIndex] = team;
         
         BettingManager.Instance.SettleBets(team, CurrentStage);
     }
