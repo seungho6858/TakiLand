@@ -78,9 +78,18 @@ public class BettingUI : MonoBehaviour
 	{
 		foreach (var pair in GeneralSetting.Instance.TeamSprites)
 		{
-			_bettingButtonImages[pair.Key].sprite = team.HasValue && team.Value == pair.Key
+			Image target = _bettingButtonImages[pair.Key];
+			target.sprite = team.HasValue && team.Value == pair.Key
 				? pair.Value.Selected
 				: pair.Value.Idle;
+		}
+		
+		foreach (KeyValuePair<Team, Button> pair in _bettingButtons)
+		{
+			var background = pair.Value.GetComponent<Image>();
+			background.color = team.HasValue && team.Value == pair.Key 
+				? GeneralSetting.Instance.BetTeamColors[pair.Key]
+				: Color.white;
 		}
 	}
 
