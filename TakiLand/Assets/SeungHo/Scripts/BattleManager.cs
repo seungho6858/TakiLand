@@ -40,6 +40,8 @@ public partial class BattleManager : MonoBehaviour
     private void OnBattleStart()
     {
         GameState = GameState.Battle;
+        
+        listUnits.ForEach(x => x.GameStateChange(GameState.Battle));
     }
 
     public static int GetGreedCount(Team team)

@@ -32,8 +32,6 @@ public partial class BattleUnit : MonoBehaviour
     private List<BattleUnit> listRangeUnits;
     private BattleUnit rangeUnit;
     
-    
-    
     public void SetTeam(Team team, SpecialAction specialAction)
     {
         Init();
@@ -143,6 +141,14 @@ public partial class BattleUnit : MonoBehaviour
         this.rangeType = rangeType;
 
         trRange.localScale = Vector3.one * range;
+        
+        slime.SetHp(GetAtk(), GetHp(), this.team);
+    }
+
+    public void GameStateChange(GameState gameState)
+    {
+        if(gameState == GameState.Battle)
+            slime.StartGame();
     }
 
     private void SetUnitState(UnitState unitState)
@@ -527,11 +533,13 @@ public partial class BattleUnit
         
         slime.ShowHpBar(true, isDead ? 10f : 1f);
         
+        /*
         if (null != attacker)
         {
             vKnockBack = (GetPos() - attacker.GetPos()).normalized;
             knockBack = 0.08f;
         }
+        */
         
         var ef = EffectManager.Instance.SpawnEffect("Ef_DamageFont", GetPos() + Vector2.up , Quaternion.identity)
             .GetComponent<Ef_DamageFont>();

@@ -23,6 +23,13 @@ public partial class Slime : MonoBehaviour
         }
     }
 
+    public void SetHp(float atk, float hp, Team team)
+    {
+        hpBar.SetStat(this.team, atk, hp);
+    }
+
+    public void StartGame() => hpBar.StartGame();
+
     private Transform trLook;
 
     private List<SpriteRenderer> _listSprs;
@@ -59,7 +66,7 @@ public partial class Slime : MonoBehaviour
                 Quaternion.Euler(0, 0, 0) : Quaternion.Euler(0, 180, 0);
 
             hpBar.transform.rotation = diff > 0f ? 
-                Quaternion.Euler(0, 0, 0) : Quaternion.Euler(0, 180, 0);
+                Quaternion.Euler(0, 0, 0) : Quaternion.Euler(0, 0, 0);
         }
     }
 
