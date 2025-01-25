@@ -34,5 +34,13 @@ namespace Mib.Data
 			int rewardRate = new Key(stage).Data.RewardRate;
 			return betAmount * (rewardRate + 1);
 		}
+
+		public partial class Data : IValidatable
+		{
+			public bool Validate()
+			{
+				return MinimumCost <= MaximumCost;
+			}
+		}
 	}
 }

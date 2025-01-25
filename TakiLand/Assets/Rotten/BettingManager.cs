@@ -90,7 +90,20 @@ public class BettingManager : MonoSingleton<BettingManager>
 	{
 		int prevBet = CurrentBet.BetAmount;
 
-		amount = Math.Clamp(amount, 0, CurrentGold);
+		Stage.Data data = Stage.Instance.Table[new Stage.Key(StageManager.Instance.CurrentStage)];
+
+		if (data.MinimumCost <= amount && amount <= data.MaximumCost)
+		{
+			amount = Math.Min(amount, CurrentGold);
+		}
+		else if (amount < data.MinimumCost)
+		{
+			amount = Math.Min(data.MinimumCost, CurrentGold);
+		}
+		else if (amount > data.MaximumCost)
+		{
+			amount = Math.Min(data.MaximumCost, CurrentGold);
+		}
 		
 		CurrentBet.BetAmount = amount;
 		

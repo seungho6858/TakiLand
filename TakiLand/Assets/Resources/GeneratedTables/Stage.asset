@@ -59,6 +59,9 @@ MonoBehaviour:
     - Name: MinimumCost
       Entry: 3
       Data: 1
+    - Name: MaximumCost
+      Entry: 3
+      Data: 5
     - Name: RewardRate
       Entry: 3
       Data: 1
@@ -92,6 +95,9 @@ MonoBehaviour:
     - Name: MinimumCost
       Entry: 3
       Data: 2
+    - Name: MaximumCost
+      Entry: 3
+      Data: 5
     - Name: RewardRate
       Entry: 3
       Data: 1
@@ -125,6 +131,9 @@ MonoBehaviour:
     - Name: MinimumCost
       Entry: 3
       Data: 4
+    - Name: MaximumCost
+      Entry: 3
+      Data: 10
     - Name: RewardRate
       Entry: 3
       Data: 1
@@ -158,6 +167,9 @@ MonoBehaviour:
     - Name: MinimumCost
       Entry: 3
       Data: 8
+    - Name: MaximumCost
+      Entry: 3
+      Data: 30
     - Name: RewardRate
       Entry: 3
       Data: 2
@@ -191,6 +203,9 @@ MonoBehaviour:
     - Name: MinimumCost
       Entry: 3
       Data: 10
+    - Name: MaximumCost
+      Entry: 3
+      Data: 90
     - Name: RewardRate
       Entry: 3
       Data: 5
@@ -224,6 +239,9 @@ MonoBehaviour:
     - Name: MinimumCost
       Entry: 3
       Data: 20
+    - Name: MaximumCost
+      Entry: 3
+      Data: 250
     - Name: RewardRate
       Entry: 3
       Data: 2
@@ -257,6 +275,9 @@ MonoBehaviour:
     - Name: MinimumCost
       Entry: 3
       Data: 20
+    - Name: MaximumCost
+      Entry: 3
+      Data: 500
     - Name: RewardRate
       Entry: 3
       Data: 3
@@ -290,6 +311,9 @@ MonoBehaviour:
     - Name: MinimumCost
       Entry: 3
       Data: 20
+    - Name: MaximumCost
+      Entry: 3
+      Data: 1250
     - Name: RewardRate
       Entry: 3
       Data: 3
@@ -323,6 +347,9 @@ MonoBehaviour:
     - Name: MinimumCost
       Entry: 3
       Data: 20
+    - Name: MaximumCost
+      Entry: 3
+      Data: 3000
     - Name: RewardRate
       Entry: 3
       Data: 3
@@ -356,6 +383,9 @@ MonoBehaviour:
     - Name: MinimumCost
       Entry: 3
       Data: 20
+    - Name: MaximumCost
+      Entry: 3
+      Data: 13536
     - Name: RewardRate
       Entry: 3
       Data: 10

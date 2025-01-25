@@ -17,6 +17,9 @@ public class BettingUI : MonoBehaviour
 	
 	[SerializeField] 
 	private SerializableDictionary<BetPreset, Button> _betAmountButtons;
+	
+	[SerializeField]
+	private TextMeshProUGUI _betRange;
 
 	[SerializeField]
 	private TextMeshProUGUI _currentBet;
@@ -57,8 +60,10 @@ public class BettingUI : MonoBehaviour
 
 		StageManager.Instance.OnStageChanged += (blue, red, stage) =>
 		{
-			var stageKey = new Stage.Key(stage);
-			_currentRewardRate.text = $"x {stageKey.Data.RewardRate.ToString()}";
+			Stage.Data stageData = new Stage.Key(stage).Data;
+			_currentRewardRate.text = $"x {stageData.RewardRate.ToString()}";
+			_betRange.text = $"최소 {stageData.MinimumCost.ToString()} ~ 최대 {stageData.MaximumCost.ToString()}";
+			
 			SelectBetTeam(null);
 			Show();
 		};

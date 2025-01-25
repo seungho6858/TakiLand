@@ -16,7 +16,7 @@ public class NonDiegeticUI : MonoBehaviour
 	
 	[SerializeField]
 	private TextMeshProUGUI _currentGoldText;
-
+	
 	private void Awake()
 	{
 		_testFormationButton.onClick.AddListener(() =>
@@ -34,5 +34,20 @@ public class NonDiegeticUI : MonoBehaviour
 			//TODO : 뭔가 애니메이션
 			_currentGoldText.text = current.ToString();
 		};
+
+		StageManager.Instance.OnStageChanged += (_, _, _) =>
+		{
+			CanBattleStart(false);
+		};
+
+		BettingManager.Instance.OnBetTeamChanged += _ =>
+		{
+			CanBattleStart(true);
+		};
+	}
+
+	private void CanBattleStart(bool value)
+	{
+		_battleStartButton.interactable = value;
 	}
 }

@@ -39,6 +39,9 @@ namespace Mib.Data
                     case "MinimumCost":
 						data.MinimumCost = Parser.ParseInt(value);
 						break;
+                    case "MaximumCost":
+						data.MaximumCost = Parser.ParseInt(value);
+						break;
                     case "RewardRate":
 						data.RewardRate = Parser.ParseInt(value);
 						break;
@@ -55,6 +58,7 @@ namespace Mib.Data
 			public int Stage;
 			public float BattleTime;
 			public int MinimumCost;
+			public int MaximumCost;
 			public int RewardRate;
 
 		}
