@@ -606,6 +606,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7977908860653368060}
+  - component: {fileID: 2261178474894314648}
   m_Layer: 5
   m_Name: BettingHIstory
   m_TagString: Untagged
@@ -634,6 +635,18 @@ RectTransform:
   m_AnchoredPosition: {x: 628.8014, y: 0}
   m_SizeDelta: {x: -1384.6062, y: 400}
   m_Pivot: {x: 0.5, y: 0}
+--- !u!114 &2261178474894314648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6633145167754499831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f07b45ab4144b13498e8fd4b867fe065, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6635414894920211468
 GameObject:
   m_ObjectHideFlags: 0
