@@ -48,3 +48,5 @@ sysinfo.txt
 DrawWar_clone_0
 
 *.DS_Store
+
+*.vsconfig
