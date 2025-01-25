@@ -55,10 +55,10 @@ MonoBehaviour:
       Data: 1
     - Name: BattleTime
       Entry: 4
-      Data: 30
+      Data: 40
     - Name: MinimumCost
       Entry: 3
-      Data: 0
+      Data: 1
     - Name: RewardRate
       Entry: 3
       Data: 1
@@ -88,10 +88,10 @@ MonoBehaviour:
       Data: 2
     - Name: BattleTime
       Entry: 4
-      Data: 30
+      Data: 40
     - Name: MinimumCost
       Entry: 3
-      Data: 0
+      Data: 2
     - Name: RewardRate
       Entry: 3
       Data: 1
@@ -121,10 +121,10 @@ MonoBehaviour:
       Data: 3
     - Name: BattleTime
       Entry: 4
-      Data: 30
+      Data: 50
     - Name: MinimumCost
       Entry: 3
-      Data: 0
+      Data: 4
     - Name: RewardRate
       Entry: 3
       Data: 1
@@ -154,10 +154,10 @@ MonoBehaviour:
       Data: 4
     - Name: BattleTime
       Entry: 4
-      Data: 40
+      Data: 50
     - Name: MinimumCost
       Entry: 3
-      Data: 0
+      Data: 8
     - Name: RewardRate
       Entry: 3
       Data: 2
@@ -190,10 +190,10 @@ MonoBehaviour:
       Data: 50
     - Name: MinimumCost
       Entry: 3
-      Data: 0
+      Data: 10
     - Name: RewardRate
       Entry: 3
-      Data: 2
+      Data: 5
     - Name: 
       Entry: 8
       Data: 
@@ -223,7 +223,7 @@ MonoBehaviour:
       Data: 60
     - Name: MinimumCost
       Entry: 3
-      Data: 0
+      Data: 20
     - Name: RewardRate
       Entry: 3
       Data: 2
@@ -256,7 +256,7 @@ MonoBehaviour:
       Data: 60
     - Name: MinimumCost
       Entry: 3
-      Data: 0
+      Data: 20
     - Name: RewardRate
       Entry: 3
       Data: 3
@@ -286,10 +286,10 @@ MonoBehaviour:
       Data: 8
     - Name: BattleTime
       Entry: 4
-      Data: 60
+      Data: 70
     - Name: MinimumCost
       Entry: 3
-      Data: 0
+      Data: 20
     - Name: RewardRate
       Entry: 3
       Data: 3
@@ -319,10 +319,10 @@ MonoBehaviour:
       Data: 9
     - Name: BattleTime
       Entry: 4
-      Data: 60
+      Data: 80
     - Name: MinimumCost
       Entry: 3
-      Data: 0
+      Data: 20
     - Name: RewardRate
       Entry: 3
       Data: 3
@@ -352,13 +352,13 @@ MonoBehaviour:
       Data: 10
     - Name: BattleTime
       Entry: 4
-      Data: 60
+      Data: 90
     - Name: MinimumCost
       Entry: 3
-      Data: 0
+      Data: 20
     - Name: RewardRate
       Entry: 3
-      Data: 4
+      Data: 10
     - Name: 
       Entry: 8
       Data: 

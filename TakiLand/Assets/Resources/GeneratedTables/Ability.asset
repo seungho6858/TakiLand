@@ -265,19 +265,19 @@ MonoBehaviour:
       Data: 6
     - Name: Damage
       Entry: 3
-      Data: 3
+      Data: 1
     - Name: MaxHp
       Entry: 3
-      Data: 6
+      Data: 1
     - Name: MoveSpeed
       Entry: 4
       Data: 1
     - Name: AttackSpeed
       Entry: 4
-      Data: 4
+      Data: 1
     - Name: Range
       Entry: 4
-      Data: 2
+      Data: 1
     - Name: IsRangedUnit
       Entry: 3
       Data: 1
