@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -33,7 +34,9 @@ public partial class BattleUnit : MonoBehaviour
         this.team = team;
         this.specialAction = specialAction;
         
-        spr.color = team == Team.Red ? Color.red : Color.blue;
+        //spr.color = team == Team.Red ? Color.red : Color.blue;
+        spr.material.SetColor("_OutlineColor", team == Team.Red ? Color.red : Color.blue); // 빨간색 설정
+
         tmpAction.text = specialAction.ToString();
     }
     
@@ -77,6 +80,11 @@ public partial class BattleUnit : MonoBehaviour
         if (units == null || units.Count == 0)
             return null; // 리스트가 비어 있으면 null 반환
 
+        if (units.Count(x => x.specialAction == SpecialAction.Taunt) > 0)
+        {
+            units.RemoveAll(x => x.specialAction != SpecialAction.Taunt);
+        }
+        
         BattleUnit nearestUnit = null;
         float shortestDistance = float.MaxValue;
 
@@ -120,12 +128,21 @@ public partial class BattleUnit
     public float moveSpeed;
     public float attackSpeed;
     public float coolTime;
+
+    public float knockBack;
+    public Vector2 vKnockBack;
     
     private void FixedUpdate()
     {
         if (BattleManager.GameState == GameState.Battle)
         {
-            if (this.rangeUnit != null)
+            if (knockBack >= 0f) // 넉백 적용
+            {
+                knockBack -= Time.deltaTime;
+                
+                rg.position += vKnockBack * (Time.deltaTime * 0.9f);
+            }
+            else if (this.rangeUnit != null)
             {
                 // 주위에 공격할 유닛이 있다!
             }
@@ -134,15 +151,15 @@ public partial class BattleUnit
                 // 가장 가까운 적에게 다가간다!
                 Vector2 vDir = this.nearUnit.GetPos() - this.GetPos();
                 vDir.Normalize();
-
+                
                 rg.position += vDir * (moveSpeed * Time.deltaTime);
             }
         }
     }
-
+    
     private void Attack()
     {
-        rangeUnit.GetDamage(this.atk);
+        rangeUnit.GetDamage(this, this.atk);
     }
 
     private void Die()
@@ -169,7 +186,7 @@ public partial class BattleUnit
         
     }
     
-    public bool GetDamage(float dmg)
+    public bool GetDamage(BattleUnit attacker, float dmg)
     {
         this.hp -= dmg;
 
@@ -178,6 +195,12 @@ public partial class BattleUnit
             Die();   
         }
 
+        if (null != attacker)
+        {
+            vKnockBack = (GetPos() - attacker.GetPos()).normalized;
+            knockBack = 0.12f;
+        }
+        
         var ef = EffectManager.Instance.SpawnEffect("Ef_DamageFont", GetPos(), Quaternion.identity)
             .GetComponent<Ef_DamageFont>();
         ef.SetDamage(dmg);
@@ -188,7 +211,6 @@ public partial class BattleUnit
 
 public partial class BattleUnit
 {
-    
     #region Trigger
     
     // range
@@ -257,17 +279,10 @@ public partial class BattleUnit
         find.SetTrigger(OnTriggerEnterWithFindUnit, OnTriggerExitWithFindUnit);
         range.SetTrigger(OnTriggerEnterWithRangeUnit, OnTriggerExitWithRangeUnit);
     }
-
     
     private void OnDestroy()
     {
         listFindUnits.Clear();
     }
 
-    public enum Dir
-    {
-        Right,
-        Left,
-        
-    }
 }
