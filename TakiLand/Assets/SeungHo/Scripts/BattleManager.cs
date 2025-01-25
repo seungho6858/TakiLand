@@ -189,7 +189,7 @@ public partial class BattleManager : MonoBehaviour
 
     private async UniTaskVoid GameEndAsync(Team winner)
     {
-        await UniTask.Delay(3000);
+        await UniTask.Delay(3000, cancellationToken:this.GetCancellationTokenOnDestroy());
         
         onTeamWin?.Invoke(winner);
     }
