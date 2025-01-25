@@ -100,16 +100,16 @@ MonoBehaviour:
       Data: 2
     - Name: MaxHp
       Entry: 3
-      Data: 10
+      Data: 9
     - Name: MoveSpeed
       Entry: 4
       Data: 1
     - Name: AttackSpeed
       Entry: 4
-      Data: 5
+      Data: 2
     - Name: Range
       Entry: 4
-      Data: 1
+      Data: 2
     - Name: IsRangedUnit
       Entry: 3
       Data: 0
@@ -148,10 +148,10 @@ MonoBehaviour:
       Data: 2
     - Name: AttackSpeed
       Entry: 4
-      Data: 2.5
+      Data: 1.25
     - Name: Range
       Entry: 4
-      Data: 1
+      Data: 2
     - Name: IsRangedUnit
       Entry: 3
       Data: 0
@@ -190,10 +190,10 @@ MonoBehaviour:
       Data: 1
     - Name: AttackSpeed
       Entry: 4
-      Data: 3
+      Data: 1.5
     - Name: Range
       Entry: 4
-      Data: 1
+      Data: 2
     - Name: IsRangedUnit
       Entry: 3
       Data: 0
@@ -223,7 +223,7 @@ MonoBehaviour:
       Data: 5
     - Name: Damage
       Entry: 3
-      Data: 3
+      Data: 1
     - Name: MaxHp
       Entry: 3
       Data: 4
@@ -232,7 +232,7 @@ MonoBehaviour:
       Data: 1
     - Name: AttackSpeed
       Entry: 4
-      Data: 3
+      Data: 1
     - Name: Range
       Entry: 4
       Data: 5
@@ -316,7 +316,7 @@ MonoBehaviour:
       Data: 1
     - Name: AttackSpeed
       Entry: 4
-      Data: 5
+      Data: 2.5
     - Name: Range
       Entry: 4
       Data: 1
@@ -358,10 +358,10 @@ MonoBehaviour:
       Data: 1
     - Name: AttackSpeed
       Entry: 4
-      Data: 5
+      Data: 2.5
     - Name: Range
       Entry: 4
-      Data: 1
+      Data: 2
     - Name: IsRangedUnit
       Entry: 3
       Data: 0
@@ -400,7 +400,7 @@ MonoBehaviour:
       Data: 0
     - Name: AttackSpeed
       Entry: 4
-      Data: 5
+      Data: 3
     - Name: Range
       Entry: 4
       Data: 10
@@ -439,13 +439,13 @@ MonoBehaviour:
       Data: 6
     - Name: MoveSpeed
       Entry: 4
-      Data: 10
+      Data: 3
     - Name: AttackSpeed
       Entry: 4
-      Data: 3
+      Data: 1.5
     - Name: Range
       Entry: 4
-      Data: 2
+      Data: 3
     - Name: IsRangedUnit
       Entry: 3
       Data: 0

@@ -648,13 +648,7 @@ MonoBehaviour:
       Data: 40|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 5
-    - Name: 
-      Entry: 3
-      Data: 10
-    - Name: 
-      Entry: 3
-      Data: 10
+      Data: 3
     - Name: 
       Entry: 3
       Data: 10
@@ -1206,21 +1200,6 @@ MonoBehaviour:
       Data: 68|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 10
-    - Name: 
-      Entry: 3
-      Data: 5
-    - Name: 
-      Entry: 3
-      Data: 5
-    - Name: 
-      Entry: 3
-      Data: 5
-    - Name: 
-      Entry: 3
-      Data: 5
-    - Name: 
-      Entry: 3
       Data: 5
     - Name: 
       Entry: 3
@@ -1308,13 +1287,7 @@ MonoBehaviour:
       Data: 72|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 7
-    - Name: 
-      Entry: 3
-      Data: 8
-    - Name: 
-      Entry: 3
-      Data: 8
+      Data: 5
     - Name: 
       Entry: 3
       Data: 8
@@ -1395,7 +1368,25 @@ MonoBehaviour:
       Data: 76|SpecialAction[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 0
+      Data: 6
+    - Name: 
+      Entry: 3
+      Data: 9
+    - Name: 
+      Entry: 3
+      Data: 4
+    - Name: 
+      Entry: 3
+      Data: 9
+    - Name: 
+      Entry: 3
+      Data: 4
+    - Name: 
+      Entry: 3
+      Data: 4
+    - Name: 
+      Entry: 3
+      Data: 4
     - Name: 
       Entry: 13
       Data: 
