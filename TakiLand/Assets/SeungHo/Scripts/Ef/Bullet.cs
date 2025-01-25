@@ -32,9 +32,10 @@ public class Bullet : Effect
 			.SetEase(Ease.Linear) // 선형 이동
 			.OnUpdate(() =>
 			{
+				if(initialLife != target.life)
+					Hide();
 				// 실시간으로 타겟의 위치를 업데이트
-				if (target != null && target.gameObject.activeSelf &&
-				    initialLife != target.life)
+				else if (target != null && target.gameObject.activeSelf)
 				{
 					targetPosition = target.GetPos() + targetOffset;
 					transform.DOMove(targetPosition, moveDuration).ChangeEndValue(targetPosition, true);
