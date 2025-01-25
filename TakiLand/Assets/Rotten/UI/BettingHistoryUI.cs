@@ -38,14 +38,8 @@ public class BettingHistoryUI : MonoBehaviour
 			int prevStage = stage - 1;
 			int scoreIndex = prevStage - 1;
 			
-			BettingManager.Bet prevBet = BettingManager.Instance.GetBet(prevStage);
-			Team result = StageManager.Instance.GetResult(prevStage);
-			bool won = prevBet.BetTeam == result;
+			(bool won, int goldDelta) = BettingManager.Instance.CalculateResult(prevStage);
 
-			int goldDelta = won
-				? Stage.Instance.GetReward(prevStage, prevBet.BetAmount) - prevBet.BetAmount
-				: -prevBet.BetAmount;
-			
 			_scores[scoreIndex].UpdateScore(won, goldDelta);
 		};
 		

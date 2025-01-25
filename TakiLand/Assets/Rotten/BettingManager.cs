@@ -106,6 +106,18 @@ public class BettingManager : MonoSingleton<BettingManager>
 		}
 	}
 
+	public (bool won, int goldDelta) CalculateResult(int stage)
+	{
+		Bet prevBet = GetBet(stage);
+		Team result = StageManager.Instance.GetResult(stage);
+		bool won = prevBet.BetTeam == result;
+
+		int goldDelta = won
+			? Stage.Instance.GetReward(stage, prevBet.BetAmount) - prevBet.BetAmount
+			: -prevBet.BetAmount;
+		return (won, goldDelta);
+	}
+
 	public void Cheat_SetGold(int amount)
 	{
 		_gold.SetValue(amount);
