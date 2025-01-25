@@ -337,8 +337,15 @@ public partial class BattleUnit
 
                 onAttack = () =>
                 {
-                    if(null != rangeUnit && life == rangeUnit.life)
+                    if (null != rangeUnit && life == rangeUnit.life)
+                    {
                         rangeUnit.GetDamage(this, GetAtk());
+                        
+                        if (specialAction == SpecialAction.Fear)
+                        {
+                            rangeUnit?.SetFear(this);
+                        }
+                    }
                 };
 
             }
@@ -406,10 +413,6 @@ public partial class BattleUnit
             circleCollider.enabled = true;
         }
 
-        if (specialAction == SpecialAction.Fear)
-        {
-            rangeUnit.SetFear(this);
-        }
     }   
     
     private void Die()
@@ -660,6 +663,7 @@ public partial class BattleUnit
     
     private void OnDestroy()
     {
+        life++;
         listFindUnits.Clear();
     }
 
