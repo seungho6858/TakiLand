@@ -67,7 +67,7 @@ public class StageManager : MonoSingleton<StageManager>
             .OrderBy(_ => Guid.NewGuid())
             .ToArray();
         
-        Debug.Log($"전투시작\tRed:[{positions[0]}]\tBlue:[{positions[1]}]");
+        Debug.Log($"[Log] 전투시작\tRed:[{positions[0]}]\tBlue:[{positions[1]}]");
         
         OnStageChanged?.Invoke(positions[0], positions[1], CurrentStage);
 
@@ -101,9 +101,9 @@ public class StageManager : MonoSingleton<StageManager>
             return;
         }
         
-        Debug.Log("전투종료!!");
-        
         _battleEndFlag = true;
+        
+        Debug.Log("전투종료!!");
 
         int resultIndex = CurrentStage - 1;
         _results[resultIndex] = team;
