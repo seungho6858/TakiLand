@@ -522,6 +522,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1976024977840074556}
   - component: {fileID: 9153792175994973884}
+  - component: {fileID: 1242197495227537479}
   m_Layer: 5
   m_Name: Popup_Ranking
   m_TagString: Untagged
@@ -566,6 +567,27 @@ MonoBehaviour:
   _attribute: 0
   uiElement: {fileID: 9071867152757235498}
   mine: {fileID: 9008646575492955856}
+--- !u!95 &1242197495227537479
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023482209695625280}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cb4ec07d23f6bfc419b0ed15e45f421c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2770891355087256306
 GameObject:
   m_ObjectHideFlags: 0
@@ -601,9 +623,9 @@ RectTransform:
   - {fileID: 6140184221737420328}
   m_Father: {fileID: 6806050495409638011}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 435, y: -50}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &9071867152757235498
@@ -1486,6 +1508,7 @@ GameObject:
   - component: {fileID: 8163050056918420803}
   - component: {fileID: 3349370708244534260}
   - component: {fileID: 6929875685706249387}
+  - component: {fileID: 7958844848609722641}
   m_Layer: 5
   m_Name: Scroll View
   m_TagString: Untagged
@@ -1581,6 +1604,18 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!225 &7958844848609722641
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5550745473392403592}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &5802157329921213825
 GameObject:
   m_ObjectHideFlags: 0
@@ -1950,6 +1985,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4151988913610355491}
   - component: {fileID: 9008646575492955856}
+  - component: {fileID: 3495564079625718746}
   m_Layer: 5
   m_Name: Element (1)
   m_TagString: Untagged
@@ -1995,6 +2031,18 @@ MonoBehaviour:
   rank: {fileID: 8136453243524703811}
   gold: {fileID: 700604270185972731}
   stage: {fileID: 5372967592877292118}
+--- !u!225 &3495564079625718746
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7445893382547083613}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &7978239173577304045
 GameObject:
   m_ObjectHideFlags: 0
