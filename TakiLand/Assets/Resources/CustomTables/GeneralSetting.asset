@@ -51,5 +51,17 @@ MonoBehaviour:
     - Idle: {fileID: 21300000, guid: 7ffa37c2e6b7f2c48969ce970c4f1f49, type: 3}
       Selected: {fileID: 21300000, guid: 221ace1cf21442141b31198e0d187fd4, type: 3}
   ResultSprites:
-    m_keys: 
-    m_values: []
+    m_keys: 000000000100000002000000
+    m_values:
+    - Win: {fileID: 21300000, guid: 9c1c0cf50aba9ce469772ba710fda94a, type: 3}
+      Lose: {fileID: 21300000, guid: bca3b6f2c8978674a8cbd3780ec8f6ab, type: 3}
+    - Win: {fileID: 21300000, guid: 21e84498a54ac5c42bc62b96b2447219, type: 3}
+      Lose: {fileID: 21300000, guid: 3c3d1e05a58af5745afc5412e3a6bd30, type: 3}
+    - Win: {fileID: 21300000, guid: a3019e6faea4fd149a9007bf7368498d, type: 3}
+      Lose: {fileID: 21300000, guid: eabd7817a79eaaf49abbb58e0d4ac43a, type: 3}
+  ButtonImage:
+    m_keys: 000000000100000002000000
+    m_values:
+    - {fileID: 21300000, guid: 38ce8873b1f1df540ba28063cd2b53bf, type: 3}
+    - {fileID: 21300000, guid: 01c5e54e8d41da94ea31d8e1349abcd3, type: 3}
+    - {fileID: 21300000, guid: 74eb16387c169a54d808007110d887e8, type: 3}
