@@ -1,0 +1,38 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using Mib;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
+public class Title : MonoBehaviour
+{
+	[SerializeField]
+	private Button _playButton;
+	
+	[SerializeField]
+	private Button _creditButton;
+	
+	[SerializeField]
+	private Button _exitButton;
+
+	private void Awake()
+	{
+		_playButton.onClick.AddListener(() =>
+		{
+			SceneLoader.ChangeScene(Constant.BattleScene).Forget();
+		});
+		
+		_creditButton.onClick.AddListener(() =>
+		{
+			// TODO: creadit만들기
+		});
+		
+		_exitButton.onClick.AddListener(() =>
+		{
+			SceneLoader.ChangeScene(Constant.BattleScene).Forget();
+			// TODO: 페이크 버튼 만들기
+		});
+	}
+}

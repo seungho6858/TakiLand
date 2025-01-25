@@ -36,6 +36,8 @@ public class StageManager : MonoSingleton<StageManager>
     private void Start()
     {
         Initialize();
+        
+        SceneLoader.CompleteLoading().Forget();
 
         PlayFullSequence().Forget();
     }

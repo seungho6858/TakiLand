@@ -12,15 +12,11 @@ namespace Mib
 		public static event Action<string> OnSceneChanging;
 		public static event Action<string> OnSceneChanged;
 
-		public const string TITLE = "Title";
-		public const string LOBBY = "Lobby";
-		public const string MAIN = "Main";
-
 		public static string CurrentScene => _current;
 
 		private const string LOADING = "Loading";
 
-		private static string _current = TITLE;
+		private static string _current = Constant.TitleScene;
 		private static readonly List<string> AdditiveScenes = new();
 		private static bool _isLoading;
 		private static bool _isAdditiveLoading = false;
