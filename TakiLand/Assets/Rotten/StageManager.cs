@@ -38,8 +38,8 @@ public class StageManager : MonoSingleton<StageManager>
     {
         base.OnDestroy();
         
-        _bettingEndFlag.TrySetCanceled();
-        _battleEndFlag.TrySetCanceled();
+        _bettingEndFlag?.TrySetCanceled();
+        _battleEndFlag?.TrySetCanceled();
     }
 
     private void Start()
