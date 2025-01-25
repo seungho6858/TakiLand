@@ -8,9 +8,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2296992660122674598, guid: bb1b4805da6a64a13a20cd0ba6c3a9d2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2608552064685199872, guid: bb1b4805da6a64a13a20cd0ba6c3a9d2, type: 3}
       propertyPath: m_Name
-      value: Slime
+      value: Invisibility
+      objectReference: {fileID: 0}
+    - target: {fileID: 6083842818512225173, guid: bb1b4805da6a64a13a20cd0ba6c3a9d2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: de30c08d8e9ea3949b69bee5c7a8882d, type: 3}
+    - target: {fileID: 6152391015483647310, guid: bb1b4805da6a64a13a20cd0ba6c3a9d2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 68ad829c43fa23b46bf9835587f8051e, type: 3}
+    - target: {fileID: 7947473653689821286, guid: bb1b4805da6a64a13a20cd0ba6c3a9d2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7959039810440618914, guid: bb1b4805da6a64a13a20cd0ba6c3a9d2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -50,6 +66,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7959039810440618914, guid: bb1b4805da6a64a13a20cd0ba6c3a9d2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8053887601234000681, guid: bb1b4805da6a64a13a20cd0ba6c3a9d2, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8327677702944728235, guid: bb1b4805da6a64a13a20cd0ba6c3a9d2, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
