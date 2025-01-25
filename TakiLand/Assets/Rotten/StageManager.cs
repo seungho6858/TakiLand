@@ -17,8 +17,8 @@ public class StageManager : MonoSingleton<StageManager>
 
     private Team[] _results;
 
-    private bool _battleEndFlag;
-    private bool _bettingEndFlag;
+    private AutoResetUniTaskCompletionSource _battleEndFlag;
+    private AutoResetUniTaskCompletionSource _bettingEndFlag;
 
     public int CurrentStage
     {
@@ -29,8 +29,19 @@ public class StageManager : MonoSingleton<StageManager>
     protected override void OnAwake()
     {
         _results = new Team[Define.Instance.GetValue("TotalStage")];
+        _battleEndFlag = AutoResetUniTaskCompletionSource.Create();
+        _bettingEndFlag = AutoResetUniTaskCompletionSource.Create();
         
         BattleManager.onTeamWin += EndBattle;
+        
+    }
+
+    protected override void OnDestroy()
+    {
+        base.OnDestroy();
+        
+        _bettingEndFlag.TrySetCanceled();
+        _battleEndFlag.TrySetCanceled();
     }
 
     private void Start()
@@ -57,6 +68,9 @@ public class StageManager : MonoSingleton<StageManager>
         {
             await BettingProcess();
             await BattleProcess();
+            
+            _bettingEndFlag = AutoResetUniTaskCompletionSource.Create();
+            _battleEndFlag = AutoResetUniTaskCompletionSource.Create();
         }
     }
     
@@ -71,21 +85,21 @@ public class StageManager : MonoSingleton<StageManager>
         
         OnStageChanged?.Invoke(positions[0], positions[1], CurrentStage);
 
-        await UniTask.WaitUntil(() => Instance._bettingEndFlag, cancellationToken:this.GetCancellationTokenOnDestroy());
-        _bettingEndFlag = false;
+        await _bettingEndFlag.Task;
+        await UniTask.Yield(PlayerLoopTiming.Update, cancellationToken: this.GetCancellationTokenOnDestroy());
     }
 
     public void BetDone()
     {
-        _bettingEndFlag = true;
+        _bettingEndFlag.TrySetResult();
     }
 
     public async UniTask BattleProcess()
     {
         OnBattleStart?.Invoke();
-        
-        await UniTask.WaitUntil(() => Instance._battleEndFlag, cancellationToken:this.GetCancellationTokenOnDestroy());
-        _battleEndFlag = false;
+
+        await _battleEndFlag.Task;
+        await UniTask.Yield(PlayerLoopTiming.Update, cancellationToken: this.GetCancellationTokenOnDestroy());
         
         Debug.Log($"[Log] {BettingManager.Instance.CurrentBet}");
         
@@ -101,13 +115,13 @@ public class StageManager : MonoSingleton<StageManager>
             return;
         }
         
-        Debug.Log("전투종료!!");
+        _battleEndFlag.TrySetResult();
         
-        _battleEndFlag = true;
-
+        Debug.Log("전투종료!!");
+    
         int resultIndex = CurrentStage - 1;
         _results[resultIndex] = team;
-        
+
         BettingManager.Instance.SettleBets(team, CurrentStage);
     }
 

@@ -60,7 +60,7 @@ public class BettingUI : MonoBehaviour
 
 		StageManager.Instance.OnStageChanged += (blue, red, stage) =>
 		{
-			Stage.Data stageData = new Stage.Key(stage).Data;
+			Stage.Data stageData = Stage.Instance.Table[new Stage.Key(stage)];
 			_currentRewardRate.text = $"x {stageData.RewardRate.ToString()}";
 			_betRange.text = $"최소 {stageData.MinimumCost.ToString()} ~ 최대 {stageData.MaximumCost.ToString()}";
 			

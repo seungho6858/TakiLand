@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using Mib.Data;
 using R3;
@@ -179,12 +180,14 @@ public partial class BattleManager : MonoBehaviour
 
     private void GameEnd(Team winner)
     {
-        Observable.Timer(TimeSpan.FromSeconds(3f)).Subscribe(_ =>
-        {
-            onTeamWin?.Invoke(winner);
-        });
+        GameEndAsync(winner).Forget();
+    }
+
+    private async UniTaskVoid GameEndAsync(Team winner)
+    {
+        await UniTask.Delay(3000);
         
-        
+        onTeamWin?.Invoke(winner);
     }
     
     public static List<BattleUnit> GetRangeUnits(Vector2 vPos, float range, Team team)

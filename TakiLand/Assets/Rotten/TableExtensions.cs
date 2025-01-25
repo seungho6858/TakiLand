@@ -29,15 +29,6 @@ namespace Mib.Data
 
 	public partial class Stage
 	{
-		public int GetReward(int stage, BettingManager.Bet bet)
-		{
-			int rewardRate = new Key(stage).Data.RewardRate;
-			int totalRewardRate = 1 + rewardRate + bet.ExtraRewardRate;
-			int result =  bet.BetAmount * totalRewardRate;
-			Debug.Log($"[Log] GetReward [{result.ToString()}]");
-			return result;
-		}
-
 		public partial class Data : IValidatable
 		{
 			public bool Validate()

@@ -38,7 +38,7 @@ public class BettingManager : MonoSingleton<BettingManager>
 	}
 
 	private Bet[] _betHistory;
-	private readonly Gold _gold = new Gold();
+	private Gold _gold;
 	private int CurrentGold => _gold.Value;
 	
 	public event Action<int, int> OnBetChanged;//prev, current
@@ -53,6 +53,8 @@ public class BettingManager : MonoSingleton<BettingManager>
 	
 	protected override void OnAwake()
 	{
+		_gold = new Gold();
+		
 		_betHistory = new Bet[Define.Instance.GetValue("TotalStage")];
 		for (int i = 0; i < _betHistory.Length; i++)
 		{
@@ -66,8 +68,8 @@ public class BettingManager : MonoSingleton<BettingManager>
 
 		StageManager.Instance.OnStageChanged += (_, _, stage) =>
 		{
-			var stageData = new Stage.Key(stage);
-			BetMoney(stageData.Data.MinimumCost);
+			var stageKey = new Stage.Key(stage);
+			BetMoney(stageKey.Data.MinimumCost);
 		};
 	}
 
@@ -130,7 +132,7 @@ public class BettingManager : MonoSingleton<BettingManager>
 		CurrentBet.ExtraRewardRate = extraRewardRate;
 			
 		// 리워드 적용 
-		int reward = Stage.Instance.GetReward(currentStage, CurrentBet);
+		int reward = GetReward(currentStage, CurrentBet);
 		_gold.SetValue(CurrentGold + reward);
 	}
 
@@ -141,10 +143,19 @@ public class BettingManager : MonoSingleton<BettingManager>
 		bool won = prevBet.BetTeam == result;
 
 		int goldDelta = won
-			? Stage.Instance.GetReward(stage, prevBet) - prevBet.BetAmount
+			? GetReward(stage, prevBet) - prevBet.BetAmount
 			: -prevBet.BetAmount;
 		
 		return (won, goldDelta);
+	}
+	
+	private int GetReward(int stage, Bet bet)
+	{
+		int rewardRate = Stage.Instance.Table[new Stage.Key(stage)].RewardRate;
+		int totalRewardRate = 1 + rewardRate + bet.ExtraRewardRate;
+		int result =  bet.BetAmount * totalRewardRate;
+		Debug.Log($"[Log] GetReward [{result.ToString()}]");
+		return result;
 	}
 
 	public void Cheat_SetGold(int amount)
