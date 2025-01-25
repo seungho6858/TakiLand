@@ -227,7 +227,14 @@ public partial class BattleManager : MonoBehaviour
             
             SummonUnit(team, SpecialAction.None, GetPosition(team, rand));
         }
-            
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            if (Mathf.Approximately(Time.timeScale, 1f))
+                Time.timeScale = 5f;
+            else if(Mathf.Approximately(Time.timeScale, 5f))
+                Time.timeScale = 1f;
+        }
     }
 
 #endif

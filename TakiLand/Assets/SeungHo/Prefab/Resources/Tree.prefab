@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3627659670299094875}
   - component: {fileID: 1322126983905278365}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: Tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
-  effect: effect
+  effect: Tree
 --- !u!1 &3092086120226803070
 GameObject:
   m_ObjectHideFlags: 0
@@ -74,7 +74,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
+  m_LocalScale: {x: 0.04, y: 0.04, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3627659670299094875}
@@ -120,7 +120,7 @@ SpriteRenderer:
   m_SortingLayerID: -58322873
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7298ca2a6bad4de4f9e84848777e73f1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: feb0842b979e2184c9a0aa331d821eed, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
