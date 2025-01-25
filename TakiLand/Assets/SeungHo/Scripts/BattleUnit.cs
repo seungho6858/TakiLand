@@ -277,10 +277,23 @@ public partial class BattleUnit
         return specialAction == SpecialAction.Invisibility && atkCnt == 0;
     }
     
-    public float GetAtk() => atk;
+    public float GetAtk()
+    {
+        if (specialAction == SpecialAction.Rage)
+        {
+            if (GetRatio() <= BattleManager.GetData().Rage_hpRatio)
+            {
+                return atk;
+            }
+        }
+        else
+            return atk;
+    }
+
     public float GetAttackSpeed() => attackSpeed;
     public float GetMoveSpeed() => moveSpeed;
     public float GetHp() => hp;
+    public float GetRatio() => hp / FullHp;
 
     public enum UnitState
     {
