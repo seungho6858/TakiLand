@@ -115,7 +115,13 @@ public partial class BattleManager : MonoBehaviour
         instance.listUnits.Remove(unit);
         instance.TeamCountChanged();
     }
-    
+
+    private void FixedUpdate()
+    {
+        if (GameState == GameState.Battle)
+            Physics2D.Simulate(Time.fixedDeltaTime);
+    }
+
     private void Update()
     {
         if (GameState == GameState.Battle)

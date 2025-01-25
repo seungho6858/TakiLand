@@ -110,7 +110,7 @@ public class SoundManager : MonoBehaviour
     /// </summary>
     /// <param name="soundName">사운드 이름</param>
     /// <returns>AudioClip</returns>
-    private static AudioClip GetAudioClip(string soundName)
+    public static AudioClip GetAudioClip(string soundName)
     {
         if (!soundCache.ContainsKey(soundName))
         {

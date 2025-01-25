@@ -19,6 +19,7 @@ public partial class BattleUnit : MonoBehaviour
     [SerializeField] private Transform trLook;
     [SerializeField] private Transform trRange;
     [SerializeField] private HpBar hpBar;
+    [SerializeField] private AudioSource audioSource;
     private Transform tr;
     
     // 유닛을 다가가자
@@ -60,38 +61,54 @@ public partial class BattleUnit : MonoBehaviour
         switch (specialAction)
         {
             case SpecialAction.Explosion:
-                SoundManager.PlayLoopSound("Mgc_Fire_Hold_01");
+                audioSource.clip = SoundManager.GetAudioClip("Mgc_Fire_Hold_01");
+                audioSource.Play();
                 break;
             
             case SpecialAction.Taunt:
-                SoundManager.PlayLoopSound("77_flesh_02");
-                break;
-            
             case SpecialAction.Invisibility:
-                SoundManager.PlayLoopSound("77_flesh_02");
-                break;
-            
             case SpecialAction.Rage:
-                SoundManager.PlayLoopSound("77_flesh_02");
-                break;
-            
             case SpecialAction.Greed:
-                SoundManager.PlayLoopSound("77_flesh_02");
-                break;
-            
             case SpecialAction.Fear:
-                SoundManager.PlayLoopSound("77_flesh_02");
-                break;
-            
             case SpecialAction.CounterAttack:
-                SoundManager.PlayLoopSound("77_flesh_02");
+                audioSource.clip = SoundManager.GetAudioClip("77_flesh_02");
                 break;
             
             case SpecialAction.SpeedBoost:
-                SoundManager.PlayLoopSound("Flying");
+                audioSource.clip = SoundManager.GetAudioClip("Flying");
                 break;
-            
-            
+        }
+    }
+
+    private void MoveSound()
+    {
+        switch (specialAction)
+        {
+            case SpecialAction.Taunt:
+            case SpecialAction.Invisibility:
+            case SpecialAction.Rage:
+            case SpecialAction.Greed:
+            case SpecialAction.Fear:
+            case SpecialAction.CounterAttack:
+            case SpecialAction.SpeedBoost:
+                audioSource.Play();
+                break;
+        }
+    }
+
+    private void StopMoveSound()
+    {
+        switch (specialAction)
+        {
+            case SpecialAction.Taunt:
+            case SpecialAction.Invisibility:
+            case SpecialAction.Rage:
+            case SpecialAction.Greed:
+            case SpecialAction.Fear:
+            case SpecialAction.CounterAttack:
+            case SpecialAction.SpeedBoost:
+                audioSource.Stop();
+                break;
         }
     }
     
@@ -108,9 +125,24 @@ public partial class BattleUnit : MonoBehaviour
         trRange.localScale = Vector3.one * range;
     }
 
+    private void SetUnitState(UnitState unitState)
+    {
+        this.unitState = unitState;
+        
+        switch (unitState)
+        {
+            
+        }
+        
+        if(unitState == UnitState.Move)
+            MoveSound();
+        else
+            StopMoveSound();
+    }
+    
     private void Init()
     {
-        unitState = UnitState.Idle;
+        SetUnitState(UnitState.Idle);
         nearUnit = null;
         
         hpBar.ShowHpBar(false);
@@ -124,7 +156,7 @@ public partial class BattleUnit : MonoBehaviour
 
         if (rangeUnit != null)
         {
-            unitState = UnitState.Attack;
+            SetUnitState(UnitState.Attack);
             
             Look(rangeUnit.GetPos().x - GetPos().x);
         }
@@ -139,7 +171,7 @@ public partial class BattleUnit : MonoBehaviour
 
         if (nearUnit != null)
         {
-            unitState = UnitState.Move;
+            SetUnitState(UnitState.Move);
             
             Look(nearUnit.GetPos().x - GetPos().x);
             Debug.DrawLine(GetPos(), this.nearUnit.GetPos(),
@@ -361,48 +393,14 @@ public partial class BattleUnit
         find.gameObject.SetActive(false);
         range.gameObject.SetActive(false);
 
-        unitState = UnitState.Die;
+        SetUnitState(UnitState.Die);
         circleCollider.enabled = false;
         gameObject.SetActive(false);
     }
 
     private void OnDisable()
     {
-        
-        switch (specialAction)
-        {
-            case SpecialAction.Explosion:
-                SoundManager.StopLoopSound("Mgc_Fire_Hold_01");
-                break;
-            
-            case SpecialAction.Taunt:
-                SoundManager.StopLoopSound("77_flesh_02");
-                break;
-            
-            case SpecialAction.Invisibility:
-                SoundManager.StopLoopSound("77_flesh_02");
-                break;
-            
-            case SpecialAction.Rage:
-                SoundManager.StopLoopSound("77_flesh_02");
-                break;
-            
-            case SpecialAction.Greed:
-                SoundManager.StopLoopSound("77_flesh_02");
-                break;
-            
-            case SpecialAction.Fear:
-                SoundManager.StopLoopSound("77_flesh_02");
-                break;
-            
-            case SpecialAction.CounterAttack:
-                SoundManager.StopLoopSound("77_flesh_02");
-                break;
-            
-            case SpecialAction.SpeedBoost:
-                SoundManager.StopLoopSound("Flying");
-                break;
-        }
+        audioSource.Stop();
     }
 
     private void Update()
@@ -418,6 +416,11 @@ public partial class BattleUnit
                     Attack();
                 }
             }
+        }
+        else
+        {
+            if(unitState == UnitState.Move)
+                SetUnitState(UnitState.Idle);
         }
     }
     
@@ -447,7 +450,7 @@ public partial class BattleUnit
             .GetComponent<Ef_DamageFont>();
         ef.SetDamage(dmg);
 
-        unitState = UnitState.Hit;
+        SetUnitState(UnitState.Hit);
 
         if (this.specialAction == SpecialAction.CounterAttack)
         {
