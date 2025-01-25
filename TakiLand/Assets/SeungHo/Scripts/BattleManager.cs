@@ -152,7 +152,7 @@ public partial class BattleManager : MonoBehaviour
 
         OnTeamCountChanged?.Invoke(teamA, teamB);
         
-        if (reduced && (teamA == 0) || teamB == 0)
+        if (reduced && ((teamA == 0) || teamB == 0))
         {
             GameState = GameState.End;
             onTeamWin?.Invoke(teamA > 0 ? Team.Red : Team.Blue);
