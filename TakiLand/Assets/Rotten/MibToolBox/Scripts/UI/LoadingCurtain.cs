@@ -34,14 +34,16 @@ namespace Mib.UI
 		{
 			_image.gameObject.SetActive(true);
 			_image.color = Color.clear;
-			await _image.DOFade(1.0f, duration);
+			await _image.DOFade(1.0f, duration).AsyncWaitForCompletion();
+			
+			
 		}
 
 		[Button]
 		public async UniTask Hide(float duration = 0.5f)
 		{
 			_image.color = Color.black;
-			await _image.DOFade(0.0f, duration);
+			await _image.DOFade(0.0f, duration).AsyncWaitForCompletion();
 			_image.gameObject.SetActive(false);
 		}
 	}

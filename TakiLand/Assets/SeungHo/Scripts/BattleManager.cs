@@ -199,6 +199,29 @@ public partial class BattleManager : MonoBehaviour
         return instance.listUnits.FindAll(x => x.team == team && Vector2.Distance(x.GetPos(), vPos) <= range);
     }
 
+    public static void LeaderboardPlayerRecord(long gold, int stage)
+    {
+        ServerManager.instance.LeaderboardPlayerRecord(gold, JsonUtility.ToJson(
+            new Rank() { stage = stage}), b =>
+        {
+        });
+    }
+
+    public static void GetRankList(System.Action<ArrayList> callBack)
+    {
+        ServerManager.instance.LeaderboardPlayerRange(list =>
+        {
+            callBack.Invoke(list);
+        });
+        
+    }
+
+    [System.Serializable]
+    public class Rank
+    {
+        public int stage;
+    }
+    
     private void Start()
     {
         //SoundManager.PlayLoopSound("track_shortadventure_loop");    
@@ -247,6 +270,26 @@ public partial class BattleManager : MonoBehaviour
                 Time.timeScale = 5f;
             else if(Mathf.Approximately(Time.timeScale, 5f))
                 Time.timeScale = 1f;
+        }
+
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            LeaderboardPlayerRecord(100, 4);
+        }
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            GetRankList(list =>
+            {
+                foreach (Dictionary<string, object> value in list)
+                {
+                    Debug.Log(value["Rank"]);
+                    Debug.Log(value["RotationCount"]);
+                    Debug.Log(value["RecordId"]);
+                    Debug.Log(value["Score"]);
+                    Debug.Log(value["ExtraData"]);
+                }
+            });
         }
     }
 

@@ -20,6 +20,10 @@ public partial class Title : MonoBehaviour
 
 	private void Awake()
 	{
+		// 프레임 60 고정 
+		QualitySettings.vSyncCount = 0;
+		Application.targetFrameRate = 60;
+		
 		_playButton.onClick.AddListener(() =>
 		{
 			SceneLoader.ChangeScene(Constant.BattleScene).Forget();
