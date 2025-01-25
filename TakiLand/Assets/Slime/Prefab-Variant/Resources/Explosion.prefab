@@ -428,6 +428,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 6b60c5228a58d3647ac845208f5d768f, type: 2}
+    - target: {fileID: 6286956869572706469, guid: bb1b4805da6a64a13a20cd0ba6c3a9d2, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7147109685517407948, guid: bb1b4805da6a64a13a20cd0ba6c3a9d2, type: 3}
       propertyPath: m_IsActive
       value: 0

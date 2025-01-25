@@ -20,7 +20,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 7fd13faf2e33a244ab6efeb48db58c3c, type: 2}
+  m_Motion: {fileID: 7400000, guid: 7775ef7b916b5b74dac4814ad60363d5, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -111,7 +111,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Explosion
+  m_Name: Taunt
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:
@@ -174,7 +174,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 572e793f719e5df4784578607bd0f02b, type: 2}
+  m_Motion: {fileID: 7400000, guid: 82b84a158dbd92346ad168ee04bba9bb, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
