@@ -30,17 +30,19 @@ public class BettingHistoryUI : MonoBehaviour
 				return;
 			}
 
-			// if (!gameObject.activeSelf)
-			// {
-			// 	Show();
-			// }
-			
+			Show();
+
 			int prevStage = stage - 1;
 			int scoreIndex = prevStage - 1;
 			
 			(bool won, int goldDelta) = BettingManager.Instance.CalculateResult(prevStage);
 
 			_scores[scoreIndex].UpdateScore(won, goldDelta);
+		};
+
+		StageManager.Instance.OnBattleStart += () =>
+		{
+			Hide();
 		};
 	}
 
