@@ -33,7 +33,9 @@ namespace Mib.Data
 		{
 			int rewardRate = new Key(stage).Data.RewardRate;
 			int totalRewardRate = 1 + rewardRate + bet.ExtraRewardRate;
-			return bet.BetAmount * totalRewardRate;
+			int result =  bet.BetAmount * totalRewardRate;
+			Debug.Log($"[Log] GetReward [{result.ToString()}]");
+			return result;
 		}
 
 		public partial class Data : IValidatable

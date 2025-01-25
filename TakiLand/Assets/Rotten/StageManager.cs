@@ -71,7 +71,7 @@ public class StageManager : MonoSingleton<StageManager>
         
         OnStageChanged?.Invoke(positions[0], positions[1], CurrentStage);
 
-        await UniTask.WaitUntil(() => Instance._bettingEndFlag, cancellationToken:this.GetCancellationTokenOnDestroy());
+        await UniTask.WaitUntil(() => Instance._bettingEndFlag, PlayerLoopTiming.LastUpdate, cancellationToken:this.GetCancellationTokenOnDestroy());
         _bettingEndFlag = false;
     }
 
@@ -84,7 +84,7 @@ public class StageManager : MonoSingleton<StageManager>
     {
         OnBattleStart?.Invoke();
         
-        await UniTask.WaitUntil(() => Instance._battleEndFlag, cancellationToken:this.GetCancellationTokenOnDestroy());
+        await UniTask.WaitUntil(() => Instance._battleEndFlag, PlayerLoopTiming.LastUpdate, cancellationToken:this.GetCancellationTokenOnDestroy());
         _battleEndFlag = false;
         
         Debug.Log($"[Log] {BettingManager.Instance.CurrentBet}");
@@ -101,14 +101,14 @@ public class StageManager : MonoSingleton<StageManager>
             return;
         }
         
-        _battleEndFlag = true;
-        
         Debug.Log("전투종료!!");
 
         int resultIndex = CurrentStage - 1;
         _results[resultIndex] = team;
         
         BettingManager.Instance.SettleBets(team, CurrentStage);
+        
+        _battleEndFlag = true;
     }
 
     public void Cheat_ChangeStage(int targetStage)
