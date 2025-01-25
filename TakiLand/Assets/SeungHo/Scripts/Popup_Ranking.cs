@@ -1,18 +1,39 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Mib;
+using Mib.Data;
+using Mib.UI;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
+using UnityEngine.UI;
 
-public class Popup_Ranking : MonoBehaviour
+[PopupPath("Popup_Ranking")]
+public class Popup_Ranking : PopupBase
 {
-    [SerializeField]
-    private UiRankElement uiElement;
+    
+    
+    [SerializeField] private UiRankElement uiElement;
+    [SerializeField] private UiRankElement mine;
 
     private List<UiRankElement> listElements;
 
-    private void OnEnable()
+    private void Awake()
+    {
+        listElements = new List<UiRankElement>() { uiElement };
+    }
+
+    protected override void OnAwake()
+    {
+        
+    }
+
+    public override void OnOpen()
     {
         listElements.ForEach(x => x.gameObject.SetActive(false));
+        mine.gameObject.SetActive(false);
         
         BattleManager.GetRankList(list =>
         {
@@ -30,16 +51,23 @@ public class Popup_Ranking : MonoBehaviour
                 if(listElements.Count <= idx)
                     listElements.Add(Instantiate(uiElement, uiElement.transform.parent));
                 listElements[idx].SetUi((int) value["Rank"],  (int)((System.Double) value["Score"]), 
-                    extra.stage);
+                    extra.stage, extra.nick);
                 listElements[idx].gameObject.SetActive(true);
                 
                 idx++;
+
+                if (extra.nick == BattleManager.nick)
+                {
+                    mine.SetUi((int) value["Rank"],  (int)((System.Double) value["Score"]), 
+                        extra.stage, extra.nick);
+                    mine.gameObject.SetActive(true);
+                }
             }
         });
     }
 
-    private void Awake()
+    protected override void OnClose()
     {
-        listElements = new List<UiRankElement>() { uiElement };
+        SceneManager.LoadScene("01.Title");
     }
 }

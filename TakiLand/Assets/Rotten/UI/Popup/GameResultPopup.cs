@@ -28,6 +28,23 @@ public class GameResultPopup : PopupBase
         set => PlayerPrefs.SetInt("PlayerNumber_Key", value);
     }
     
+    public void OnClick()
+    {
+        string nick = _nickNameInputField.text;
+
+        if (!string.IsNullOrEmpty(nick))
+        {
+            BattleManager.nick = nick;
+            
+            ServerManager.instance.LeaderboardPlayerRecord(BettingManager.Instance.CurrentGold, 
+                JsonUtility.ToJson(new BattleManager.Rank()), nick, 
+                b =>
+                {
+                    Mib.UI.PopupManager.Instance.Open<Popup_Ranking>();
+                });
+        }
+    }
+    
     protected override void OnAwake()
     {
         _titleButton.onClick.AddListener(() =>

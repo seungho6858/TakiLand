@@ -199,11 +199,13 @@ public partial class BattleManager : MonoBehaviour
         return instance.listUnits.FindAll(x => x.team == team && Vector2.Distance(x.GetPos(), vPos) <= range);
     }
 
+    public static string nick;
+    
     public static void LeaderboardPlayerRecord(long gold, int stage, string nickName)
     {
         ServerManager.instance.LeaderboardPlayerRecord(
             gold, JsonUtility.ToJson(
-            new Rank() { stage = stage}), nickName, b =>
+            new Rank() { stage = stage, nick = nickName}), nickName, b =>
         {
         });
     }
@@ -221,6 +223,7 @@ public partial class BattleManager : MonoBehaviour
     public class Rank
     {
         public int stage;
+        public string nick;
     }
     
     private void Start()
@@ -275,7 +278,10 @@ public partial class BattleManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.L))
         {
-            LeaderboardPlayerRecord(100, 4, "");
+            //LeaderboardPlayerRecord(100, 4, "");
+            
+            
+            Mib.UI.PopupManager.Instance.Open<Popup_Ranking>();
         }
 
         if (Input.GetKeyDown(KeyCode.A))

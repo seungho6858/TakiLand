@@ -20,6 +20,9 @@ Library: /Users/freedust/TakiLand/TakiLand/Temp/BurstOutput/StaticLibraries/lib_
 --assembly-defines=Microsoft.Bcl.TimeProvider;
 --assembly-defines=Mono.Security;
 --assembly-defines=mscorlib;
+--assembly-defines=PlayNANOOChat;
+--assembly-defines=PlayNANOOiOS;
+--assembly-defines=PlayNANOOSettings;
 --assembly-defines=R3;
 --assembly-defines=Sirenix.OdinInspector.Attributes;
 --assembly-defines=Sirenix.Serialization.Config;
@@ -47,6 +50,7 @@ Library: /Users/freedust/TakiLand/TakiLand/Temp/BurstOutput/StaticLibraries/lib_
 --assembly-defines=Unity.TextMeshPro;
 --assembly-defines=Unity.VisualScripting.Core;
 --assembly-defines=UnityEngine;
+--assembly-defines=websocket-sharp;
 --assembly-defines=ZString;
 --linker-options=min-ios-version=12.0
 --generate-link-xml=Temp/burst.link.xml
