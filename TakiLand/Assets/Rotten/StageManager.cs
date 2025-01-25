@@ -53,7 +53,7 @@ public class StageManager : MonoSingleton<StageManager>
     public async UniTaskVoid PlayFullSequence() 
     {
         int totalStage = Define.Instance.GetValue("TotalStage");
-        for (CurrentStage = 1; CurrentStage < totalStage; CurrentStage++)
+        for (CurrentStage = 1; CurrentStage <= totalStage; CurrentStage++)
         {
             await BettingProcess();
             await BattleProcess();
