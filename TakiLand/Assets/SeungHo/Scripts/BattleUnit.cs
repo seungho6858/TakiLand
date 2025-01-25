@@ -358,49 +358,59 @@ public partial class BattleUnit
             }
             else if (rangeType == RangeType.Dist)
             {
-                Vector3 pos = GetPos();
-                if (specialAction == SpecialAction.Greed)
-                    pos = (slime as Slime_Greed).GetShoot();
-
-                string effect = "Bullet";
-                if (specialAction == SpecialAction.Greed)
+                int life = rangeUnit.life;
+                onAttack = () =>
                 {
-                    effect = "Bullet";
-                    
-                    var ef = EffectManager.Instance.SpawnEffect(effect, 
-                        pos, Quaternion.identity).GetComponent<Bullet>();
-
-                    int life = rangeUnit.life;
-                    ef.SetTarget(rangeUnit, () =>
+                    if (null != rangeUnit && life == rangeUnit.life)
                     {
-                        if (rangeUnit != null &&
-                            life == rangeUnit.life)
-                        {
-                            rangeUnit.GetDamage(this, GetAtk());
-                        
-                        }
-                    });
-                }
-                else if (specialAction == SpecialAction.Immobility)
-                {
-                    effect = "Tree";
-                    
-                    var ef = EffectManager.Instance.SpawnEffect(effect, 
-                        pos, Quaternion.identity).GetComponent<Tree>();
+                        Vector3 pos = GetPos();
+                        if (specialAction == SpecialAction.Greed)
+                            pos = (slime as Slime_Greed).GetShoot();
 
-                    int life = rangeUnit.life;
-                    ef.SetTarget(rangeUnit, () =>
-                    {
-                        if (rangeUnit != null &&
-                            life == rangeUnit.life)
+                        string effect = "Bullet";
+                        if (specialAction == SpecialAction.Greed)
                         {
-                            rangeUnit.GetDamage(this, GetAtk());
+                            effect = "Bullet";
+                    
+                            var ef = EffectManager.Instance.SpawnEffect(effect, 
+                                pos, Quaternion.identity).GetComponent<Bullet>();
+
+                            int life = rangeUnit.life;
+                            ef.SetTarget(rangeUnit, pos, 0.3f, () =>
+                            {
+                                if (rangeUnit != null &&
+                                    life == rangeUnit.life)
+                                {
+                                    rangeUnit.GetDamage(this, GetAtk());
                         
-                            if(specialAction == SpecialAction.Immobility)
-                                SoundManager.PlaySound("45_Landing_01");
+                                }
+                            });
                         }
-                    });
-                }
+                        else if (specialAction == SpecialAction.Immobility)
+                        {
+                            effect = "Tree";
+                    
+                            var ef = EffectManager.Instance.SpawnEffect(effect, 
+                                pos, Quaternion.identity).GetComponent<Tree>();
+
+                            int life = rangeUnit.life;
+                            ef.SetTarget(rangeUnit,  pos, 0.3f, () =>
+                            {
+                                if (rangeUnit != null &&
+                                    life == rangeUnit.life)
+                                {
+                                    rangeUnit.GetDamage(this, GetAtk());
+                        
+                                    if(specialAction == SpecialAction.Immobility)
+                                        SoundManager.PlaySound("45_Landing_01");
+                                }
+                            });
+                        }
+                    }
+                    
+                    
+                };
+
             }
 
             switch (specialAction)
