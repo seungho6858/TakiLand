@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3627659670299094875}
-  - component: {fileID: 1322126983905278365}
+  - component: {fileID: 346184946581661447}
   m_Layer: 0
   m_Name: Tree
   m_TagString: Untagged
@@ -33,7 +33,7 @@ Transform:
   - {fileID: 7596234266382343760}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1322126983905278365
+--- !u!114 &346184946581661447
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,10 +42,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2141785542127045521}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2474609693fde43a9b9c05f8df4ab350, type: 3}
+  m_Script: {fileID: 11500000, guid: 12765ec78ea3444e78be41040873cf42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
+  arcHeight: 2
   effect: Tree
 --- !u!1 &3092086120226803070
 GameObject:
@@ -74,7 +75,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.04, y: 0.04, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3627659670299094875}
@@ -120,7 +121,7 @@ SpriteRenderer:
   m_SortingLayerID: -58322873
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: feb0842b979e2184c9a0aa331d821eed, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 842cec8d21b5bf74dbc27c42846d612a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

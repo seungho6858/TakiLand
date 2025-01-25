@@ -907,11 +907,11 @@ PrefabInstance:
     - target: {fileID: 4281161619862049550, guid: bb1b4805da6a64a13a20cd0ba6c3a9d2, type: 3}
       propertyPath: red
       value: 
-      objectReference: {fileID: 21300000, guid: 2926afac0268e394eae23fd97643bd16, type: 3}
+      objectReference: {fileID: 21300000, guid: be183694d25091e46bac015d4a686e43, type: 3}
     - target: {fileID: 4281161619862049550, guid: bb1b4805da6a64a13a20cd0ba6c3a9d2, type: 3}
       propertyPath: blue
       value: 
-      objectReference: {fileID: 21300000, guid: d8ee3dc2615fed74ba12aed5cbfed85f, type: 3}
+      objectReference: {fileID: 21300000, guid: e36a52a006a4fbb4d8d69118bf444c90, type: 3}
     - target: {fileID: 4755713208203337594, guid: bb1b4805da6a64a13a20cd0ba6c3a9d2, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.787

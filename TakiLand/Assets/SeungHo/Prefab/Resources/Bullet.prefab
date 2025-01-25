@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
-  effect: effect
+  effect: Bullet
 --- !u!1 &3092086120226803070
 GameObject:
   m_ObjectHideFlags: 0

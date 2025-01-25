@@ -362,25 +362,43 @@ public partial class BattleUnit
 
                 string effect = "Bullet";
                 if (specialAction == SpecialAction.Greed)
-                    effect = "Bullet";
-                else if (specialAction == SpecialAction.Immobility)
-                    effect = "Tree";
-                
-                var ef = EffectManager.Instance.SpawnEffect(effect, 
-                    pos, Quaternion.identity).GetComponent<Bullet>();
-
-                int life = rangeUnit.life;
-                ef.SetTarget(rangeUnit, () =>
                 {
-                    if (rangeUnit != null &&
-                        life == rangeUnit.life)
+                    effect = "Bullet";
+                    
+                    var ef = EffectManager.Instance.SpawnEffect(effect, 
+                        pos, Quaternion.identity).GetComponent<Bullet>();
+
+                    int life = rangeUnit.life;
+                    ef.SetTarget(rangeUnit, () =>
                     {
-                        rangeUnit.GetDamage(this, GetAtk());
+                        if (rangeUnit != null &&
+                            life == rangeUnit.life)
+                        {
+                            rangeUnit.GetDamage(this, GetAtk());
                         
-                        if(specialAction == SpecialAction.Immobility)
-                            SoundManager.PlaySound("45_Landing_01");
-                    }
-                });
+                        }
+                    });
+                }
+                else if (specialAction == SpecialAction.Immobility)
+                {
+                    effect = "Tree";
+                    
+                    var ef = EffectManager.Instance.SpawnEffect(effect, 
+                        pos, Quaternion.identity).GetComponent<Tree>();
+
+                    int life = rangeUnit.life;
+                    ef.SetTarget(rangeUnit, () =>
+                    {
+                        if (rangeUnit != null &&
+                            life == rangeUnit.life)
+                        {
+                            rangeUnit.GetDamage(this, GetAtk());
+                        
+                            if(specialAction == SpecialAction.Immobility)
+                                SoundManager.PlaySound("45_Landing_01");
+                        }
+                    });
+                }
             }
 
             switch (specialAction)
@@ -504,7 +522,8 @@ public partial class BattleUnit
             .GetComponent<Ef_DamageFont>();
         ef.SetDamage(dmg);
 
-        SetUnitState(UnitState.Hit);
+        if(unitState != UnitState.Attack)
+            SetUnitState(UnitState.Hit);
 
         if (this.specialAction == SpecialAction.CounterAttack)
         {
