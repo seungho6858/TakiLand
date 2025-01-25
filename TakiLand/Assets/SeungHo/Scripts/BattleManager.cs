@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using DG.Tweening;
 using Mib.Data;
 using R3;
 using UnityEngine;
@@ -191,7 +192,10 @@ public partial class BattleManager : MonoBehaviour
 
     private void Start()
     {
-        SoundManager.PlayLoopSound("track_shortadventure_loop");
+        SoundManager.PlayLoopSound("track_shortadventure_loop");    
+        
+        DOTween.SetTweensCapacity(2000, 100); // Tweens: 2000, Sequences: 100
+
     }
 
     private void Awake()

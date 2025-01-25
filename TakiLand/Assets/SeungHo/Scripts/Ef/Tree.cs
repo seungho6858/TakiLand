@@ -9,6 +9,8 @@ public class Tree : Effect
     [SerializeField] private float arcHeight = 2f; // 포물선의 최대 높이
     public string effect;
 
+    private Coroutine moveCoroutine; // 이동을 처리하는 Coroutine
+
     public void SetTarget(BattleUnit target, System.Action end)
     {
         if (target == null)
@@ -17,56 +19,75 @@ public class Tree : Effect
             return;
         }
 
-        int initialLife = target.life;
+        // 기존 이동 코루틴 중지
+        if (moveCoroutine != null)
+        {
+            StopCoroutine(moveCoroutine);
+        }
 
-        // 타겟의 초기 위치 + 높이 보정
-        Vector2 targetOffset = new Vector3(0, 0.5f, 0); // 타겟보다 0.5 높이
+        // 이동 시작
+        moveCoroutine = StartCoroutine(MoveToTarget(target, end));
+    }
+
+    private IEnumerator MoveToTarget(BattleUnit target, System.Action end)
+    {
         Vector3 startPosition = transform.position;
-        Vector3 targetPosition = target.GetPos() + targetOffset;
 
-        // 타겟까지의 거리 계산
-        float distance = Vector3.Distance(startPosition, targetPosition);
-        float moveDuration = distance / moveSpeed; // 거리 기반 이동 시간 계산
-
-        // 포물선 경로 계산 (시작점, 중간점, 끝점)
-        Vector3 midPoint = (startPosition + targetPosition) / 2 + Vector3.up * arcHeight; // 중간 지점은 포물선의 최고점
-        Vector3[] path = { startPosition, midPoint, targetPosition };
-
-        // DOTween을 사용해 포물선 경로로 이동
-        transform.DOPath(path, moveDuration, PathType.CatmullRom)
-            .SetEase(Ease.Linear) // 선형 시간에 따라 이동
-            .OnUpdate(() =>
+        while (true)
+        {
+            if (target == null || !target.gameObject.activeSelf)
             {
-                if(initialLife != target.life)
-                    Hide();
-                
-                // 실시간으로 타겟 위치 업데이트
-                else if (target != null && target.gameObject.activeSelf)
-                {
-                    targetPosition = target.GetPos() + targetOffset;
-                    midPoint = (startPosition + targetPosition) / 2 + Vector3.up * arcHeight;
-                    path[1] = midPoint; // 중간 지점 업데이트
-                    path[2] = targetPosition; // 최종 지점 업데이트
-                }
-                else
-                {
-                    Hide(); // 타겟이 사라지거나 비활성화된 경우 숨기기
-                }
-            })
-            .OnComplete(() =>
-            {
-                // 타겟에 도달했을 때 콜백 실행
-                if (target != null && target.gameObject.activeSelf)
-                {
-                    end?.Invoke();
-                }
                 Hide();
-            });
+                yield break;
+            }
+
+            // 타겟 위치 계산
+            Vector3 targetPosition = target.GetPos() + new Vector2(0, 0.5f);
+
+            // 타겟까지의 거리 계산
+            float distance = Vector3.Distance(startPosition, targetPosition);
+            if (distance < 0.1f) // 타겟에 도달한 경우
+            {
+                end?.Invoke();
+                Hide();
+                yield break;
+            }
+
+            // 이동 경로 계산
+            Vector3 midPoint = (startPosition + targetPosition) / 2 + Vector3.up * arcHeight;
+            Vector3 nextPosition = CalculateParabola(startPosition, midPoint, targetPosition, moveSpeed * Time.deltaTime);
+
+            // 위치 업데이트
+            transform.position = nextPosition;
+
+            // 시작점 갱신
+            startPosition = transform.position;
+
+            yield return null; // 다음 프레임까지 대기
+        }
+    }
+
+    private Vector3 CalculateParabola(Vector3 start, Vector3 mid, Vector3 end, float delta)
+    {
+        // 두 점 사이의 비율 계산 (0~1)
+        float t = delta / Vector3.Distance(start, end);
+        t = Mathf.Clamp01(t);
+
+        // 포물선 공식 계산
+        Vector3 m1 = Vector3.Lerp(start, mid, t);
+        Vector3 m2 = Vector3.Lerp(mid, end, t);
+        return Vector3.Lerp(m1, m2, t);
     }
 
     private void Hide()
     {
-        // 총알을 풀로 반환
+        // 이동 코루틴 중지
+        if (moveCoroutine != null)
+        {
+            StopCoroutine(moveCoroutine);
+        }
+
+        // 풀로 반환
         EffectManager.Instance.ReturnEffect(effect, gameObject);
     }
 }

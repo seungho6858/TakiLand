@@ -57,6 +57,8 @@ public partial class BattleUnit : MonoBehaviour
             {
                 onAttack?.Invoke();
             }
+            else if(s == "Idle")
+                SetUnitState(UnitState.Idle);
         });
         
         tmpAction.text = specialAction.ToString();

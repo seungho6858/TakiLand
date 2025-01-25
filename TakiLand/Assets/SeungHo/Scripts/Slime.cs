@@ -88,6 +88,11 @@ public partial class Slime : MonoBehaviour
         onAnimCallBack.Invoke("Attack");
     }
 
+    public void OnIdle()
+    {
+        onAnimCallBack.Invoke("Idle");
+    }
+
     public void SetTeam(Team team)
     {
         this.team = team;
