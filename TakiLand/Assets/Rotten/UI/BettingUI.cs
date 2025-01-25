@@ -13,6 +13,9 @@ public class BettingUI : MonoBehaviour
 	private SerializableDictionary<Team, Button> _bettingButtons;
 	
 	[SerializeField] 
+	private SerializableDictionary<Team, Image> _bettingButtonImages;
+	
+	[SerializeField] 
 	private SerializableDictionary<BetPreset, Button> _betAmountButtons;
 
 	[SerializeField]
@@ -46,11 +49,17 @@ public class BettingUI : MonoBehaviour
 			// TODO: 뭔가 애니메이션?
 			_currentBet.text = current.ToString();
 		};
+		
+		BettingManager.Instance.OnBetTeamChanged += (current) =>
+		{
+			SelectBetTeam(current);
+		};
 
 		StageManager.Instance.OnStageChanged += (blue, red, stage) =>
 		{
 			var stageKey = new Stage.Key(stage);
 			_currentRewardRate.text = $"x {stageKey.Data.RewardRate.ToString()}";
+			SelectBetTeam(null);
 			Show();
 		};
 
@@ -58,6 +67,16 @@ public class BettingUI : MonoBehaviour
 		{
 			Hide();
 		};
+	}
+
+	private void SelectBetTeam(Team? team)
+	{
+		foreach (var pair in GeneralSetting.Instance.TeamSprites)
+		{
+			_bettingButtonImages[pair.Key].sprite = team.HasValue && team.Value == pair.Key
+				? pair.Value.Selected
+				: pair.Value.Idle;
+		}
 	}
 
 	public void Show()

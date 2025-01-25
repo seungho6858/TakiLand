@@ -34,8 +34,9 @@ public class BettingManager : MonoSingleton<BettingManager>
 	private readonly Gold _gold = new Gold();
 	private int CurrentGold => _gold.Value;
 	
-	public event Action<int, int> OnBetChanged;
-	public event Action<int, int> OnGoldChanged;
+	public event Action<int, int> OnBetChanged;//prev, current
+	public event Action<Team> OnBetTeamChanged; //current
+	public event Action<int, int> OnGoldChanged;//prev, current
 	
 	protected override bool IsPersistent => false;
 
@@ -71,6 +72,7 @@ public class BettingManager : MonoSingleton<BettingManager>
 	public void BetTeam(Team team)
 	{
 		CurrentBet.BetTeam = team;
+		OnBetTeamChanged?.Invoke(team);
 	}
 
 	public void BetMoney(BetPreset money)

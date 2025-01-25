@@ -25,3 +25,12 @@ MonoBehaviour:
   BlueTeamColor: {r: 0.2509804, g: 0.35686275, b: 0.64705884, a: 1}
   WinColor: {r: 0.17735851, g: 0.12682807, b: 0.12682807, a: 1}
   LoseColor: {r: 1, g: 0, b: 0, a: 1}
+  TeamSprites:
+    m_keys: 000000000100000002000000
+    m_values:
+    - Idle: {fileID: 21300000, guid: ff304607b69b81449acdb95599269167, type: 3}
+      Selected: {fileID: 21300000, guid: 58712e5d5c97c354a8a9fb2c8dc7d352, type: 3}
+    - Idle: {fileID: 21300000, guid: 7c53b31f7ffe1eb46ba866665b2d7ff9, type: 3}
+      Selected: {fileID: 21300000, guid: 17b50614b2ef80041b8b92de46eb2bb7, type: 3}
+    - Idle: {fileID: 21300000, guid: 7ffa37c2e6b7f2c48969ce970c4f1f49, type: 3}
+      Selected: {fileID: 21300000, guid: 221ace1cf21442141b31198e0d187fd4, type: 3}

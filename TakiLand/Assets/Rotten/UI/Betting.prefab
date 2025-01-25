@@ -1604,6 +1604,14 @@ MonoBehaviour:
     - {fileID: 3586167678576827349}
     - {fileID: 967858728100164583}
     - {fileID: 8458800921141174272}
+  _bettingButtonSprites:
+    m_keys: 
+  _bettingButtonImages:
+    m_keys: 000000000100000002000000
+    m_values:
+    - {fileID: 8447834640918090627}
+    - {fileID: 7267300469991883002}
+    - {fileID: 5680310919275144222}
   _betAmountButtons:
     m_keys: 00000000010000000a00000064000000e8030000
     m_values:
