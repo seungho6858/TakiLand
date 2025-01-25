@@ -16,13 +16,6 @@ public class BettingHistoryUI : MonoBehaviour
 	
 	private void Awake()
 	{
-		_scores = new ScoreUI[Define.Instance.GetValue("TotalStage")];
-		for (int i = 0; i < _scores.Length; i++)
-		{
-			_scores[i] = Instantiate(_scorePrefab, _scoreRoot);
-			_scores[i].Initialize(i + 1);
-		}
-		
 		StageManager.Instance.OnStageChanged +=(red, blue, stage) =>
 		{
 			if (stage <= 1)
