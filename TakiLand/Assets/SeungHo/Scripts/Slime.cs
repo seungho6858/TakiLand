@@ -92,6 +92,16 @@ public partial class Slime : MonoBehaviour
     {
         onAnimCallBack.Invoke("Idle");
     }
+    
+    public bool IsPlaying(string stateName)
+    {
+        if (animator == null) return false;
+
+        // 현재 상태 정보를 가져옴
+        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0); // 0은 기본 레이어
+        return stateInfo.IsName(stateName);
+    }
+
 
     public void SetTeam(Team team)
     {

@@ -32,6 +32,8 @@ public partial class BattleUnit : MonoBehaviour
     private List<BattleUnit> listRangeUnits;
     private BattleUnit rangeUnit;
     
+    
+    
     public void SetTeam(Team team, SpecialAction specialAction)
     {
         Init();
@@ -325,8 +327,8 @@ public partial class BattleUnit
                 }
                 
                 SoundManager.PlaySound("52_Dive_02");
-                
-                Die();
+
+                GetDamage(null, FullHp);
             };
             
             //Die();
@@ -534,7 +536,7 @@ public partial class BattleUnit
             .GetComponent<Ef_DamageFont>();
         ef.SetDamage(dmg);
 
-        if(unitState != UnitState.Attack)
+        if(!slime.IsPlaying("Attack"))
             SetUnitState(UnitState.Hit);
 
         if (this.specialAction == SpecialAction.CounterAttack)
