@@ -196,7 +196,8 @@ public partial class BattleUnit : MonoBehaviour
 
         if (nearUnit != null)
         {
-            SetUnitState(UnitState.Move);
+            if(!slime.IsPlaying("Attack"))
+                SetUnitState(UnitState.Move);
             
             Look(nearUnit.GetPos().x - GetPos().x);
             Debug.DrawLine(GetPos(), this.nearUnit.GetPos(),
@@ -212,7 +213,7 @@ public partial class BattleUnit : MonoBehaviour
         BattleUnit nearestUnit = null;
         float shortestDistance = float.MaxValue;
         
-        List<BattleUnit> copy = new List<BattleUnit>(units);
+        List<BattleUnit> copy = new List<BattleUnit>(units.FindAll(x => x.team != this.team));
 
         if (this.specialAction == SpecialAction.Invisibility && copy.Exists(x => x.rangeType == RangeType.Dist))
         {
@@ -286,7 +287,7 @@ public partial class BattleUnit
                     CheckAttackEnemy();
                 }
             }
-            else if (knockBack >= 0f) // 넉백 적용
+            else if (knockBack > 0f) // 넉백 적용
             {
                 knockBack -= Time.deltaTime;
                 
