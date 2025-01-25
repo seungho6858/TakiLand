@@ -34,7 +34,8 @@ public class StageResultPopup : PopupBase
     {
         (bool won, int goldDelta) = BettingManager.Instance.CalculateResult(stage);
         string resultText = won ? "맞췄다!" : "틀렸다!";
-        _resultText.text =  $"{resultText} gold: {goldDelta} ";
+        Team result = StageManager.Instance.GetResult(stage);
+        _resultText.text =  $"승리팀:{result.GetTeamName()} {resultText} gold: {goldDelta} ";
 
     }
 }
