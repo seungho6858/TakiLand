@@ -64,10 +64,6 @@ public class StageManager : MonoSingleton<StageManager>
             .Where(data => data.Stage == CurrentStage)
             .OrderBy(_ => Guid.NewGuid())
             .ToArray();
-
-        (StageResultPopup popup, UniTask task) =  PopupManager.Instance.OpenWithTask<StageResultPopup>();
-        popup.Set(CurrentStage);
-        await task;
         
         OnStageChanged?.Invoke(positions[0], positions[1], CurrentStage);
         
@@ -79,6 +75,10 @@ public class StageManager : MonoSingleton<StageManager>
         
         await UniTask.WaitUntil(() => Instance._battleEndFlag, cancellationToken:this.GetCancellationTokenOnDestroy());
         _battleEndFlag = false;
+        
+        (StageResultPopup popup, UniTask task) =  PopupManager.Instance.OpenWithTask<StageResultPopup>();
+        popup.Set(CurrentStage);
+        await task;
     }
 
     public void EndBattle(Team team)
