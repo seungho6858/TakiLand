@@ -163,7 +163,12 @@ public partial class BattleManager : MonoBehaviour
     {
         return instance.listUnits.FindAll(x => x.team == team && Vector2.Distance(x.GetPos(), vPos) <= range);
     }
-    
+
+    private void Start()
+    {
+        SoundManager.PlayLoopSound("track_shortadventure_loop");
+    }
+
     private void Awake()
     {
         instance = this;

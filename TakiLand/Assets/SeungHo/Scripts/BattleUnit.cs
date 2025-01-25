@@ -47,6 +47,7 @@ public partial class BattleUnit : MonoBehaviour
             obj = Resources.Load("Fast");
         
         slime = (Instantiate(obj, transform) as GameObject).GetComponent<Slime>();
+        slime.SetTeam(team);
         
         tmpAction.text = specialAction.ToString();
 
@@ -419,7 +420,7 @@ public partial class BattleUnit
         }
         else
         {
-            if(unitState == UnitState.Move)
+            if(unitState != UnitState.Idle)
                 SetUnitState(UnitState.Idle);
         }
     }

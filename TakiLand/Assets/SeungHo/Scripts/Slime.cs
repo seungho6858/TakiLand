@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,8 @@ public class Slime : MonoBehaviour
 {
     [SerializeField] private Animator animator;
     private System.Action<string> onAnimCallBack;
+
+    private List<SpriteFlip> listFlips;
 
     public void AddCallBack(System.Action<string> onAnimCallBack)
     {
@@ -21,5 +24,14 @@ public class Slime : MonoBehaviour
     {
         onAnimCallBack.Invoke("Die");
     }
-    
+
+    public void SetTeam(Team team)
+    {
+        listFlips.ForEach(x => x.SetTeam(team));
+    }
+
+    private void Awake()
+    {
+        listFlips = new List<SpriteFlip>(GetComponentsInChildren<SpriteFlip>(true));
+    }
 }

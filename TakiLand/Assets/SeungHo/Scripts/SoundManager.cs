@@ -6,8 +6,10 @@ public class SoundManager : MonoBehaviour
     private static SoundManager instance;
     private static Dictionary<string, AudioClip> soundCache = new Dictionary<string, AudioClip>();
     private static Dictionary<string, AudioSource> loopAudioSources = new Dictionary<string, AudioSource>();
+    private static Dictionary<string, float> soundCooldowns = new Dictionary<string, float>();
 
-    [SerializeField] private string resourcePath = "Sounds"; // Resources 내의 사운드 폴더 경로
+    [SerializeField] private string resourcePath = "Sounds"; // Resources 폴더 경로
+    private static AudioSource globalAudioSource; // 전역적으로 사용할 AudioSource
 
     private void Awake()
     {
@@ -16,19 +18,30 @@ public class SoundManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
+            InitializeGlobalAudioSource();
         }
         else
         {
             Destroy(gameObject);
-            return;
         }
+    }
+
+    /// <summary>
+    /// 글로벌 AudioSource 초기화
+    /// </summary>
+    private void InitializeGlobalAudioSource()
+    {
+        globalAudioSource = gameObject.AddComponent<AudioSource>();
+        globalAudioSource.playOnAwake = false;
     }
 
     /// <summary>
     /// 특정 사운드를 재생합니다.
     /// </summary>
     /// <param name="soundName">재생할 사운드의 이름</param>
-    public static void PlaySound(string soundName)
+    /// <param name="volume">볼륨 (기본값: 1.0)</param>
+    /// <param name="cooldown">쿨다운 시간 (기본값: 0.2초)</param>
+    public static void PlaySound(string soundName, float volume = 1f, float cooldown = 0.2f)
     {
         if (instance == null)
         {
@@ -36,10 +49,22 @@ public class SoundManager : MonoBehaviour
             return;
         }
 
+        // 쿨다운 확인
+        if (soundCooldowns.ContainsKey(soundName) && Time.time < soundCooldowns[soundName])
+        {
+            return;
+        }
+
         AudioClip clip = GetAudioClip(soundName);
         if (clip == null) return;
 
-        AudioSource.PlayClipAtPoint(clip, Vector3.zero); // 1회성 재생
+        // 글로벌 AudioSource로 재생
+        globalAudioSource.PlayOneShot(clip, volume);
+
+        // 쿨다운 설정
+        soundCooldowns[soundName] = Time.time + cooldown;
+
+        Debug.Log($"Sound played: {soundName}");
     }
 
     /// <summary>
@@ -75,6 +100,8 @@ public class SoundManager : MonoBehaviour
 
         // 딕셔너리에 추가
         loopAudioSources[soundName] = newSource;
+
+        Debug.Log($"Loop sound started: {soundName}");
     }
 
     /// <summary>
@@ -88,6 +115,8 @@ public class SoundManager : MonoBehaviour
             loopAudioSources[soundName].Stop();
             Destroy(loopAudioSources[soundName]); // AudioSource 삭제
             loopAudioSources.Remove(soundName); // 딕셔너리에서 제거
+
+            Debug.Log($"Loop sound stopped: {soundName}");
         }
     }
 
@@ -103,6 +132,7 @@ public class SoundManager : MonoBehaviour
         }
 
         loopAudioSources.Clear(); // 딕셔너리 초기화
+        Debug.Log("All loop sounds stopped.");
     }
 
     /// <summary>
