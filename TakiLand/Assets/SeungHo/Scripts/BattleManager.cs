@@ -107,13 +107,13 @@ public partial class BattleManager : MonoBehaviour
         unit.SetStat(value.MaxHp, value.Damage, value.MoveSpeed, value.AttackSpeed, value.Range, (RangeType) value.IsRangedUnit);
         
         instance.listUnits.Add(unit);
-        instance.TeamCountChanged();
+        instance.TeamCountChanged(false);
     }
 
     public static void DestroyUnit(BattleUnit unit)
     {
         instance.listUnits.Remove(unit);
-        instance.TeamCountChanged();
+        instance.TeamCountChanged(true);
     }
 
     private void FixedUpdate()
@@ -142,7 +142,7 @@ public partial class BattleManager : MonoBehaviour
         }
     }
 
-    private void TeamCountChanged()
+    private void TeamCountChanged(bool reduced)
     {
         int teamA = listUnits.Count(x => x.team == Team.Red);
         int teamB = listUnits.Count(x => x.team == Team.Blue);
@@ -151,8 +151,8 @@ public partial class BattleManager : MonoBehaviour
         Debug.Log($"Team B : {teamB}");
 
         OnTeamCountChanged?.Invoke(teamA, teamB);
-
-        if (GameState == GameState.Battle && (teamA == 0) || teamB == 0)
+        
+        if (reduced && (teamA == 0) || teamB == 0)
         {
             GameState = GameState.End;
             onTeamWin?.Invoke(teamA > 0 ? Team.Red : Team.Blue);

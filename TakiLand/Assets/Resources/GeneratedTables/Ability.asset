@@ -34,7 +34,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 10
+      Data: 11
     - Name: 
       Entry: 7
       Data: 
@@ -64,7 +64,7 @@ MonoBehaviour:
       Data: 1
     - Name: AttackSpeed
       Entry: 4
-      Data: 100
+      Data: 5
     - Name: Range
       Entry: 4
       Data: 1
@@ -446,6 +446,48 @@ MonoBehaviour:
     - Name: Range
       Entry: 4
       Data: 2
+    - Name: IsRangedUnit
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: Mib.Data.Ability+Key, Assembly-CSharp
+    - Name: _item
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 12|Mib.Data.Ability+Data, Assembly-CSharp
+    - Name: Tid
+      Entry: 3
+      Data: 0
+    - Name: Damage
+      Entry: 3
+      Data: 0
+    - Name: MaxHp
+      Entry: 3
+      Data: 0
+    - Name: MoveSpeed
+      Entry: 4
+      Data: 0
+    - Name: AttackSpeed
+      Entry: 4
+      Data: 0
+    - Name: Range
+      Entry: 4
+      Data: 0
     - Name: IsRangedUnit
       Entry: 3
       Data: 0
