@@ -135,7 +135,7 @@ public partial class BattleUnit : MonoBehaviour
         this.atk = atk;
         this.moveSpeed = moveSpeed;
         this.attackSpeed = attackSpeed;
-        this.coolTime = attackSpeed;
+        this.coolTime = 0f;
         this.rangeType = rangeType;
 
         trRange.localScale = Vector3.one * range;
@@ -317,7 +317,7 @@ public partial class BattleUnit
         {
             onAttack = () =>
             {
-                foreach (BattleUnit battleUnit in BattleManager.GetRangeUnits(GetPos(), 3f, BattleHelper.GetOther(this.team)))
+                foreach (BattleUnit battleUnit in BattleManager.GetRangeUnits(GetPos(), 2f, BattleHelper.GetOther(this.team)))
                 {
                     battleUnit.GetDamage(this, GetAtk());
                 }
@@ -342,8 +342,12 @@ public partial class BattleUnit
             }
             else if (rangeType == RangeType.Dist)
             {
+                Vector3 pos = GetPos();
+                if (specialAction == SpecialAction.Greed)
+                    pos = (slime as Slime_Greed).GetShoot(); 
+                
                 var ef = EffectManager.Instance.SpawnEffect("Bullet", 
-                    GetPos(), Quaternion.identity).GetComponent<Bullet>();
+                    pos, Quaternion.identity).GetComponent<Bullet>();
 
                 int life = rangeUnit.life;
                 ef.SetTarget(rangeUnit, () =>
@@ -427,6 +431,8 @@ public partial class BattleUnit
         SetUnitState(UnitState.Die);
     }
 
+    public Slime GetSlime() => this.slime;
+    
     private void EndDeathAnimation()
     {
         gameObject.SetActive(false);

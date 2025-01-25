@@ -5,7 +5,7 @@ using UnityEngine;
 
 public partial class Slime : MonoBehaviour
 {
-    [SerializeField] private Animator animator;
+    [SerializeField] protected Animator animator;
     private System.Action<string> onAnimCallBack;
 
     protected Team team;
@@ -71,6 +71,11 @@ public partial class Slime : MonoBehaviour
     public void SetHp(float hp, float ratio)
     {
         hpBar.SetHp(hp, ratio);
+    }
+
+    public virtual void Win()
+    {
+        
     }
     
     public void EndDieAnimation()

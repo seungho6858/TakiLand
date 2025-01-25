@@ -142,7 +142,7 @@ public partial class BattleManager : MonoBehaviour
             if (timer <= 0f)
             {
                 GameState = GameState.End;
-                onTeamWin?.Invoke(Team.Draw);
+                GameEnd(Team.Draw);
             }
         }
     }
@@ -160,10 +160,28 @@ public partial class BattleManager : MonoBehaviour
         if (reduced && ((teamA == 0) || teamB == 0))
         {
             GameState = GameState.End;
-            onTeamWin?.Invoke(teamA > 0 ? Team.Red : Team.Blue);
+
+            Team winner = Team.Draw;
             
-            Debug.Log("게임 종료!");
+            if(teamA == 0 && teamB == 0)
+                winner = (Team.Draw);
+            else
+                winner = (teamA > 0 ? Team.Red : Team.Blue);
+
+            GameEnd(winner);
+            
+            listUnits.ForEach(x => x.GetSlime()?.Win());
         }
+    }
+
+    private void GameEnd(Team winner)
+    {
+        Observable.Timer(TimeSpan.FromSeconds(3f)).Subscribe(_ =>
+        {
+            onTeamWin?.Invoke(winner);
+        });
+        
+        
     }
     
     public static List<BattleUnit> GetRangeUnits(Vector2 vPos, float range, Team team)
