@@ -461,8 +461,10 @@ public partial class BattleUnit
         }
         else
         {
+            /*
             if(unitState != UnitState.Idle)
                 SetUnitState(UnitState.Idle);
+            */
         }
     }
     

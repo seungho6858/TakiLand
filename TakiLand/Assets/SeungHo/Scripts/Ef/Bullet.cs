@@ -7,37 +7,49 @@ public class Bullet : Effect
 {
 	[SerializeField] private float moveSpeed = 10f; // 이동 속도 (단위: 거리/초)
 
-	public void SetTarget(BattleUnit trTarget, System.Action end)
+	public void SetTarget(BattleUnit target, System.Action end)
 	{
-		if (trTarget == null)
+		if (target == null)
 		{
 			Hide();
 			return;
 		}
 
-		int initialLife = trTarget.life;
+		int initialLife = target.life;
+
+		// 타겟의 초기 위치 + 높이 보정
+		Vector2 targetOffset = new Vector3(0, 0.5f, 0); // 타겟보다 0.5 높이
+		Vector3 startPosition = transform.position;
+		Vector3 targetPosition = target.GetPos() + targetOffset;
 
 		// 타겟까지의 거리 계산
-		float distance = Vector3.Distance(transform.position, trTarget.GetPos());
+		float distance = Vector3.Distance(startPosition, targetPosition);
 		float moveDuration = distance / moveSpeed; // 거리 기반 이동 시간 계산
 
 		// DOTween을 사용해 타겟으로 이동
-		transform.DOMove(trTarget.GetPos(), moveDuration)
+		transform.DOMove(targetPosition, moveDuration)
 			.SetEase(Ease.Linear) // 선형 이동
 			.OnUpdate(() =>
 			{
-				// 타겟이 null이거나 상태가 변경되면 총알 숨기기
-				if (trTarget == null ||
-				    initialLife != trTarget.life ||
-				    !trTarget.gameObject.activeSelf)
+				// 실시간으로 타겟의 위치를 업데이트
+				if (target != null && target.gameObject.activeSelf &&
+				    initialLife != target.life)
 				{
-					Hide();
+					targetPosition = target.GetPos() + targetOffset;
+					transform.DOMove(targetPosition, moveDuration).ChangeEndValue(targetPosition, true);
+				}
+				else
+				{
+					Hide(); // 타겟이 사라지거나 비활성화된 경우 숨기기
 				}
 			})
 			.OnComplete(() =>
 			{
 				// 타겟에 도달했을 때 콜백 실행
-				end.Invoke();
+				if (target != null && target.gameObject.activeSelf)
+				{
+					end?.Invoke();
+				}
 				Hide();
 			});
 	}

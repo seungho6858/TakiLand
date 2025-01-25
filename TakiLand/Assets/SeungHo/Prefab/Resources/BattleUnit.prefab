@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   oBar: {fileID: 7903285037919848756}
   trBar: {fileID: 7325662862297676075}
+  init: 2.7
 --- !u!1 &4070162848782731429
 GameObject:
   m_ObjectHideFlags: 0
@@ -144,7 +145,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5214882333551492358
 RectTransform:
   m_ObjectHideFlags: 0
@@ -605,9 +606,7 @@ MonoBehaviour:
   tmpAction: {fileID: 1246522143542109611}
   rg: {fileID: 8772071211764512268}
   circleCollider: {fileID: 4753276130411340563}
-  trLook: {fileID: 0}
   trRange: {fileID: 1477497547560548373}
-  hpBar: {fileID: 7639930895797887963}
   audioSource: {fileID: 8289278904132916850}
   find: {fileID: 7559843902011120747}
   range: {fileID: 8439114211847771343}
