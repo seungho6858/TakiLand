@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using EnumsNET;
 using Mib;
 using Mib.Data;
 using UnityEngine;
@@ -12,6 +13,12 @@ public class BettingManager : MonoSingleton<BettingManager>
 	{
 		public Team BetTeam;
 		public int BetAmount;
+		public int ExtraRewardRate;
+
+		public override string ToString()
+		{
+			return $"BetTeam:[{BetTeam.AsString()}]\tBetAmount:[{BetAmount.ToString()}]\tExtraRewardRate:[{ExtraRewardRate.ToString()}]";
+		}
 	}
 
 	public class Gold
@@ -113,12 +120,18 @@ public class BettingManager : MonoSingleton<BettingManager>
 	public void SettleBets(Team team, int currentStage)
 	{
 		bool isWin = CurrentBet.BetTeam == team;
-
-		if (isWin)
+		if (!isWin)
 		{
-			var reward = Stage.Instance.GetReward(currentStage, CurrentBet.BetAmount);
-			_gold.SetValue(CurrentGold + reward);
+			return;
 		}
+
+		// 남은 탐욕슬라임 개수만큼 추가 리워드 적용
+		int extraRewardRate = BattleManager.GetGreedCount(team);
+		CurrentBet.ExtraRewardRate = extraRewardRate;
+			
+		// 리워드 적용 
+		int reward = Stage.Instance.GetReward(currentStage, CurrentBet);
+		_gold.SetValue(CurrentGold + reward);
 	}
 
 	public (bool won, int goldDelta) CalculateResult(int stage)
@@ -128,8 +141,9 @@ public class BettingManager : MonoSingleton<BettingManager>
 		bool won = prevBet.BetTeam == result;
 
 		int goldDelta = won
-			? Stage.Instance.GetReward(stage, prevBet.BetAmount) - prevBet.BetAmount
+			? Stage.Instance.GetReward(stage, prevBet) - prevBet.BetAmount
 			: -prevBet.BetAmount;
+		
 		return (won, goldDelta);
 	}
 

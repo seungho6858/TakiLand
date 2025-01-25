@@ -151,7 +151,7 @@ PrefabInstance:
     - target: {fileID: 3344261603324978719, guid: bb1b4805da6a64a13a20cd0ba6c3a9d2, type: 3}
       propertyPath: blue
       value: 
-      objectReference: {fileID: 21300000, guid: 127a7361381682f4599f48b768d1d28c, type: 3}
+      objectReference: {fileID: 21300000, guid: c78b73d498e3a2448af08e5bc0e64407, type: 3}
     - target: {fileID: 4281161619862049550, guid: bb1b4805da6a64a13a20cd0ba6c3a9d2, type: 3}
       propertyPath: red
       value: 
@@ -159,7 +159,7 @@ PrefabInstance:
     - target: {fileID: 4281161619862049550, guid: bb1b4805da6a64a13a20cd0ba6c3a9d2, type: 3}
       propertyPath: blue
       value: 
-      objectReference: {fileID: 21300000, guid: 878b5185302b6ce4d8d17043a8c823f1, type: 3}
+      objectReference: {fileID: 21300000, guid: 228c8db883fae07439c5e00cc1fe22e5, type: 3}
     - target: {fileID: 4695559610533730862, guid: bb1b4805da6a64a13a20cd0ba6c3a9d2, type: 3}
       propertyPath: m_Sprite
       value: 

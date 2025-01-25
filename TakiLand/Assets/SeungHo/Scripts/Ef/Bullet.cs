@@ -6,7 +6,8 @@ using UnityEngine;
 public class Bullet : Effect
 {
 	[SerializeField] private float moveSpeed = 10f; // 이동 속도 (단위: 거리/초)
-
+	public string effect;
+	
 	public void SetTarget(BattleUnit target, System.Action end)
 	{
 		if (target == null)
@@ -57,6 +58,6 @@ public class Bullet : Effect
 	private void Hide()
 	{
 		// 총알을 풀로 반환
-		EffectManager.Instance.ReturnEffect("Bullet", gameObject);
+		EffectManager.Instance.ReturnEffect(effect, gameObject);
 	}
 }

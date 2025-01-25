@@ -65,6 +65,8 @@ public class StageManager : MonoSingleton<StageManager>
             .OrderBy(_ => Guid.NewGuid())
             .ToArray();
         
+        Debug.Log($"전투시작\tRed:[{positions[0]}]\tBlue:[{positions[1]}]");
+        
         OnStageChanged?.Invoke(positions[0], positions[1], CurrentStage);
 
         await UniTask.WaitUntil(() => Instance._bettingEndFlag, cancellationToken:this.GetCancellationTokenOnDestroy());
@@ -82,6 +84,8 @@ public class StageManager : MonoSingleton<StageManager>
         
         await UniTask.WaitUntil(() => Instance._battleEndFlag, cancellationToken:this.GetCancellationTokenOnDestroy());
         _battleEndFlag = false;
+        
+        Debug.Log($"[Log] {BettingManager.Instance.CurrentBet}");
         
         (StageResultPopup popup, UniTask task) =  PopupManager.Instance.OpenWithTask<StageResultPopup>();
         popup.Set(CurrentStage);

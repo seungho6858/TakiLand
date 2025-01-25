@@ -337,8 +337,20 @@ public partial class BattleUnit
 
                 onAttack = () =>
                 {
-                    if(null != rangeUnit && life == rangeUnit.life)
+                    if (null != rangeUnit && life == rangeUnit.life)
+                    {
                         rangeUnit.GetDamage(this, GetAtk());
+                        
+                        if (specialAction == SpecialAction.Fear)
+                        {
+                            rangeUnit?.SetFear(this);
+                        }
+                        else if (specialAction == SpecialAction.Invisibility)
+                        {
+                            slime.SetInvisible(false);
+                            circleCollider.enabled = true;
+                        }
+                    }
                 };
 
             }
@@ -346,9 +358,15 @@ public partial class BattleUnit
             {
                 Vector3 pos = GetPos();
                 if (specialAction == SpecialAction.Greed)
-                    pos = (slime as Slime_Greed).GetShoot(); 
+                    pos = (slime as Slime_Greed).GetShoot();
+
+                string effect = "Bullet";
+                if (specialAction == SpecialAction.Greed)
+                    effect = "Bullet";
+                else if (specialAction == SpecialAction.Immobility)
+                    effect = "Tree";
                 
-                var ef = EffectManager.Instance.SpawnEffect("Bullet", 
+                var ef = EffectManager.Instance.SpawnEffect(effect, 
                     pos, Quaternion.identity).GetComponent<Bullet>();
 
                 int life = rangeUnit.life;
@@ -400,16 +418,8 @@ public partial class BattleUnit
         atkCnt++;
         atkSameCnt++;
 
-        if (specialAction == SpecialAction.Invisibility)
-        {
-            slime.SetInvisible(false);
-            circleCollider.enabled = true;
-        }
+        
 
-        if (specialAction == SpecialAction.Fear)
-        {
-            rangeUnit.SetFear(this);
-        }
     }   
     
     private void Die()
@@ -660,6 +670,7 @@ public partial class BattleUnit
     
     private void OnDestroy()
     {
+        life++;
         listFindUnits.Clear();
     }
 
