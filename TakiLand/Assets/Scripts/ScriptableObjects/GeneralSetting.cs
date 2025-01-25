@@ -15,8 +15,6 @@ public class GeneralSetting : ScriptableObjectSingleton<GeneralSetting>
 	[SerializeField]
 	public SerializableDictionary<Team, Color> TeamColors;
 	
-	public Color RedTeamColor;
-	public Color BlueTeamColor;
 	public Color WinColor;
 	public Color LoseColor;
 	
