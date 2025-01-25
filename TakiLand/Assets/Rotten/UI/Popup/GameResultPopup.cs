@@ -32,7 +32,10 @@ public class GameResultPopup : PopupBase
     {
         _titleButton.onClick.AddListener(() =>
         {
-            // TODO: 여기서 랭킹적재하고
+            BattleManager.LeaderboardPlayerRecord(
+                BettingManager.Instance.CurrentGold,
+                StageManager.Instance.CurrentStage, 
+                GetPlayerNickName());
             
             SceneLoader.ChangeScene(Constant.TitleScene).Forget();
         });
