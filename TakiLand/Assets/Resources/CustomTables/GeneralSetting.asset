@@ -27,8 +27,18 @@ MonoBehaviour:
     - {r: 0.654902, g: 0.20784315, b: 0.29411766, a: 1}
     - {r: 0.2509804, g: 0.35686275, b: 0.64705884, a: 1}
     - {r: 0.33333334, g: 0.28235295, b: 0.2509804, a: 1}
-  RedTeamColor: {r: 0.654902, g: 0.20784315, b: 0.29411766, a: 1}
-  BlueTeamColor: {r: 0.2509804, g: 0.35686275, b: 0.64705884, a: 1}
+  BetTeamColors:
+    m_keys: 000000000100000002000000
+    m_values:
+    - {r: 1, g: 0.69411767, b: 0.7882353, a: 1}
+    - {r: 0.6313726, g: 0.8117647, b: 1, a: 1}
+    - {r: 1, g: 0.88235295, b: 0.64705884, a: 1}
+  StageResultColors:
+    m_keys: 000000000100000002000000
+    m_values:
+    - {r: 1, g: 0.5882353, b: 0.76862746, a: 1}
+    - {r: 0.32941177, g: 0.6431373, b: 1, a: 1}
+    - {r: 0.7529412, g: 0.87058824, b: 1, a: 1}
   WinColor: {r: 0.17735851, g: 0.12682807, b: 0.12682807, a: 1}
   LoseColor: {r: 1, g: 0, b: 0, a: 1}
   TeamSprites:
@@ -40,3 +50,6 @@ MonoBehaviour:
       Selected: {fileID: 21300000, guid: 17b50614b2ef80041b8b92de46eb2bb7, type: 3}
     - Idle: {fileID: 21300000, guid: 7ffa37c2e6b7f2c48969ce970c4f1f49, type: 3}
       Selected: {fileID: 21300000, guid: 221ace1cf21442141b31198e0d187fd4, type: 3}
+  ResultSprites:
+    m_keys: 
+    m_values: []
