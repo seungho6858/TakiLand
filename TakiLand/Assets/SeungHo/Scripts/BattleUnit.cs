@@ -48,11 +48,51 @@ public partial class BattleUnit : MonoBehaviour
         slime = (Instantiate(obj, transform) as GameObject).GetComponent<Slime>();
         
         tmpAction.text = specialAction.ToString();
-        
+
         if (specialAction == SpecialAction.Invisibility)
+        {
+            SoundManager.PlaySound("invisable");
             circleCollider.enabled = false;
+        }
         else
             circleCollider.enabled = true;
+        
+        switch (specialAction)
+        {
+            case SpecialAction.Explosion:
+                SoundManager.PlayLoopSound("Mgc_Fire_Hold_01");
+                break;
+            
+            case SpecialAction.Taunt:
+                SoundManager.PlayLoopSound("77_flesh_02");
+                break;
+            
+            case SpecialAction.Invisibility:
+                SoundManager.PlayLoopSound("77_flesh_02");
+                break;
+            
+            case SpecialAction.Rage:
+                SoundManager.PlayLoopSound("77_flesh_02");
+                break;
+            
+            case SpecialAction.Greed:
+                SoundManager.PlayLoopSound("77_flesh_02");
+                break;
+            
+            case SpecialAction.Fear:
+                SoundManager.PlayLoopSound("77_flesh_02");
+                break;
+            
+            case SpecialAction.CounterAttack:
+                SoundManager.PlayLoopSound("77_flesh_02");
+                break;
+            
+            case SpecialAction.SpeedBoost:
+                SoundManager.PlayLoopSound("Flying");
+                break;
+            
+            
+        }
     }
     
     public void SetStat(
@@ -250,10 +290,46 @@ public partial class BattleUnit
                 int life = rangeUnit.life;
                 ef.SetTarget(rangeUnit, () =>
                 {
-                    if(rangeUnit != null &&
+                    if (rangeUnit != null &&
                         life == rangeUnit.life)
+                    {
                         rangeUnit.GetDamage(this, GetAtk());
+                        
+                        if(specialAction == SpecialAction.Immobility)
+                            SoundManager.PlaySound("45_Landing_01");
+                    }
                 });
+            }
+
+            switch (specialAction)
+            {
+                case SpecialAction.Taunt:
+                    SoundManager.PlaySound("39_Block_03");
+                    break;
+                
+                case SpecialAction.Invisibility:
+                    SoundManager.PlaySound("22_Slash_04");
+                    break;
+                
+                case SpecialAction.Rage:
+                    SoundManager.PlaySound("071_Unequip_01");
+                    break;
+                
+                case SpecialAction.Greed:
+                    SoundManager.PlaySound("15_Impact_flesh_02");
+                    break;
+                
+                case SpecialAction.Fear:
+                    SoundManager.PlaySound("21_Debuff_01");
+                    break;
+                
+                case SpecialAction.Immobility:
+                    SoundManager.PlaySound("Throw");
+                    break;
+                
+                case SpecialAction.SpeedBoost:
+                    SoundManager.PlaySound("56_Attack_03");
+                    break;
             }
         }
         
@@ -272,6 +348,13 @@ public partial class BattleUnit
     private void Die()
     {
         life++;
+
+        switch (specialAction)
+        {
+            default:
+                SoundManager.PlaySound("14_Step_water_02");
+                break;
+        }
         
         BattleManager.DestroyUnit(this);
         
@@ -281,6 +364,45 @@ public partial class BattleUnit
         unitState = UnitState.Die;
         circleCollider.enabled = false;
         gameObject.SetActive(false);
+    }
+
+    private void OnDisable()
+    {
+        
+        switch (specialAction)
+        {
+            case SpecialAction.Explosion:
+                SoundManager.StopLoopSound("Mgc_Fire_Hold_01");
+                break;
+            
+            case SpecialAction.Taunt:
+                SoundManager.StopLoopSound("77_flesh_02");
+                break;
+            
+            case SpecialAction.Invisibility:
+                SoundManager.StopLoopSound("77_flesh_02");
+                break;
+            
+            case SpecialAction.Rage:
+                SoundManager.StopLoopSound("77_flesh_02");
+                break;
+            
+            case SpecialAction.Greed:
+                SoundManager.StopLoopSound("77_flesh_02");
+                break;
+            
+            case SpecialAction.Fear:
+                SoundManager.StopLoopSound("77_flesh_02");
+                break;
+            
+            case SpecialAction.CounterAttack:
+                SoundManager.StopLoopSound("77_flesh_02");
+                break;
+            
+            case SpecialAction.SpeedBoost:
+                SoundManager.StopLoopSound("Flying");
+                break;
+        }
     }
 
     private void Update()
@@ -301,6 +423,8 @@ public partial class BattleUnit
     
     private bool GetDamage(BattleUnit attacker, float dmg)
     {
+        bool isRage = IsRage();
+        
         this.hp -= dmg;
         hpBar.SetHp(this.hp, this.hp / this.FullHp);
 
@@ -330,8 +454,13 @@ public partial class BattleUnit
             if (null != attacker && attacker.rangeType == RangeType.Near)
             {
                 attacker.GetDamage(null, dmg);
+                
+                SoundManager.PlaySound("SWORD_27");
             }
         }
+        
+        if(!isRage && IsRage())
+            SoundManager.PlaySound("Goblin_03");
         
         return this.hp <= 0f;
     }

@@ -66,10 +66,11 @@ public partial class BattleManager : MonoBehaviour
 
         timer = c = TIMER;
 
-        for (int i = 0; i < listUnits.Count; ++i)
+        foreach (var unit in GetComponentsInChildren<BattleUnit>())
         {
-            Destroy(listUnits[i].gameObject);
+            Destroy(unit.gameObject);
         }
+        
         listUnits.Clear();
         
         Debug.Log("TeamA");
