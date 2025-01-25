@@ -83,6 +83,11 @@ public class StageManager : MonoSingleton<StageManager>
 
     public void EndBattle(Team team)
     {
+        if (BattleManager.GameState != GameState.End)
+        {
+            return;
+        }
+        
         Debug.Log("전투종료!!");
         
         _battleEndFlag = true;
