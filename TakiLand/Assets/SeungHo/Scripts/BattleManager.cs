@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Mib.Data;
+using R3;
 using UnityEngine;
 using Random = System.Random;
 
@@ -38,7 +39,6 @@ public partial class BattleManager : MonoBehaviour
     private void OnBattleStart()
     {
         GameState = GameState.Battle;
-        
     }
     
     private void OnBattleStateChangedFunc(GameState obj)
@@ -130,7 +130,7 @@ public partial class BattleManager : MonoBehaviour
             if (timer <= 0f)
             {
                 GameState = GameState.End;
-                onTeamWin?.Invoke(Team.None);
+                onTeamWin?.Invoke(Team.Draw);
             }
         }
     }

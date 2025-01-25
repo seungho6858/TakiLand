@@ -19,7 +19,7 @@ public class HpBar : MonoBehaviour
         trBar.localScale = vScale;
     }
 
-    public void ShowHpBar(bool b)
+    public void ShowHpBar(bool b, float duration = 1f)
     {
         oBar.SetActive(b);
 

@@ -17,4 +17,5 @@ public class UnitData : ScriptableObject
 
 	[Header("기사 말")]
 	public float horse_second;
+	
 }

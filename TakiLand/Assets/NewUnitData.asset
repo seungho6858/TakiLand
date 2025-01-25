@@ -18,3 +18,4 @@ MonoBehaviour:
   Rage_minus_speed: 0.5
   Rage_minumum_speed: 0.5
   ghost_second: 3
+  horse_second: 2

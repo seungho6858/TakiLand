@@ -63,6 +63,7 @@ public partial class BattleUnit : MonoBehaviour
         this.moveSpeed = moveSpeed;
         this.attackSpeed = attackSpeed;
         this.coolTime = attackSpeed;
+        this.rangeType = rangeType;
 
         trRange.localScale = Vector3.one * range;
     }
@@ -79,7 +80,7 @@ public partial class BattleUnit : MonoBehaviour
     {
         BattleUnit before = this.rangeUnit;
         
-        this.rangeUnit = FindNearest(this.listRangeUnits);
+        this.rangeUnit = FindNearest(this.listRangeUnits, false);
 
         if (rangeUnit != null)
         {
@@ -94,7 +95,7 @@ public partial class BattleUnit : MonoBehaviour
     
     private void CheckFindEnemy()
     {
-        this.nearUnit = FindNearest(this.listFindUnits);
+        this.nearUnit = FindNearest(this.listFindUnits, true);
 
         if (nearUnit != null)
         {
@@ -105,7 +106,7 @@ public partial class BattleUnit : MonoBehaviour
         }
     }
     
-    private BattleUnit FindNearest(List<BattleUnit> units)
+    private BattleUnit FindNearest(List<BattleUnit> units, bool find) 
     {
         if (units == null || units.Count == 0)
             return null; // 리스트가 비어 있으면 null 반환
@@ -119,7 +120,7 @@ public partial class BattleUnit : MonoBehaviour
         {
             copy.RemoveAll(x => x.rangeType == RangeType.Near);
         }
-        else if (copy.Exists(x => x.specialAction == SpecialAction.Taunt))
+        else if (!find && copy.Exists(x => x.specialAction == SpecialAction.Taunt))
             copy.RemoveAll(x => x.specialAction != SpecialAction.Taunt);
         
         foreach (var unit in copy)
@@ -159,6 +160,8 @@ public partial class BattleUnit : MonoBehaviour
 
 public partial class BattleUnit
 {
+    public int life;
+    
     public float FullHp;
     public float hp;
     public float atk;
@@ -179,7 +182,7 @@ public partial class BattleUnit
     {
         if (BattleManager.GameState == GameState.Battle)
         {
-            if (fear >= 0f) // 공포
+            if (fear > 0f) // 공포
             {
                 fear -= Time.deltaTime;
                 
@@ -187,6 +190,7 @@ public partial class BattleUnit
 
                 if (fear <= 0f)
                 {
+                    this.circleCollider.enabled = true;
                     CheckFindEnemy();
                     CheckAttackEnemy();
                 }
@@ -231,7 +235,22 @@ public partial class BattleUnit
         }
         else
         {
-            rangeUnit.GetDamage(this, GetAtk());
+            if (rangeType == RangeType.Near)
+            {
+                rangeUnit.GetDamage(this, GetAtk());
+            }
+            else if (rangeType == RangeType.Dist)
+            {
+                var ef = EffectManager.Instance.SpawnEffect("Bullet", 
+                    GetPos(), Quaternion.identity).GetComponent<Bullet>();
+
+                int life = rangeUnit.life;
+                ef.SetTarget(rangeUnit, () =>
+                {
+                    if(life == rangeUnit.life)
+                        rangeUnit.GetDamage(this, GetAtk());
+                });
+            }
         }
         
         atkCnt++;
@@ -248,6 +267,8 @@ public partial class BattleUnit
     
     private void Die()
     {
+        life++;
+        
         BattleManager.DestroyUnit(this);
         
         find.gameObject.SetActive(false);
@@ -278,12 +299,15 @@ public partial class BattleUnit
     {
         this.hp -= dmg;
         hpBar.SetHp(this.hp, this.hp / this.FullHp);
-        hpBar.ShowHpBar(true);
 
-        if (this.hp <= 0f)
+        bool isDead = this.hp <= 0f;
+        
+        if (isDead)
         {
             Die();
         }
+        
+        hpBar.ShowHpBar(true, isDead ? 10f : 1f);
         
         if (null != attacker)
         {
@@ -351,7 +375,17 @@ public partial class BattleUnit
     public float GetHp() => hp;
     public float GetRatio() => hp / FullHp;
 
-    public bool IsRage() => specialAction == SpecialAction.Rage && GetRatio() <= BattleManager.GetData().Rage_hpRatio;
+    public void Aggro() // 주변 적을 어그로끈다
+    {
+        foreach (BattleUnit battleUnit in BattleManager.GetRangeUnits(GetPos(), 3f, 
+                     BattleHelper.GetOther(this.team)))
+        {
+            
+        }
+    }
+    
+    public bool IsRage() => specialAction == SpecialAction.Rage && 
+        GetRatio() * 100f <= BattleManager.GetData().Rage_hpRatio;
 
     public void SetFear(BattleUnit attacker)
     {

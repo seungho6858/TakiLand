@@ -11,7 +11,7 @@ public enum Team
 {
     Red,
     Blue,
-    None
+    Draw
 }
 
 public enum SpecialAction
