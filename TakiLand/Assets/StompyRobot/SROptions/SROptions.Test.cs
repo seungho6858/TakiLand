@@ -32,12 +32,6 @@ public partial class SROptions
         StageManager.Instance.Cheat_ChangeStage(Stage);
     }
     
-    [Category("Stage")]
-    public void 풀_기능_테스트()
-    {
-        StageManager.Instance.PlayFullSequence().Forget();
-    }
-    
     private int _targetGold = 1;
 
     [Category("Gold")]
