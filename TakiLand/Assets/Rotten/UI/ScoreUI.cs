@@ -6,16 +6,17 @@ using UnityEngine;
 public class ScoreUI : MonoBehaviour
 {
     [SerializeField]
+    private TextMeshProUGUI _stageText;
+    
+    [SerializeField]
     private TextMeshProUGUI _resultText;
     
     [SerializeField]
     private TextMeshProUGUI _goldText;
     
-    private int _stage;
-
     public void Initialize(int stage)
     {
-        _stage = stage;
+        _stageText.text = stage.ToString();
         _resultText.text = string.Empty;
         _goldText.text = string.Empty;
     }
