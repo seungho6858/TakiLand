@@ -556,7 +556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _closeButton: {fileID: 0}
-  _attribute: 0
+  _attribute: 17
   _titleButton: {fileID: 4768614167343280292}
   _resultText: {fileID: 5187086542676978288}
   _nickNameInputField: {fileID: 6298584335010408854}
