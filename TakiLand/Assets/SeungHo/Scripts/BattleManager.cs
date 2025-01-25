@@ -10,6 +10,9 @@ public partial class BattleManager : MonoBehaviour
 {
     private static BattleManager instance;
     
+    [SerializeField] private UnitData unitData; // 스크립터블 오브젝트 연결
+    public static UnitData GetData() => instance.unitData;
+    
     public List<BattleUnit> listUnits;
 
     private static GameState _GameState;
@@ -35,14 +38,40 @@ public partial class BattleManager : MonoBehaviour
     private void OnBattleStart()
     {
         GameState = GameState.Battle;
+        
     }
     
+    private void OnBattleStateChangedFunc(GameState obj)
+    {
+        switch (obj)
+        {
+            
+            case GameState.End:
+                {
+                    
+                }
+                break;
+
+            case GameState.Ready:
+                {
+                    
+                }
+                break;
+        }
+    }
+
     private void OnStageChanged(Formation.Data data1, Formation.Data data2, int stage)
     {
         GameState = GameState.Ready;
 
         timer = c = TIMER;
 
+        for (int i = 0; i < listUnits.Count; ++i)
+        {
+            Destroy(listUnits[i].gameObject);
+        }
+        listUnits.Clear();
+        
         Debug.Log("TeamA");
         Setting(Team.Red, data1);
         
@@ -74,7 +103,7 @@ public partial class BattleManager : MonoBehaviour
         unit.SetTeam(team, specialAction);
 
         Ability.Instance.Table.TryGetValue(new Ability.Key(specialAction), out var value);
-        unit.SetStat(value.MaxHp, value.Damage, value.MoveSpeed, value.AttackSpeed);
+        unit.SetStat(value.MaxHp, value.Damage, value.MoveSpeed, value.AttackSpeed, value.Range);
         
         instance.listUnits.Add(unit);
         instance.TeamCountChanged();
@@ -123,6 +152,11 @@ public partial class BattleManager : MonoBehaviour
         }
     }
     
+    public static List<BattleUnit> GetRangeUnits(Vector2 vPos, float range, Team team)
+    {
+        return instance.listUnits.FindAll(x => x.team == team && Vector2.Distance(x.GetPos(), vPos) <= range);
+    }
+    
     private void Awake()
     {
         instance = this;
@@ -131,15 +165,16 @@ public partial class BattleManager : MonoBehaviour
 
         GameState = GameState.Ready;
         
+        BattleManager.OnBattleStateChanged += OnBattleStateChangedFunc;
         StageManager.Instance.OnStageChanged += OnStageChanged;
         StageManager.Instance.OnBattleStart += OnBattleStart;
     }
-
 
     private void OnDestroy()
     {
         instance = null;
         
+        BattleManager.OnBattleStateChanged -= OnBattleStateChangedFunc;
         StageManager.Instance.OnStageChanged -= OnStageChanged;
         StageManager.Instance.OnBattleStart -= OnBattleStart;
     }

@@ -45,6 +45,9 @@ namespace Mib.Data
                     case "AttackSpeed":
 						data.AttackSpeed = Parser.ParseFloat(value);
 						break;
+                    case "Range":
+						data.Range = Parser.ParseFloat(value);
+						break;
 				}
 			}
 
@@ -60,6 +63,7 @@ namespace Mib.Data
 			public int MaxHp;
 			public float MoveSpeed;
 			public float AttackSpeed;
+			public float Range;
 
 		}
 

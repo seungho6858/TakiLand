@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7959039810440618914}
   - component: {fileID: 5841167662459685753}
+  - component: {fileID: 1488364407650039487}
+  - component: {fileID: 5249468890102690406}
   m_Layer: 0
   m_Name: "Slime (\uC6D0\uBCF8)"
   m_TagString: Untagged
@@ -54,6 +56,30 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1488364407650039487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2608552064685199872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a39d4242d442c4dd99657904f1ab8dc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!210 &5249468890102690406
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2608552064685199872}
+  m_Enabled: 1
+  m_SortingLayerID: 220270893
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &4996482951596144062
 GameObject:
   m_ObjectHideFlags: 0

@@ -32,8 +32,12 @@ public enum SpecialAction
 public enum GameState
 {
     Ready,
-    
     Battle,
-    
     End
+}
+
+public enum RangeType
+{
+    Near = 0,
+    Dist = 1,
 }

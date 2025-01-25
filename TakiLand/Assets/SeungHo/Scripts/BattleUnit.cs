@@ -10,11 +10,15 @@ public partial class BattleUnit : MonoBehaviour
 {
     public Team team;
     public SpecialAction specialAction;
+    public UnitState unitState;
     
-    [SerializeField] private SpriteRenderer spr;
+    [SerializeField] private Slime slime;
     [SerializeField] private TextMeshPro tmpAction;
     [SerializeField] private Rigidbody2D rg;
+    [SerializeField] private CircleCollider2D circleCollider;
     [SerializeField] private Transform trLook;
+    [SerializeField] private Transform trRange;
+    [SerializeField] private HpBar hpBar;
     private Transform tr;
     
     // 유닛을 다가가자
@@ -35,23 +39,39 @@ public partial class BattleUnit : MonoBehaviour
         this.specialAction = specialAction;
         
         //spr.color = team == Team.Red ? Color.red : Color.blue;
-        spr.material.SetColor("_OutlineColor", team == Team.Red ? Color.red : Color.blue); // 빨간색 설정
-
+        //spr.material.SetColor("_OutlineColor", team == Team.Red ? Color.red : Color.blue); // 빨간색 설정
+        
+        var obj = Resources.Load(this.specialAction.ToString());
+        if (null == obj)
+            obj = Resources.Load("Fast");
+        
+        slime = (Instantiate(obj, transform) as GameObject).GetComponent<Slime>();
+        
         tmpAction.text = specialAction.ToString();
+        
+        if (specialAction == SpecialAction.Invisibility)
+            circleCollider.enabled = false;
+        else
+            circleCollider.enabled = true;
     }
     
-    public void SetStat(float hp, float atk, float moveSpeed, float attackSpeed)
+    public void SetStat(float hp, float atk, float moveSpeed, float attackSpeed, float range)
     {
-        this.hp = hp;
+        this.hp = this.FullHp = hp;
         this.atk = atk;
         this.moveSpeed = moveSpeed;
         this.attackSpeed = attackSpeed;
         this.coolTime = attackSpeed;
+
+        trRange.localScale = Vector3.one * range;
     }
 
     private void Init()
     {
+        unitState = UnitState.Idle;
         nearUnit = null;
+        
+        hpBar.ShowHpBar(false);
     }
 
     private void CheckAttackEnemy()
@@ -60,6 +80,8 @@ public partial class BattleUnit : MonoBehaviour
 
         if (rangeUnit != null)
         {
+            unitState = UnitState.Attack;
+            
             Look(rangeUnit.GetPos().x - GetPos().x);
         }
     }
@@ -70,6 +92,8 @@ public partial class BattleUnit : MonoBehaviour
 
         if (nearUnit != null)
         {
+            unitState = UnitState.Move;
+            
             Look(nearUnit.GetPos().x - GetPos().x);
             Debug.DrawLine(GetPos(), this.nearUnit.GetPos(), team == Team.Red ? Color.red : Color.blue, 1f);
         }
@@ -80,22 +104,28 @@ public partial class BattleUnit : MonoBehaviour
         if (units == null || units.Count == 0)
             return null; // 리스트가 비어 있으면 null 반환
 
-        if (units.Count(x => x.specialAction == SpecialAction.Taunt) > 0)
-        {
-            units.RemoveAll(x => x.specialAction != SpecialAction.Taunt);
-        }
-        
         BattleUnit nearestUnit = null;
         float shortestDistance = float.MaxValue;
+        
+        List<BattleUnit> copy = new List<BattleUnit>(units);
 
-        foreach (var unit in units)
+        if (this.specialAction == SpecialAction.Invisibility && copy.Exists(x => x.rangeType == RangeType.Dist))
+        {
+            copy.RemoveAll(x => x.rangeType == RangeType.Near);
+        }
+        else if (copy.Exists(x => x.specialAction == SpecialAction.Taunt))
+            copy.RemoveAll(x => x.specialAction != SpecialAction.Taunt);
+        
+        foreach (var unit in copy)
         {
             if (unit == null) continue; // 유닛이 null인 경우 건너뜀
             
             if (unit.team == this.team) continue; // 같은 팀 제외
+            
+            if(unit.IsOutOfTarget()) continue; // 투명화 등
 
             float distance = Vector2.Distance(tr.position, unit.tr.position);
-
+            
             if (distance < shortestDistance)
             {
                 shortestDistance = distance;
@@ -123,14 +153,17 @@ public partial class BattleUnit : MonoBehaviour
 
 public partial class BattleUnit
 {
+    public float FullHp;
     public float hp;
     public float atk;
     public float moveSpeed;
     public float attackSpeed;
     public float coolTime;
-
+    public RangeType rangeType;
+    
     public float knockBack;
     public Vector2 vKnockBack;
+    public int atkCnt; // 공격 카운트
     
     private void FixedUpdate()
     {
@@ -141,6 +174,12 @@ public partial class BattleUnit
                 knockBack -= Time.deltaTime;
                 
                 rg.position += vKnockBack * (Time.deltaTime * 0.9f);
+
+                if (knockBack <= 0f)
+                {
+                    CheckFindEnemy();
+                    CheckAttackEnemy();
+                }
             }
             else if (this.rangeUnit != null)
             {
@@ -152,20 +191,42 @@ public partial class BattleUnit
                 Vector2 vDir = this.nearUnit.GetPos() - this.GetPos();
                 vDir.Normalize();
                 
-                rg.position += vDir * (moveSpeed * Time.deltaTime);
+                rg.position += vDir * (GetMoveSpeed() * Time.deltaTime);
             }
         }
     }
     
     private void Attack()
     {
-        rangeUnit.GetDamage(this, this.atk);
-    }
+        if (specialAction == SpecialAction.Explosion)
+        {
+            foreach (BattleUnit battleUnit in BattleManager.GetRangeUnits(GetPos(), 1.5f, BattleHelper.GetOther(this.team)))
+            {
+                battleUnit.GetDamage(this, GetAtk());
+            }
+            
+            Die();
+        }
+        else
+        {
+            rangeUnit.GetDamage(this, GetAtk());
+        }
 
+        atkCnt++;
+
+        if (specialAction == SpecialAction.Invisibility)
+            circleCollider.enabled = true;
+    }   
+    
     private void Die()
     {
         BattleManager.DestroyUnit(this);
         
+        find.gameObject.SetActive(false);
+        range.gameObject.SetActive(false);
+
+        unitState = UnitState.Die;
+        circleCollider.enabled = false;
         gameObject.SetActive(false);
     }
 
@@ -178,23 +239,24 @@ public partial class BattleUnit
             {
                 if (this.rangeUnit != null)
                 {
-                    coolTime = attackSpeed;
+                    coolTime = GetAttackSpeed();
                     Attack();
                 }
             }
         }
-        
     }
     
-    public bool GetDamage(BattleUnit attacker, float dmg)
+    private bool GetDamage(BattleUnit attacker, float dmg)
     {
         this.hp -= dmg;
+        hpBar.SetHp(this.hp, this.hp / this.FullHp);
+        hpBar.ShowHpBar(true);
 
         if (this.hp <= 0f)
         {
-            Die();   
+            Die();
         }
-
+        
         if (null != attacker)
         {
             vKnockBack = (GetPos() - attacker.GetPos()).normalized;
@@ -204,8 +266,29 @@ public partial class BattleUnit
         var ef = EffectManager.Instance.SpawnEffect("Ef_DamageFont", GetPos(), Quaternion.identity)
             .GetComponent<Ef_DamageFont>();
         ef.SetDamage(dmg);
+
+        unitState = UnitState.Hit;
         
         return this.hp <= 0f;
+    }
+
+    public bool IsOutOfTarget()
+    {
+        return specialAction == SpecialAction.Invisibility && atkCnt == 0;
+    }
+    
+    public float GetAtk() => atk;
+    public float GetAttackSpeed() => attackSpeed;
+    public float GetMoveSpeed() => moveSpeed;
+    public float GetHp() => hp;
+
+    public enum UnitState
+    {
+        Idle,
+        Move,
+        Attack,
+        Hit,
+        Die,
     }
 }
 
@@ -223,7 +306,7 @@ public partial class BattleUnit
             if (!listRangeUnits.Contains(unit))
             {
                 listRangeUnits.Add(unit);
-
+                
                 CheckAttackEnemy();
             }
         }
@@ -242,7 +325,7 @@ public partial class BattleUnit
     
     // find
     private void OnTriggerEnterWithFindUnit(Collider2D obj)
-    {
+    {       
         if (obj.CompareTag("BattleUnit"))
         {
             BattleUnit unit = obj.GetComponent<BattleUnit>();

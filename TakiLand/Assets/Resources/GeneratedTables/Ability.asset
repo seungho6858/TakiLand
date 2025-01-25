@@ -55,7 +55,7 @@ MonoBehaviour:
       Data: 1
     - Name: Damage
       Entry: 3
-      Data: 1
+      Data: 4
     - Name: MaxHp
       Entry: 3
       Data: 5
@@ -63,6 +63,9 @@ MonoBehaviour:
       Entry: 4
       Data: 1
     - Name: AttackSpeed
+      Entry: 4
+      Data: 100
+    - Name: Range
       Entry: 4
       Data: 1
     - Name: 
@@ -91,14 +94,17 @@ MonoBehaviour:
       Data: 2
     - Name: Damage
       Entry: 3
-      Data: 1
+      Data: 2
     - Name: MaxHp
       Entry: 3
-      Data: 5
+      Data: 10
     - Name: MoveSpeed
       Entry: 4
       Data: 1
     - Name: AttackSpeed
+      Entry: 4
+      Data: 5
+    - Name: Range
       Entry: 4
       Data: 1
     - Name: 
@@ -127,14 +133,17 @@ MonoBehaviour:
       Data: 3
     - Name: Damage
       Entry: 3
-      Data: 2
+      Data: 3
     - Name: MaxHp
       Entry: 3
-      Data: 5
+      Data: 2
     - Name: MoveSpeed
       Entry: 4
-      Data: 1
+      Data: 2
     - Name: AttackSpeed
+      Entry: 4
+      Data: 2.5
+    - Name: Range
       Entry: 4
       Data: 1
     - Name: 
@@ -166,13 +175,16 @@ MonoBehaviour:
       Data: 2
     - Name: MaxHp
       Entry: 3
-      Data: 5
+      Data: 8
     - Name: MoveSpeed
       Entry: 4
       Data: 1
     - Name: AttackSpeed
       Entry: 4
-      Data: 1.5
+      Data: 3
+    - Name: Range
+      Entry: 4
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -199,16 +211,19 @@ MonoBehaviour:
       Data: 5
     - Name: Damage
       Entry: 3
-      Data: 22
+      Data: 3
     - Name: MaxHp
       Entry: 3
-      Data: 55
+      Data: 4
     - Name: MoveSpeed
       Entry: 4
       Data: 1
     - Name: AttackSpeed
       Entry: 4
-      Data: 1
+      Data: 3
+    - Name: Range
+      Entry: 4
+      Data: 5
     - Name: 
       Entry: 8
       Data: 
@@ -235,16 +250,19 @@ MonoBehaviour:
       Data: 6
     - Name: Damage
       Entry: 3
-      Data: 2
+      Data: 3
     - Name: MaxHp
       Entry: 3
-      Data: 5
+      Data: 6
     - Name: MoveSpeed
       Entry: 4
       Data: 1
     - Name: AttackSpeed
       Entry: 4
-      Data: 1
+      Data: 4
+    - Name: Range
+      Entry: 4
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -274,11 +292,14 @@ MonoBehaviour:
       Data: 2
     - Name: MaxHp
       Entry: 3
-      Data: 5
+      Data: 4
     - Name: MoveSpeed
       Entry: 4
       Data: 1
     - Name: AttackSpeed
+      Entry: 4
+      Data: 5
+    - Name: Range
       Entry: 4
       Data: 1
     - Name: 
@@ -307,14 +328,17 @@ MonoBehaviour:
       Data: 8
     - Name: Damage
       Entry: 3
-      Data: 2
+      Data: 1
     - Name: MaxHp
       Entry: 3
-      Data: 5
+      Data: 7
     - Name: MoveSpeed
       Entry: 4
       Data: 1
     - Name: AttackSpeed
+      Entry: 4
+      Data: 5
+    - Name: Range
       Entry: 4
       Data: 1
     - Name: 
@@ -343,16 +367,19 @@ MonoBehaviour:
       Data: 9
     - Name: Damage
       Entry: 3
-      Data: 2
+      Data: 4
     - Name: MaxHp
       Entry: 3
-      Data: 5
+      Data: 6
     - Name: MoveSpeed
       Entry: 4
-      Data: 1
+      Data: 0
     - Name: AttackSpeed
       Entry: 4
-      Data: 1
+      Data: 5
+    - Name: Range
+      Entry: 4
+      Data: 10
     - Name: 
       Entry: 8
       Data: 
@@ -379,16 +406,19 @@ MonoBehaviour:
       Data: 10
     - Name: Damage
       Entry: 3
-      Data: 22
+      Data: 4
     - Name: MaxHp
       Entry: 3
-      Data: 5
+      Data: 6
     - Name: MoveSpeed
       Entry: 4
-      Data: 1
+      Data: 10
     - Name: AttackSpeed
       Entry: 4
-      Data: 1
+      Data: 3
+    - Name: Range
+      Entry: 4
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
