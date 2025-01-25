@@ -16,6 +16,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Invisibility
       objectReference: {fileID: 0}
+    - target: {fileID: 4860913519438689813, guid: bb1b4805da6a64a13a20cd0ba6c3a9d2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4860913519438689813, guid: bb1b4805da6a64a13a20cd0ba6c3a9d2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 220270893
+      objectReference: {fileID: 0}
     - target: {fileID: 6083842818512225173, guid: bb1b4805da6a64a13a20cd0ba6c3a9d2, type: 3}
       propertyPath: m_Sprite
       value: 
