@@ -26,7 +26,7 @@ public class NonDiegeticUI : MonoBehaviour
 		
 		_battleStartButton.onClick.AddListener(() =>
 		{
-			StageManager.Instance.BattleProcess().Forget();
+			StageManager.Instance.BetDone();
 		});
 		
 		BettingManager.Instance.OnGoldChanged += (prev, current) =>

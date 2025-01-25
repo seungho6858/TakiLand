@@ -1604,8 +1604,6 @@ MonoBehaviour:
     - {fileID: 3586167678576827349}
     - {fileID: 967858728100164583}
     - {fileID: 8458800921141174272}
-  _bettingButtonSprites:
-    m_keys: 
   _bettingButtonImages:
     m_keys: 000000000100000002000000
     m_values:
@@ -3658,7 +3656,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1069180704840502762
 RectTransform:
   m_ObjectHideFlags: 0
