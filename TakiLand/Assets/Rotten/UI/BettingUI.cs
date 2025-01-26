@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using Mib.Data;
 using Sirenix.OdinInspector;
 using TMPro;
@@ -73,6 +74,34 @@ public class BettingUI : MonoBehaviour, IPointerClickHandler
 		{
 			Hide();
 		};
+
+		StageManager.Instance.OnBetFailed += () =>
+		{
+			HighlightButtons();
+		};
+	}
+
+	private void HighlightButtons()
+	{
+		foreach (KeyValuePair<Team, Button> pair in _bettingButtons)
+		{
+			var background = pair.Value.GetComponent<Image>();
+			Color targetColor = GeneralSetting.Instance.BetTeamColors[pair.Key];
+			HighlightButtonAsync(background, Color.white, targetColor).Forget();
+		}
+	}
+	
+	private async UniTaskVoid HighlightButtonAsync(Image image, Color from, Color to)
+	{
+		const int delay = 100;
+		
+		image.color = to;
+		await UniTask.Delay(delay, cancellationToken: this.GetCancellationTokenOnDestroy());
+		image.color = from;
+		await UniTask.Delay(delay, cancellationToken: this.GetCancellationTokenOnDestroy());
+		image.color = to;
+		await UniTask.Delay(delay, cancellationToken: this.GetCancellationTokenOnDestroy());
+		image.color = from;
 	}
 
 	private void SelectBetTeam(Team? team)

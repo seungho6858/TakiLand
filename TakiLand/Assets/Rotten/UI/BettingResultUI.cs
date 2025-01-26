@@ -45,7 +45,7 @@ public class BettingResultUI : MonoBehaviour
 
 			// 보상 설명
 			Stage.Data stageData = new Stage.Key(StageManager.Instance.CurrentStage).Data;
-			_betDescription.text = $"성공시 x {stageData.RewardRate.ToString()}배 획득";
+			_betDescription.text = $"성공시 x{stageData.RewardRate.ToString()} 획득";
 			_betDescription.color = textColor;
 		};
 	}

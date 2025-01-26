@@ -26,7 +26,7 @@ public class NonDiegeticUI : MonoBehaviour
 		
 		_battleStartButton.onClick.AddListener(() =>
 		{
-			StageManager.Instance.BetDone();
+			StageManager.Instance.BetDone(HasBet);
 		});
 		
 		BettingManager.Instance.OnGoldChanged += (prev, current) =>
@@ -46,8 +46,22 @@ public class NonDiegeticUI : MonoBehaviour
 		};
 	}
 
+	private ColorBlock _disabledColorBlock;
+	private void Start()
+	{
+		_disabledColorBlock = _battleStartButton.colors;
+		_disabledColorBlock.normalColor = _disabledColorBlock.disabledColor;
+		_disabledColorBlock.highlightedColor = _disabledColorBlock.disabledColor;
+		_disabledColorBlock.pressedColor = _disabledColorBlock.disabledColor;
+		_disabledColorBlock.selectedColor = _disabledColorBlock.disabledColor;
+	}
+
+	// bettingManager에 상태만들기 귀찮아서..
+	private bool HasBet => _battleStartButton.colors == ColorBlock.defaultColorBlock;
+
 	private void CanBattleStart(bool value)
 	{
-		_battleStartButton.interactable = value;
+		ColorBlock targetColorBlock = value ? ColorBlock.defaultColorBlock : _disabledColorBlock;
+		_battleStartButton.colors = targetColorBlock;
 	}
 }

@@ -14,6 +14,7 @@ public class StageManager : MonoSingleton<StageManager>
     // Red, Blue, CurrentStage
     public event Action<Formation.Data, Formation.Data, int> OnStageChanged;
     public event Action OnBattleStart;
+    public event Action OnBetFailed;
 
     private Team[] _results;
 
@@ -95,9 +96,16 @@ public class StageManager : MonoSingleton<StageManager>
         await UniTask.Yield(PlayerLoopTiming.Update, cancellationToken: this.GetCancellationTokenOnDestroy());
     }
 
-    public void BetDone()
+    public void BetDone(bool hasBet)
     {
-        _bettingEndFlag.TrySetResult();
+        if (hasBet)
+        {
+            _bettingEndFlag.TrySetResult();
+        }
+        else
+        {
+            OnBetFailed?.Invoke();
+        }
     }
 
     public async UniTask BattleProcess()
