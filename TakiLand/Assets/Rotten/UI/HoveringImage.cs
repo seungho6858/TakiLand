@@ -23,7 +23,6 @@ public class HoveringImage : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 	// 마우스가 버튼에서 벗어날 때 호출
 	public void OnPointerExit(PointerEventData eventData)
 	{
-		SoundManager.PlaySound("001_Hover_01");
 		ChangeAlpha(0.0f);
 	}
 

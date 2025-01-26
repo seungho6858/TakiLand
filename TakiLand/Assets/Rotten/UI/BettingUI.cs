@@ -36,7 +36,7 @@ public class BettingUI : MonoBehaviour, IPointerClickHandler
 			Team betTeam = pair.Key;
 			pair.Value.onClick.AddListener(() =>
 			{
-				SoundManager.PlaySound("Menu_Select_00");
+				SoundManager.PlaySound("Coin_push");
 				BettingManager.Instance.BetTeam(betTeam);
 			});
 		}
@@ -46,7 +46,7 @@ public class BettingUI : MonoBehaviour, IPointerClickHandler
 			var preset = pair.Key;
 			pair.Value.onClick.AddListener(() =>
 			{
-				SoundManager.PlaySound("Menu_Select_00");
+				SoundManager.PlaySound("Coin_push");
 				BettingManager.Instance.BetMoney(preset);
 			});
 		}

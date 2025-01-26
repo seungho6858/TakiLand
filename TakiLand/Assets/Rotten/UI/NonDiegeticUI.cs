@@ -9,9 +9,6 @@ using UnityEngine.UI;
 public class NonDiegeticUI : MonoBehaviour
 {
 	[SerializeField]
-	private Button _testFormationButton;
-	
-	[SerializeField]
 	private Button _battleStartButton;
 	
 	[SerializeField]
@@ -19,12 +16,6 @@ public class NonDiegeticUI : MonoBehaviour
 	
 	private void Awake()
 	{
-		_testFormationButton.onClick.AddListener(() =>
-		{
-			SoundManager.PlaySound("Menu_Select_00");
-			StageManager.Instance.BettingProcess().Forget();
-		});
-		
 		_battleStartButton.onClick.AddListener(() =>
 		{
 			SoundManager.PlaySound("Menu_Select_00");
@@ -33,7 +24,6 @@ public class NonDiegeticUI : MonoBehaviour
 		
 		BettingManager.Instance.OnGoldChanged += (prev, current) =>
 		{
-			//TODO : 뭔가 애니메이션
 			_currentGoldText.text = current.ToString();
 		};
 

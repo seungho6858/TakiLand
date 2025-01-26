@@ -33,7 +33,9 @@ public class StageResultPopup : PopupBase
     {
         _confirmButton.onClick.AddListener(() =>
         {
-            SoundManager.PlaySound("Menu_Select_00");
+            (bool won, _) = BettingManager.Instance.CalculateResult(StageManager.Instance.CurrentStage);
+            string targetSound = won ? "Coins_Gain" : "Menu_Select_00";
+            SoundManager.PlaySound(targetSound);
             PopupManager.Instance.CloseCurrent();
         });
     }
@@ -68,5 +70,8 @@ public class StageResultPopup : PopupBase
         GeneralSetting.StageResultImage resultImage = GeneralSetting.Instance.ResultSprites[myBetTeam];
         
         _slimeImage.sprite = won? resultImage.Win : resultImage.Lose;
+
+        string targetSoundName = won ? "stinger_win" : "stinger_lose";
+        SoundManager.PlaySound(targetSoundName);
     }
 }
