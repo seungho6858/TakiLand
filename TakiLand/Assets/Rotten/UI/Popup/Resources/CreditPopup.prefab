@@ -570,6 +570,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8291043774396078106}
   - component: {fileID: 6035028595919946151}
+  - component: {fileID: 6780285633398255453}
   m_Layer: 5
   m_Name: CreditPopup
   m_TagString: Untagged
@@ -619,6 +620,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6780285633398255453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409758965030950677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 295a2525d31134e69ba08a62ec2b0a6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _closeButton: {fileID: 4768614167343280292}
+  _attribute: 0
 --- !u!1 &1764704004334315836
 GameObject:
   m_ObjectHideFlags: 0

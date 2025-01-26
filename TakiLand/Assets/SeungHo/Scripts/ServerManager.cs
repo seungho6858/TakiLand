@@ -13,6 +13,11 @@ public class ServerManager : MonoBehaviour
         get;
         set;
     }
+
+    public void CheckInit()
+    {
+        
+    }
     
     private Plugin plugin { get; set; }
     public Plugin GetPlugin() => plugin;

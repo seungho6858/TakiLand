@@ -33,6 +33,7 @@ public partial class Title : MonoBehaviour
 		
 		_creditButton.onClick.AddListener(() =>
 		{
+			Mib.UI.PopupManager.Instance.Open<CreditPopup>();
 			SoundManager.PlaySound("Menu_Select_00");
 		});
 		

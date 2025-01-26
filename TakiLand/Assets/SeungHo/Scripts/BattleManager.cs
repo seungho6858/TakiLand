@@ -234,6 +234,8 @@ public partial class BattleManager : MonoBehaviour
     {
         //SoundManager.PlayLoopSound("track_shortadventure_loop");    
         
+        ServerManager.instance.CheckInit();
+        
         DOTween.SetTweensCapacity(2000, 100); // Tweens: 2000, Sequences: 100
     }
 
@@ -301,8 +303,6 @@ public partial class BattleManager : MonoBehaviour
             
             
         }
-
-        return;
         
         if (Input.GetKeyDown(KeyCode.C))
         {
