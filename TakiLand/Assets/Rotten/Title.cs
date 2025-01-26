@@ -47,13 +47,7 @@ public partial class Title : MonoBehaviour
 	{
 		SoundManager.PlaySound("Menu_Select_00");
 
-		(_, UniTask task) = PopupManager.Instance.OpenWithTask<TutorialPopup>();
-
-		await task.AttachExternalCancellation(this.GetCancellationTokenOnDestroy());
-		
-		SoundManager.PlaySound("Menu_Select_00");
-		
-		SceneLoader.ChangeScene(Constant.BattleScene).Forget();
+		PopupManager.Instance.Open<TutorialPopup>();
 	}
 
 	private void Start()
