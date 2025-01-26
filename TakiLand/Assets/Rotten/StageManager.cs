@@ -37,10 +37,10 @@ public class StageManager : MonoSingleton<StageManager>
 
     protected override void OnDestroy()
     {
-        base.OnDestroy();
-        
         _bettingEndFlag?.TrySetCanceled();
         _battleEndFlag?.TrySetCanceled();
+        
+        base.OnDestroy();
     }
 
     private void Start()

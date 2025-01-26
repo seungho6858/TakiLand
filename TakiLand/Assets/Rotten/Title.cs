@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using Mib;
 using Mib.UI;
@@ -25,11 +26,7 @@ public partial class Title : MonoBehaviour
 		QualitySettings.vSyncCount = 0;
 		Application.targetFrameRate = 60;
 		
-		_playButton.onClick.AddListener(() =>
-		{
-			SoundManager.PlaySound("Menu_Select_00");
-			SceneLoader.ChangeScene(Constant.BattleScene).Forget();
-		});
+		_playButton.onClick.AddListener(UniTask.UnityAction(PlaySequence));
 		
 		_creditButton.onClick.AddListener(() =>
 		{
@@ -44,6 +41,19 @@ public partial class Title : MonoBehaviour
 		});
 		
 		SoundManager.PlayLoopSound("track_shortadventure_loop");
+	}
+
+	private async UniTaskVoid PlaySequence()
+	{
+		SoundManager.PlaySound("Menu_Select_00");
+
+		(_, UniTask task) = PopupManager.Instance.OpenWithTask<TutorialPopup>();
+
+		await task.AttachExternalCancellation(this.GetCancellationTokenOnDestroy());
+		
+		SoundManager.PlaySound("Menu_Select_00");
+		
+		SceneLoader.ChangeScene(Constant.BattleScene).Forget();
 	}
 
 	private void Start()
