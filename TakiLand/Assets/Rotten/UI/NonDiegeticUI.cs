@@ -53,7 +53,8 @@ public class NonDiegeticUI : MonoBehaviour
 
 	private void CanBattleStart(bool value)
 	{
-		ColorBlock targetColorBlock = value ? ColorBlock.defaultColorBlock : _disabledColorBlock;
-		_battleStartButton.colors = targetColorBlock;
+		_battleStartButton.gameObject.SetActive(value);
+		// ColorBlock targetColorBlock = value ? ColorBlock.defaultColorBlock : _disabledColorBlock;
+		// _battleStartButton.colors = targetColorBlock;
 	}
 }
