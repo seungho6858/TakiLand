@@ -21,11 +21,13 @@ public class NonDiegeticUI : MonoBehaviour
 	{
 		_testFormationButton.onClick.AddListener(() =>
 		{
+			SoundManager.PlaySound("Menu_Select_00");
 			StageManager.Instance.BettingProcess().Forget();
 		});
 		
 		_battleStartButton.onClick.AddListener(() =>
 		{
+			SoundManager.PlaySound("Menu_Select_00");
 			StageManager.Instance.BetDone(HasBet);
 		});
 		

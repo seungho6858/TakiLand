@@ -27,18 +27,19 @@ public partial class Title : MonoBehaviour
 		
 		_playButton.onClick.AddListener(() =>
 		{
+			SoundManager.PlaySound("Menu_Select_00");
 			SceneLoader.ChangeScene(Constant.BattleScene).Forget();
 		});
 		
 		_creditButton.onClick.AddListener(() =>
 		{
-			// TODO: creadit만들기
+			SoundManager.PlaySound("Menu_Select_00");
 		});
 		
 		_exitButton.onClick.AddListener(() =>
 		{
 			Mib.UI.PopupManager.Instance.Open<Popup_Ranking>();
-			// TODO: 페이크 버튼 만들기
+			SoundManager.PlaySound("Menu_Select_00");
 		});
 		
 		SoundManager.PlayLoopSound("track_shortadventure_loop");

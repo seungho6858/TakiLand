@@ -33,6 +33,7 @@ public class StageResultPopup : PopupBase
     {
         _confirmButton.onClick.AddListener(() =>
         {
+            SoundManager.PlaySound("Menu_Select_00");
             PopupManager.Instance.CloseCurrent();
         });
     }
