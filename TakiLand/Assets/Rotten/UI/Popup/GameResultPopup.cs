@@ -5,28 +5,22 @@ using Mib.Data;
 using Mib.UI;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
-using UnityEngine.UI;
 
 [PopupPath("GameResultPopup")]
 public class GameResultPopup : PopupBase
 {
     [SerializeField]
-    private Button _titleButton;
+    private SerializableDictionary<bool, GameObject> _resultTextGo;
     
     [SerializeField]
-    private TextMeshProUGUI _resultText;
+    private SerializableDictionary<bool, TextMeshProUGUI> _resultTexts;
     
     [SerializeField]
     private TMP_InputField _nickNameInputField;
 
     private const string DefaultPlayerNickName = "Slime_{0}";
-    
-    private int CurrentPlayerNumber
-    {
-        get => PlayerPrefs.GetInt("PlayerNumber_Key", 0);
-        set => PlayerPrefs.SetInt("PlayerNumber_Key", value);
-    }
+
+    private static int CurrentPlayerNumber => Random.Range(0, 111111271);
     
     public void OnClick()
     {
@@ -50,20 +44,12 @@ public class GameResultPopup : PopupBase
     
     protected override void OnAwake()
     {
-        _titleButton.onClick.AddListener(() =>
-        {
-            BattleManager.LeaderboardPlayerRecord(
-                BettingManager.Instance.CurrentGold,
-                StageManager.Instance.CurrentStage, 
-                GetPlayerNickName());
-        });
+        
     }
 
     private string GetPlayerNickName()
     {
-        int currentPlayerNumber = CurrentPlayerNumber++;
-
-        return string.Format(DefaultPlayerNickName, currentPlayerNumber.ToString());
+        return string.Format(DefaultPlayerNickName, CurrentPlayerNumber.ToString());
     }
 
     public override void OnOpen()
@@ -72,9 +58,14 @@ public class GameResultPopup : PopupBase
         
         bool hasClear = StageManager.Instance.CurrentStage >= Define.Instance.GetValue("TotalStage");
 
-        _resultText.text = hasClear
-            ? $"최종 금화 : {BettingManager.Instance.CurrentGold}"
-            : $"최고 라운드 : {StageManager.Instance.CurrentStage}";
+        foreach (KeyValuePair<bool, GameObject> pair in _resultTextGo)
+        {
+            pair.Value.SetActive(pair.Key == hasClear);
+        }
+        
+        _resultTexts[hasClear].text = hasClear 
+            ? $"{BettingManager.Instance.CurrentGold}"
+            : $"최종 라운드 : {StageManager.Instance.CurrentStage}";
     }
 
     protected override void OnClose()

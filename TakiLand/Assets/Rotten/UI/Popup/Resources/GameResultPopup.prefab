@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3713207867141177684
 RectTransform:
   m_ObjectHideFlags: 0
@@ -585,8 +585,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _closeButton: {fileID: 0}
   _attribute: 17
-  _titleButton: {fileID: 4768614167343280292}
-  _resultText: {fileID: 5187086542676978288}
+  _resultTextGo:
+    m_keys: 0100
+    m_values:
+    - {fileID: 8847704577740737194}
+    - {fileID: 35860327931717529}
+  _resultTexts:
+    m_keys: 0100
+    m_values:
+    - {fileID: 9198819567963025678}
+    - {fileID: 5187086542676978288}
   _nickNameInputField: {fileID: 6298584335010408854}
 --- !u!95 &8568450726666983839
 Animator:
@@ -1242,7 +1250,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uD68D\uB4DD\uD558\uAE30"
+  m_text: "\uC810\uC218 \uB4F1\uB85D"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c0e6bb64666dff240a7c7771857aee1e, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: cb94aa01291543d4bbbc7e0f3040dfb9, type: 2}
@@ -2310,7 +2318,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1593344199930962027
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2329,7 +2337,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 19.299877, y: 95.708984}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 147.44, y: 58.26}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1245942499224527427
 CanvasRenderer:

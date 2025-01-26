@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Diagnostics;
 using Mib;
 using Mib.Data;
+using Mib.UI;
 #if !DISABLE_SRDEBUGGER
 using SRDebugger;
 using SRDebugger.Services;
@@ -30,6 +31,26 @@ public partial class SROptions
     public void 스테이지_변경()
     {
         StageManager.Instance.Cheat_ChangeStage(Stage);
+    }
+
+    [Category("Stage")]
+    public void 즉시_승리()
+    {
+        var lastStage = Define.Instance.GetValue("TotalStage");
+        StageManager.Instance.Cheat_ChangeStage(lastStage);
+
+        StageManager.Instance.CancelInvoke();
+
+        PopupManager.Instance.Open<GameResultPopup>();
+    }
+    
+    
+    [Category("Stage")]
+    public void 즉시_패배()
+    {
+        StageManager.Instance.CancelInvoke();
+
+        PopupManager.Instance.Open<GameResultPopup>();
     }
     
     private int _targetGold = 1;
