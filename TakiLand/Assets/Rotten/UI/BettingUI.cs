@@ -5,9 +5,10 @@ using Mib.Data;
 using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class BettingUI : MonoBehaviour
+public class BettingUI : MonoBehaviour, IPointerClickHandler
 {
 	[SerializeField] 
 	private SerializableDictionary<Team, Button> _bettingButtons;
@@ -103,5 +104,10 @@ public class BettingUI : MonoBehaviour
 	{
 		// TODO : 여기는 나중에 애니메이션 들어가면 수정
 		gameObject.SetActive(false);
+	}
+	
+	public void OnPointerClick(PointerEventData eventData)
+	{
+		transform.SetAsLastSibling();
 	}
 }

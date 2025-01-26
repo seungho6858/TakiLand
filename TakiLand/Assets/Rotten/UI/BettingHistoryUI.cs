@@ -3,8 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using Mib.Data;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class BettingHistoryUI : MonoBehaviour
+public class BettingHistoryUI : MonoBehaviour, IPointerClickHandler
 {
 	[SerializeField]
 	private ScoreUI[] _scores;
@@ -64,5 +65,10 @@ public class BettingHistoryUI : MonoBehaviour
 	public void Hide()
 	{
 		gameObject.SetActive(false);
+	}
+
+	public void OnPointerClick(PointerEventData eventData)
+	{
+		transform.SetAsLastSibling();
 	}
 }
